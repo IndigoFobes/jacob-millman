@@ -31,7 +31,7 @@ export default function MediaDropdown (props: Props) {
                 onClick={toggle}
             >{item.title}</button>
             <div className='absolute top-12 z-30 w-full flex justify-center'>
-            <div className={`flex flex-col py-4 px-10 bg-[var(--light-theme-color)] rounded-[.1rem] ${transClass}`}>
+            <div className={`flex flex-col py-4 px-10 bg-[var(--light-theme-color)] rounded-[var(--rounded-tiny)] ${transClass}`}>
                 {
                     menuItems.map(item =>
                         <Link

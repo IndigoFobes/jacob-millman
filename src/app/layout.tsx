@@ -1,12 +1,24 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
 import Header from './components/header'
 import MediaDropdown from './components/media-dropdown'
 
-const poppins = Poppins({ 
-  weight: "600",
-  subsets: ['latin'] })
+// import fonts
+import { Poppins, La_Belle_Aurore } from 'next/font/google'
+ 
+export const poppins = Poppins({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    variable: '--font-poppins'
+});
+ 
+export const la_belle_aurora = La_Belle_Aurore({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400',
+  variable: '--font-aurora'
+});
 
 export const metadata: Metadata = {
   title: 'Jacob A. Millman',
@@ -20,9 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-[var(--base-bg-color)]`}>
+      <body className={`${poppins.variable} ${la_belle_aurora.variable} bg-[var(--base-bg-color)] text-[var(--dark-text-color)]`}>
         <Header/>
-        <main>
+        <main className='font-sans'>
         {children}
         </main>
         </body>

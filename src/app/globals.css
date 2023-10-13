@@ -10,12 +10,17 @@
   --dark-theme-color: #686C51;
   --light-theme-color: #9EA28E;
   --base-bg-color: #FFFBF6; 
-  --accent-color: #E0BD68;
+  --accent-color: #FECB50;
   --dark-text-color: #2E2E2E;
   --light-text-color: #F6F6F6;
-  --main-font-style: 'DM Sans';
+  --rounded-tiny: .1rem;
 }
 
 .header-title {
   font-size: 4rem
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600
 }
