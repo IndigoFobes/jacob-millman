@@ -1,5 +1,11 @@
+import Header from "../header";
+
+
 export default function Page() {
     return (
-        <h1>Video page</h1>
+        <div>
+            <Header/>
+            <h1>Videos page</h1>
+        </div>
     )
 }
