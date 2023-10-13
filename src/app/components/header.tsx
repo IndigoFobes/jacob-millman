@@ -50,7 +50,7 @@ export default function Header () {
           return item.hasOwnProperty("children") ? (
             <MediaDropdown item={item} />
           ) : (
-            <Link className="hover:text-blue-500" href={item?.route || ""}>
+            <Link className="hover:text-[var(--accent-color)]" href={item?.route || ""}>
               {item.title}
             </Link>
           );

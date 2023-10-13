@@ -27,20 +27,22 @@ export default function MediaDropdown (props: Props) {
         <>
         <div className="relative">
             <button
-                className="hover:text-blue-400"
+                className="hover:text-[var(--accent-color)]"
                 onClick={toggle}
             >{item.title}</button>
-            <div className={`absolute top-8 z-30 w-[250px] min-h-[300px] flex flex-col py-4 bg-zinc-400 rounded-md ${transClass}`}>
+            <div className='absolute top-12 z-30 w-full flex justify-center'>
+            <div className={`flex flex-col py-4 px-10 bg-[var(--light-theme-color)] rounded-[.1rem] ${transClass}`}>
                 {
                     menuItems.map(item =>
                         <Link
                             key={item.route}
-                            className="hover:bg-zinc-300 hover:text-zinc-500 px-4 py-1"
+                            className="hover:text-[var(--accent-color)] px-4 py-1"
                             href={item?.route || ''}
                             onClick={toggle}
                         >{item.title}</Link>
                     )
                 }
+            </div>
             </div>
         </div>
         {
