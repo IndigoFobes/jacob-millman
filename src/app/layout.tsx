@@ -22,7 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} bg-[var(--base-bg-color)]`}>
         <Header/>
-        {children}</body>
+        <main>
+        {children}
+        </main>
+        </body>
     </html>
   )
 }
