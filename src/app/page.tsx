@@ -196,12 +196,37 @@ export default function Home() {
       </div>
       {/* Quote section */}
       <div className="bg-[var(--dark-theme-color)] p-8 md:p-10">
-        <p className="title text-[var(--light-text-color)] text-center lg:mx-20 my-5">
+        <p className="font-mono title text-[var(--light-text-color)] text-center lg:mx-20 my-5">
           {`"You miss 100% of the shots`}
           <br className="hidden md:flex"></br>{" "}
           {`you don’t take. -Wayne Gretzky”`}
           <br></br> {`-Michael Scott`}
         </p>
+      </div>
+      {/* Video section */}
+      <div className="p-4 flex flex-col">
+        <h1 className="title pt-12 pb-8 px-8 md:px-12 lg:px-20 xl:px-36">
+          Check out some of my work!
+        </h1>
+        {/* Youtube video */}
+        <div className="bg-fixed flex flex-col items-center w-full relative">
+          <div className="py-2 px-1 rounded-md">
+            <iframe
+              className="rounded-sm w-[calc(1000px*1/3)] h-[calc(500px*1/3)] sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
+              src="https://www.youtube.com/embed/Sjf0SbpnHXI?si=5WVqpKRmrtaV1YCS"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+        <Link
+          className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+          href="/media/videos"
+        >
+          see more videos
+        </Link>
       </div>
     </div>
   );
