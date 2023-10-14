@@ -194,6 +194,15 @@ export default function Home() {
           />
         </div>
       </div>
+      {/* Quote section */}
+      <div className="bg-[var(--dark-theme-color)] p-8 md:p-10">
+        <p className="title text-[var(--light-text-color)] text-center lg:mx-20 my-5">
+          {`"You miss 100% of the shots`}
+          <br className="hidden md:flex"></br>{" "}
+          {`you don’t take. -Wayne Gretzky”`}
+          <br></br> {`-Michael Scott`}
+        </p>
+      </div>
     </div>
   );
 }
