@@ -30,31 +30,65 @@ export default function Home () {
       </div>
     </div>
     {/* What's New Section */}
-    <div className="p-4">
+    <div className="p-4 flex flex-col">
       <div className="title pt-12 pb-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
         <h1 className="col-start-1 col-end-3">What's New?</h1>
       </div>
-      <ul className="md:px-12 lg:px-20 xl:px-36 grid grid-rows-3 gap-20">
-          <li className="grid grid-cols-5">
+      <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
+        {/* first show */}
+          <li className="grid grid-cols-5 pb-24">
             {/* image */}
-            <div className="col-start-1 col-end-3 pr-10">
+            <div className="col-start-1 col-end-3 pr-10 mx-auto">
             <Image
       src="/male_placeholder_image.jpeg"
       alt="Male placeholder"
-      width={1000}
+      width={500}
       height={500}
-      className=""/>
+      className="object-contain"/>
             </div>
             {/* text */}
             <div className="flex flex-col col-start-3 col-end-6">
             <h2 className="text-4xl font-[600]" >As You Like It</h2>
             <h3 className="text-2xl font-[400] mt-2 mb-4">Theatre Name</h3>
-            <p className="text-lg font-[400]">Jacob is so excited to be playing.... Just brief snippet of info about upcoming or current plays.</p>
+            <p className="text-xl font-[400] w-10/12">Jacob is so excited to be playing.... Just brief snippet of info about upcoming or current plays.</p>
             </div>
-            
           </li>
-          <li className="grid grid-cols-5">Show</li>
-          <li className="grid grid-cols-5">Show</li>
+          {/* second show */}
+          <li className="grid grid-cols-5 pb-24">
+            {/* text */}
+            <div className="flex flex-col col-start-1 col-end-4 text-end pr-10">
+            <h2 className="text-4xl font-[600]" >As You Like It</h2>
+            <h3 className="text-2xl font-[400] mt-2 mb-4">Theatre Name</h3>
+            <p className="text-xl font-[400] w-10/12 self-end">Jacob is so excited to be playing.... Just brief snippet of info about upcoming or current plays.</p>
+            </div>
+            {/* image */}
+            <div className="col-start-4 col-end-6 mx-auto">
+            <Image
+              src="/male_placeholder_image.jpeg"
+              alt="Male placeholder"
+              width={500}
+              height={500}
+              className="object-contain"/>
+            </div>
+          </li>
+          {/* third show */}
+          <li className="grid grid-cols-5 pb-24">
+            {/* image */}
+            <div className="col-start-1 col-end-3 pr-10 mx-auto">
+            <Image
+      src="/male_placeholder_image.jpeg"
+      alt="Male placeholder"
+      width={500}
+      height={500}
+      className="object-contain"/>
+            </div>
+            {/* text */}
+            <div className="flex flex-col col-start-3 col-end-6">
+            <h2 className="text-4xl font-[600]" >As You Like It</h2>
+            <h3 className="text-2xl font-[400] mt-2 mb-4">Theatre Name</h3>
+            <p className="text-xl font-[400] w-10/12">Jacob is so excited to be playing.... Just brief snippet of info about upcoming or current plays.</p>
+            </div>
+          </li>
       </ul>
     </div>
     </div>
