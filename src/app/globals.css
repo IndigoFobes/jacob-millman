@@ -16,6 +16,10 @@
   --rounded-tiny: .1rem;
 }
 
+.contentContainer {
+	min-height: calc(100vh - 88px)
+}
+
 .header-title {
   font-size: 4rem
 }
