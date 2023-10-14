@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
+      {/* Hero section */}
       <div className="relative bg-[var(--light-theme-color)] flex flex-col md:grid grid-cols-7">
         <div className="md:relative col-start-1 col-end-4 md:min-h-[30rem] lg:min-h-[40rem] xl:min-h-[50rem] xl:max-h-[60rem] w-full">
           <Image
@@ -144,6 +145,54 @@ export default function Home() {
             </div>
           </li>
         </ul>
+      </div>
+      {/* Headshots section */}
+      <div className="grid grid-cols-10 bg-[var(--light-theme-color)]">
+        {/* headshot */}
+        <div className="col-start-1 col-end-5 w-full">
+          <Image
+            src="/male_placeholder_image.jpeg"
+            alt="Male placeholder"
+            width={1000}
+            height={1000}
+            className="object-contain"
+          />
+        </div>
+        {/* text/link */}
+        <div className="col-start-5 col-end-11 flex flex-col gap-10 justify-center items-center mx-auto">
+          <h2 className="title text-[var(--light-text-color)]">Headshots</h2>
+          <Link
+            className="font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+            href="/media/photos"
+          >
+            see more headshots
+          </Link>
+        </div>
+      </div>
+      {/* Production shot section */}
+      <div className="grid grid-cols-10">
+        {/* text/link */}
+        <div className="col-start-1 col-end-7 flex flex-col gap-10 justify-center items-center mx-auto">
+          <h2 className="title text-[var(--dark-text-color)]">
+            Production Shots
+          </h2>
+          <Link
+            className="font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+            href="/media/photos"
+          >
+            see more production shots
+          </Link>
+        </div>
+        {/* headshot */}
+        <div className="col-start-7 col-end-11 w-full">
+          <Image
+            src="/male_placeholder_image.jpeg"
+            alt="Male placeholder"
+            width={1000}
+            height={1000}
+            className="object-contain"
+          />
+        </div>
       </div>
     </div>
   );
