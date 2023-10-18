@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "./components/header";
 import MediaDropdown from "./components/media-dropdown";
 import Footer from "./components/footer";
+import MobileDropdown from "./components/mobile-menu";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
@@ -40,6 +41,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${la_belle_aurora.variable} bg-[var(--base-bg-color)] text-[var(--dark-text-color)]`}
       >
         <Header />
+        <MobileDropdown />
         <main className="font-sans relative contentContainer">{children}</main>
         <Footer />
       </body>

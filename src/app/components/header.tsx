@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import MediaDropdown from "./media-dropdown";
-import React from "react";
+import React, { useState } from "react";
+import MobileDropdown from "./mobile-menu";
 
 export interface MenuItem {
   title: string;
@@ -42,13 +44,14 @@ const menuItems: MenuItem[] = [
 
 export default function Header() {
   return (
-    <header className="font-sans w-full bg-[var(--dark-theme-color)] flex flex-col justify-center">
-      <Link href="/">
+    <header className="hidden font-sans w-full bg-[var(--dark-theme-color)] md:flex md:flex-col justify-center">
+      <Link href="/" className="col-start-2 col-end-5">
         <h1 className="font-[600] text-center text-[var(--light-text-color)] py-3 px-4 header-title">
           JACOB MILLMAN
         </h1>
       </Link>
-      <ul className="font-[500] grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-xl">
+      {/* only visible on screens medium and larger */}
+      <ul className="hidden menu-item font-[500] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-lg lg:text-xl">
         {menuItems.map((item) => {
           return item.hasOwnProperty("children") ? (
             <MediaDropdown item={item} />
@@ -61,11 +64,6 @@ export default function Header() {
             </Link>
           );
         })}
-        {/* <li><Link href="/">HOME</Link></li>
-                <li><Link href="/about">ABOUT</Link></li>
-                <li>MEDIA</li>
-                <li><Link href="/resume">RESUME</Link></li>
-                <li>CONTACT</li> */}
       </ul>
     </header>
   );

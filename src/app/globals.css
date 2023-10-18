@@ -28,3 +28,36 @@
   font-size: 3rem;
   font-weight: 600
 }
+
+/* Media Query for md screen */
+@media screen and (max-width: 1024px) {
+  .header-title {
+    font-size: 2.7rem
+  }
+  
+  .title {
+    font-size: 2.5rem
+  }
+}
+
+/* Media Query for sm screen */
+@media screen and (max-width: 768px) {
+  .header-title {
+    font-size: 2.3rem
+  }
+
+  .title {
+    font-size: 2.3rem
+  }
+}
+
+/* Media Query for xs screen */
+@media screen and (max-width: 640px) {
+  .header-title {
+    font-size: 1.8rem
+  }
+
+  .title {
+    font-size: 1.8rem
+  }
+}

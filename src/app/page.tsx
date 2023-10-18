@@ -78,7 +78,7 @@ export default function Home() {
                 plays. Jacob is so excited to be playing.... Just brief snippet
                 of info about upcoming or current plays.
               </p>
-              <p className="pt-10 text-lg lg:text-xl font-[600] text-[var(--dark-theme-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
+              <p className="pt-6 md:pt-10 text-lg lg:text-xl font-[600] text-[var(--dark-theme-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
                 get details
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function Home() {
                 Jacob is so excited to be playing.... Just brief snippet of info
                 about upcoming or current plays.
               </p>
-              <p className="pt-10 text-lg lg:text-xl font-[600] text-[var(--dark-theme-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
+              <p className="pt-6 md:pt-10 text-lg lg:text-xl font-[600] text-[var(--dark-theme-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
                 get details
               </p>
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
                 plays. Jacob is so excited to be playing.... Just brief snippet
                 of info about upcoming or current plays.
               </p>
-              <p className="pt-10 text-lg lg:text-xl font-[600] text-[var(--dark-theme-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
+              <p className="pt-6 md:pt-10 text-lg lg:text-xl font-[600] text-[var(--dark-theme-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
                 get details
               </p>
             </div>
@@ -230,7 +230,7 @@ export default function Home() {
       </div>
       {/* Contact section */}
       <div className="p-10 flex flex-col justify-center md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
-        <div className="relative h-96 w-96">
+        <div className="mb-8 md:mb-0 relative place-self-center md:place-self-start h-96 w-96 md:h-72 md:w-72 lg:h-96 lg:w-96">
           <Image
             src="/pexels-janko-ferlic-1083502.jpg"
             alt="baby bear placeholder"
@@ -238,7 +238,7 @@ export default function Home() {
             className="object-cover"
           />
         </div>
-        <div className="md:ml-16">
+        <div className="md:ml-16 place-self-center md:place-self-start">
           <h2 className="title text-[var(--dark-text-color)]">Reach out!</h2>
           <h3 className="pt-2 pb-4 text-2xl font-[600] text-[var(--dark-theme-color)]">
             (777)777-7777
