@@ -228,6 +228,32 @@ export default function Home() {
           see more videos
         </Link>
       </div>
+      {/* Contact section */}
+      <div className="p-10 flex flex-col justify-center md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
+        <div className="relative h-96 w-96">
+          <Image
+            src="/pexels-janko-ferlic-1083502.jpg"
+            alt="baby bear placeholder"
+            layout="fill"
+            className="object-cover"
+          />
+        </div>
+        <div className="md:ml-16">
+          <h2 className="title text-[var(--dark-text-color)]">Reach out!</h2>
+          <h3 className="pt-2 pb-4 text-2xl font-[600] text-[var(--dark-theme-color)]">
+            (777)777-7777
+          </h3>
+          <h3 className="pb-8 text-2xl font-[600] text-[var(--dark-theme-color)]">
+            jacobam*****@gmail.com
+          </h3>
+          <Link
+            className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+            href="mailto:jacobamillman@gmail.com"
+          >
+            say hi!
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
