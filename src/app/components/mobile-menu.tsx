@@ -78,7 +78,7 @@ export default function MobileDropdown() {
             })}
           </ul>
           <p
-            className={`absolute top-5 right-5 ${textHidden}`}
+            className={`absolute top-5 right-5 ${textHidden} cursor-pointer`}
             onClick={toggle}
           >
             X
