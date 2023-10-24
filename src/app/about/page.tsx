@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="w-9/12 mx-auto mt-20 mb-32">
+    <div className="w-9/12 mx-auto mt-48 mb-32">
       <h1 className="title pb-10">About me</h1>
       <Image
         src="/male_placeholder_image.jpeg"

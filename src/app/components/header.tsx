@@ -12,46 +12,46 @@ export interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    title: "HOME",
+    title: "Home",
     route: "/",
   },
   {
-    title: "ABOUT",
+    title: "About",
     route: "/about",
   },
   {
-    title: "MEDIA",
+    title: "Media",
     children: [
       {
-        title: "PHOTOS",
+        title: "Photos",
         route: "/media/photos",
       },
       {
-        title: "VIDEOS",
+        title: "Videos",
         route: "/media/videos",
       },
     ],
   },
   {
-    title: "RESUME",
+    title: "Resume",
     route: "/resume",
   },
   {
-    title: "CONTACT",
+    title: "Contact",
     route: "/",
   },
 ];
 
 export default function Header() {
   return (
-    <header className="hidden font-sans w-full bg-[var(--dark-theme-color)] md:flex md:flex-col justify-center">
+    <header className="absolute top-0 right-0 header-bg hidden z-30 font-sans w-full md:flex md:flex-col justify-center">
       <Link href="/" className="col-start-2 col-end-5">
-        <h1 className="font-[600] text-center text-[var(--light-text-color)] py-3 px-4 header-title">
-          JACOB MILLMAN
+        <h1 className=" font-[300] font-sans text-center text-[var(--light-text-color)] py-3 px-4 header-title">
+          Jacob Millman
         </h1>
       </Link>
       {/* only visible on screens medium and larger */}
-      <ul className="hidden menu-item font-[500] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-lg lg:text-xl">
+      <ul className="hidden menu-item font-[300] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-lg">
         {menuItems.map((item) => {
           return item.hasOwnProperty("children") ? (
             <MediaDropdown item={item} />

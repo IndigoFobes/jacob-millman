@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${la_belle_aurora.variable} bg-[var(--base-bg-color)] text-[var(--dark-text-color)]`}
+        className={`${poppins.variable} ${la_belle_aurora.variable} bg-[var(--base-bg-color)] text-[var(--light-text-color)]`}
       >
         <Header />
         <MobileDropdown />

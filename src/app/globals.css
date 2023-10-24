@@ -7,13 +7,18 @@
 
 /* global variables */
 :root {
-  --dark-theme-color: #686C51;
-  --light-theme-color: #9EA28E;
-  --base-bg-color: #FFFBF6; 
-  --accent-color: #FECB50;
-  --dark-text-color: #2E2E2E;
+  --dark-theme-color: rgb(0, 0, 0);
+  --light-theme-color: #202020;
+  --base-bg-color: #151515; 
+  --accent-color: #d1b657;
+  --dark-text-color: #151515;
   --light-text-color: #F6F6F6;
   --rounded-tiny: .1rem;
+  --dark-theme-transparent: rgba(41, 41, 41, 0);
+}
+
+.header-bg {
+  background-image: linear-gradient( var(--dark-theme-color) 50%, var(--dark-theme-transparent));
 }
 
 .contentContainer {
@@ -26,7 +31,7 @@
 
 .title {
   font-size: 3rem;
-  font-weight: 600
+  font-weight: 400
 }
 
 /* Media Query for md screen */
