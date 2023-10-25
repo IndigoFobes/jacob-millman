@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </div>
       {/* What's New Section */}
-      <div className="p-4 flex flex-col">
+      <div className="p-4 flex flex-col a-gradient pb-20">
         <div className="title pt-12 pb-8 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4">What's New?</h1>
         </div>
@@ -54,7 +54,7 @@ export default function Home() {
           {/* first show */}
           <li className="flex flex-col md:grid md:grid-cols-5 pb-24">
             {/* image */}
-            <div className="md:col-start-1 md:col-end-3 md:pr-10 relative md:min-h-min md:min-w-min md:max-h-96 md:max-w-96 mr-10">
+            <div className="md:col-start-1 md:col-end-3 relative place-self-center h-96 w-full mb-10 md:mb-0 md:w-full md:h-full md:mr-10">
               <Image
                 src="/pillowman_featured.jpg"
                 alt="Jacob in Pillowman"
@@ -85,15 +85,14 @@ export default function Home() {
         </ul>
       </div>
       {/* Headshots section */}
-      <div className="grid grid-cols-10 bg-[var(--light-theme-color)]">
+      <div className="grid grid-cols-10 b-gradient">
         {/* headshot */}
-        <div className="col-start-1 col-end-5 w-full">
+        <div className="col-start-1 col-end-5 w-full md:h-[400px] lg:h-[600px] relative">
           <Image
-            src="/male_placeholder_image.jpeg"
+            src="/Jacob_ main_hs.jpg"
             alt="Male placeholder"
-            width={1000}
-            height={1000}
-            className="object-contain"
+            fill
+            className="object-cover object-top"
           />
         </div>
         {/* text/link */}
@@ -108,7 +107,7 @@ export default function Home() {
         </div>
       </div>
       {/* Production shot section */}
-      <div className="grid grid-cols-10">
+      <div className="grid grid-cols-10 a-gradient">
         {/* text/link */}
         <div className="col-start-1 col-end-7 flex flex-col gap-10 justify-center items-center mx-auto">
           <h2 className="title text-[var(--light-text-color)]">
@@ -122,18 +121,17 @@ export default function Home() {
           </Link>
         </div>
         {/* headshot */}
-        <div className="col-start-7 col-end-11 w-full">
+        <div className="col-start-7 col-end-11 w-full relative md:h-[400px] lg:h-[600px]">
           <Image
-            src="/male_placeholder_image.jpeg"
+            src="/SFB_main.jpg"
             alt="Male placeholder"
-            width={1000}
-            height={1000}
-            className="object-contain"
+            fill
+            className="object-cover"
           />
         </div>
       </div>
       {/* Quote section */}
-      <div className="bg-[var(--light-theme-color)] p-8 md:p-10">
+      <div className="bg-[var(--dark-theme-color)] p-8 md:p-10">
         <p className="font-mono title text-[var(--light-text-color)] text-center lg:mx-20 my-5">
           {`"You miss 100% of the shots`}
           <br className="hidden md:flex"></br>{" "}
@@ -142,7 +140,7 @@ export default function Home() {
         </p>
       </div>
       {/* Video section */}
-      <div className="p-4 flex flex-col">
+      <div className="p-4 flex flex-col b-gradient">
         <h1 className="title pt-12 pb-8 px-8 md:px-12 lg:px-20 xl:px-36">
           Check out some of my work!
         </h1>
@@ -167,29 +165,31 @@ export default function Home() {
         </Link>
       </div>
       {/* Contact section */}
-      <div className="p-10 flex flex-col justify-center md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
-        <div className="mb-8 md:mb-0 relative place-self-center md:place-self-start h-96 w-96 md:h-72 md:w-72 lg:h-96 lg:w-96">
-          <Image
-            src="/pexels-janko-ferlic-1083502.jpg"
-            alt="baby bear placeholder"
-            layout="fill"
-            className="object-cover"
-          />
-        </div>
-        <div className="md:ml-16 place-self-center md:place-self-start">
-          <h2 className="title text-[var(--dark-text-color)]">Reach out!</h2>
-          <h3 className="pt-2 pb-4 text-2xl font-[600] text-[var(--dark-theme-color)]">
-            (777)777-7777
-          </h3>
-          <h3 className="pb-8 text-2xl font-[600] text-[var(--dark-theme-color)]">
-            jacobam*****@gmail.com
-          </h3>
-          <Link
-            className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
-            href="mailto:jacobamillman@gmail.com"
-          >
-            say hi!
-          </Link>
+      <div className="a-gradient flex">
+        <div className="p-10 h-full flex flex-col justify-center md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
+          <div className="mb-8 md:mb-0 relative place-self-center md:place-self-start h-96 w-96 md:h-72 md:w-72 lg:h-96 lg:w-96">
+            <Image
+              src="/pexels-janko-ferlic-1083502.jpg"
+              alt="baby bear placeholder"
+              layout="fill"
+              className="object-cover"
+            />
+          </div>
+          <div className="md:ml-16 place-self-center md:place-self-start">
+            <h2 className="title text-[var(--light-text-color)]">Reach out!</h2>
+            <h3 className="pt-2 pb-4 text-2xl font-[600] text-[var(--light-text-color)]">
+              (777)777-7777
+            </h3>
+            <h3 className="pb-8 text-2xl font-[600] text-[var(--light-text-color)]">
+              jacobam*****@gmail.com
+            </h3>
+            <Link
+              className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+              href="mailto:jacobamillman@gmail.com"
+            >
+              say hi!
+            </Link>
+          </div>
         </div>
       </div>
     </div>

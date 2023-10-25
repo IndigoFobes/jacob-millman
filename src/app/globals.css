@@ -9,7 +9,7 @@
 :root {
   --dark-theme-color: rgb(0, 0, 0);
   --light-theme-color: #202020;
-  --base-bg-color: #151515; 
+  --base-bg-color: #151515;  
   --accent-color: #d1b657;
   --dark-text-color: #151515;
   --light-text-color: #F6F6F6;
@@ -19,6 +19,14 @@
 
 .header-bg {
   background-image: linear-gradient( var(--dark-theme-color) 50%, var(--dark-theme-transparent));
+}
+
+.a-gradient {
+  background: linear-gradient(135deg, var(--dark-theme-color), var(--light-theme-color));
+}
+
+.b-gradient {
+  background: linear-gradient(135deg, var(--light-theme-color), var(--dark-theme-color));
 }
 
 .contentContainer {
