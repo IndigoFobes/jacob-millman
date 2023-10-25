@@ -22,12 +22,12 @@ export default function Home() {
             height={500}
             className="md:hidden object-cover"
           />
-          <div className="hidden md:flex absolute font-mono text-[1.5rem] lg:text-[2rem] xl:text-[3rem] bottom-[2rem] z-30 left-0 translate-x-10 -rotate-6 ">
+          {/* <div className="hidden md:flex absolute font-mono text-[1.5rem] lg:text-[2rem] xl:text-[3rem] bottom-[2rem] z-30 left-0 translate-x-10 -rotate-6 ">
             Jacob A. Millman
-          </div>
+          </div> */}
         </div>
-        <div className="col-start-1 col-end-8 flex flex-col justify-center content-center my-auto mx-20 py-10 2xl:pr-60">
-          <h1 className="text-[var(--light-text-color)] font-[300] text-md md:text-xl leading-normal mb-10 mx-40 text-center">
+        <div className="col-start-1 col-end-8 flex flex-col justify-center content-center my-auto px-4 md:px-20 py-10 2xl:pr-60 bg-[var(--dark-theme-color)]">
+          <h1 className=" text-[var(--light-text-color)] font-[300] text-md md:text-xl leading-normal mb-10 mx-8 md:mx-20 lg:mx-40 text-center">
             Small paragraph about me. Something that will very clearly express
             who I am as an{" "}
             <span className="text-[var(--light-text-color)]">actor</span> and a{" "}
@@ -37,7 +37,7 @@ export default function Home() {
           </h1>
           <div className="flex justify-center">
             <Link
-              className="font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+              className="font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:text-[var(--accent-color)]"
               href="/about"
             >
               read more
@@ -54,13 +54,12 @@ export default function Home() {
           {/* first show */}
           <li className="flex flex-col md:grid md:grid-cols-5 pb-24">
             {/* image */}
-            <div className="col-start-1 col-end-3 md:pr-10 mx-auto">
+            <div className="md:col-start-1 md:col-end-3 md:pr-10 relative md:min-h-min md:min-w-min md:max-h-96 md:max-w-96 mr-10">
               <Image
-                src="/male_placeholder_image.jpeg"
-                alt="Male placeholder"
-                width={500}
-                height={500}
-                className="object-contain pb-10 md:pb-0"
+                src="/pillowman_featured.jpg"
+                alt="Jacob in Pillowman"
+                fill
+                className="object-cover"
               />
             </div>
             {/* text */}
@@ -78,7 +77,7 @@ export default function Home() {
                 plays. Jacob is so excited to be playing.... Just brief snippet
                 of info about upcoming or current plays.
               </p>
-              <p className="pt-6 md:pt-10 text-lg lg:text-xl font-[600] text-[var(--dark-theme-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
+              <p className="pt-6 md:pt-10 text-lg lg:text-xl font-[600] text-[var(--light-text-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
                 get details
               </p>
             </div>
