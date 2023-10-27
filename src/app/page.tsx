@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
 
 export default function Home() {
   return (
@@ -63,11 +64,11 @@ export default function Home() {
               />
             </div>
             {/* text */}
-            <div className="flex flex-col col-start-3 col-end-6 mx-10 md:mx-0">
-              <h2 className="text-3xl md:text-4xl font-[600]">
+            <div className="flex flex-col col-start-3 col-end-6 pl-10 mx-10 md:mx-0">
+              <h2 className="text-3xl md:text-4xl font-[500]">
                 As You Like It
               </h2>
-              <h3 className="text-2xl 2xl:text-3xl font-[500] mt-2 mb-4">
+              <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
                 Theatre Name
               </h3>
               <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
@@ -77,9 +78,11 @@ export default function Home() {
                 plays. Jacob is so excited to be playing.... Just brief snippet
                 of info about upcoming or current plays.
               </p>
-              <p className="pt-6 md:pt-10 text-lg lg:text-xl font-[600] text-[var(--light-text-color)] hover:text-[var(--accent-color)] hover:cursor-pointer">
-                get details
-              </p>
+              <div className="place-self-start">
+                <p className="hover-underline-animation pt-6 md:pt-10 text-lg lg:text-xl font-[500] text-[var(--light-text-color)] hover:cursor-pointer">
+                  get details
+                </p>
+              </div>
             </div>
           </li>
         </ul>
