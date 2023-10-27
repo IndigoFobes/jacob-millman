@@ -51,13 +51,13 @@ export default function Header() {
         </h1>
       </Link>
       {/* only visible on screens medium and larger */}
-      <ul className="hidden menu-item font-[300] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-lg">
+      <ul className="hidden menu-item font-[400] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-lg">
         {menuItems.map((item) => {
           return item.hasOwnProperty("children") ? (
             <MediaDropdown item={item} />
           ) : (
             <Link
-              className="hover:text-[var(--accent-color)]"
+              className="hover:text-[var(--accent-color)] place-self-center hover-underline-animation"
               href={item?.route || ""}
             >
               {item.title}

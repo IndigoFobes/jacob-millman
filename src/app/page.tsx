@@ -38,7 +38,7 @@ export default function Home() {
           </h1>
           <div className="flex justify-center">
             <Link
-              className="font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:text-[var(--accent-color)]"
+              className="font-[600] text-center bg-[var(--dark-theme-color)] my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover-underline-animation"
               href="/about"
             >
               read more
@@ -102,7 +102,7 @@ export default function Home() {
         <div className="col-start-5 col-end-11 flex flex-col gap-10 justify-center items-center mx-auto">
           <h2 className="title text-[var(--light-text-color)]">Headshots</h2>
           <Link
-            className="font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+            className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
             href="/media/photos"
           >
             see more headshots
@@ -117,7 +117,7 @@ export default function Home() {
             Production Shots
           </h2>
           <Link
-            className="font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+            className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
             href="/media/photos"
           >
             see more production shots
@@ -136,16 +136,15 @@ export default function Home() {
       {/* Quote section */}
       <div className="bg-[var(--dark-theme-color)] p-8 md:p-10">
         <p className="font-mono title text-[var(--light-text-color)] text-center lg:mx-20 my-5">
-          {`"You miss 100% of the shots`}
-          <br className="hidden md:flex"></br>{" "}
-          {`you don’t take. -Wayne Gretzky”`}
-          <br></br> {`-Michael Scott`}
+          {`"Review about Jacob in a show`}
+          <br className="hidden md:flex"></br> {`that he did that time.”`}
+          <br></br> {`- playbill.com`}
         </p>
       </div>
       {/* Video section */}
       <div className="p-4 flex flex-col b-gradient">
-        <h1 className="title pt-12 pb-8 px-8 md:px-12 lg:px-20 xl:px-36">
-          Check out some of my work!
+        <h1 className="title pt-12 pb-4 place-self-center">
+          Check out some of my work
         </h1>
         {/* Youtube video */}
         <div className="bg-fixed flex flex-col items-center w-full relative">
@@ -161,37 +160,41 @@ export default function Home() {
           </div>
         </div>
         <Link
-          className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+          className="mx-auto my-16 font-[600] text-center rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover-underline-animation"
           href="/media/videos"
         >
           see more videos
         </Link>
       </div>
       {/* Contact section */}
-      <div className="a-gradient flex">
-        <div className="p-10 h-full flex flex-col justify-center md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
-          <div className="mb-8 md:mb-0 relative place-self-center md:place-self-start h-96 w-96 md:h-72 md:w-72 lg:h-96 lg:w-96">
-            <Image
+      <div className="contact-image flex">
+        <div className="image-overlay w-full">
+          <div className="p-10 h-full flex flex-col justify-center md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
+            <div className="mb-8 md:mb-0 relative place-self-center md:place-self-start h-96 w-96 md:h-72 md:w-72 lg:h-96 lg:w-96">
+              {/* <Image
               src="/pexels-janko-ferlic-1083502.jpg"
               alt="baby bear placeholder"
               layout="fill"
               className="object-cover"
-            />
-          </div>
-          <div className="md:ml-16 place-self-center md:place-self-start">
-            <h2 className="title text-[var(--light-text-color)]">Reach out!</h2>
-            <h3 className="pt-2 pb-4 text-2xl font-[600] text-[var(--light-text-color)]">
-              (777)777-7777
-            </h3>
-            <h3 className="pb-8 text-2xl font-[600] text-[var(--light-text-color)]">
-              jacobam*****@gmail.com
-            </h3>
-            <Link
-              className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
-              href="mailto:jacobamillman@gmail.com"
-            >
-              say hi!
-            </Link>
+            /> */}
+            </div>
+            <div className="md:ml-16 place-self-center md:place-self-start">
+              <h2 className="title text-[var(--light-text-color)]">
+                Reach out!
+              </h2>
+              <h3 className="pt-2 pb-4 text-2xl font-[600] text-[var(--light-text-color)]">
+                (777)777-7777
+              </h3>
+              <h3 className="pb-8 text-2xl font-[600] text-[var(--light-text-color)]">
+                jacobam*****@gmail.com
+              </h3>
+              <Link
+                className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+                href="mailto:jacobamillman@gmail.com"
+              >
+                say hi!
+              </Link>
+            </div>
           </div>
         </div>
       </div>

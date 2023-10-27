@@ -33,8 +33,17 @@
 	min-height: calc(100vh - 88px)
 }
 
+.contact-image {
+  background-image: url("/pillowman_featured.jpg");
+  background-size: cover;
+}
+
 .header-title {
   font-size: 3rem
+}
+
+.image-overlay {
+  background-color: rgba(41, 41, 41, 0.3);
 }
 
 .title {
@@ -88,7 +97,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--light-text-color) ;
+  background-color: var(--accent-color) ;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
