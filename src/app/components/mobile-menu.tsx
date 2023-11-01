@@ -45,8 +45,8 @@ export default function MobileDropdown() {
       <div className="md:hidden font-sans font-[500] text-[var(--light-text-color)]">
         <header className="font-sans w-full bg-[var(--dark-theme-color)] grid grid-cols-5 md:flex md:flex-col justify-center">
           <Link href="/" className="col-start-2 col-end-5">
-            <h1 className="font-[600] text-center text-[var(--light-text-color)] py-3 px-4 header-title">
-              JACOB MILLMAN
+            <h1 className="font-[300] text-center text-[var(--light-text-color)] py-3 px-4 header-title">
+              Jacob Millman
             </h1>
           </Link>
           <div className="md:hidden text-[var(--light-text-color)] flex justify-center place-items-center">

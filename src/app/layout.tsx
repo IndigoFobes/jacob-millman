@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import MobileDropdown from "./components/mobile-menu";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import localFont from "next/font/local";
 config.autoAddCss = false;
 
 // import fonts
