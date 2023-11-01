@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero section */}
-      <div className="relative bg-[var(--light-theme-color)] flex flex-col md:grid grid-cols-7">
+      <div className="font-mono font-[400] relative bg-[var(--light-theme-color)] flex flex-col md:grid grid-cols-7">
         <div className="md:relative col-start-1 col-end-8 md:min-h-[30rem] lg:min-h-[40rem] xl:min-h-[50rem] xl:max-h-[60rem] w-full">
           <Image
             src="/Jacob_pillowman.jpg"
@@ -173,15 +173,15 @@ export default function Home() {
       <div className="w-screen contact-image flex">
         <div className="image-overlay w-full">
           <div className="p-10 h-full flex flex-col md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
-            <div className="md:mr-8 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">
+            <div className="md:mr-16 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">
               <h2 className="title text-[var(--light-text-color)]">
-                Reach out!
+                Reach out
               </h2>
             </div>
             {/* vertical line */}
             <div className="verticalLine h-3/4 hidden md:flex"></div>
             <div className="md:ml-8 md:place-self-start flex w-1/2">
-              <div className="flex flex-col">
+              <div className="flex flex-col lg:mt-4">
                 <h3 className="pt-2 pb-4 sm:text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
                   (777)777-7777
                 </h3>

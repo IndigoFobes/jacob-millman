@@ -9,12 +9,13 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
 // import fonts
-import { Poppins, La_Belle_Aurore, Oxygen, Hind } from "next/font/google";
+import { Poppins, La_Belle_Aurore, Raleway, Mulish } from "next/font/google";
 
 export const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   variable: "--font-poppins",
 });
 
@@ -25,18 +26,20 @@ export const la_belle_aurora = La_Belle_Aurore({
   variable: "--font-aurora",
 });
 
-export const oxygen = Oxygen({
+export const raleway = Raleway({
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "700"],
-  variable: "--font-oxygen",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-raleway",
 });
 
-export const hind = Hind({
+export const mulish = Mulish({
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-hind",
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-mulish",
 });
 
 export const metadata: Metadata = {
@@ -52,11 +55,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${la_belle_aurora.variable} ${oxygen.variable} ${hind.variable} bg-[var(--base-bg-color)] text-[var(--light-text-color)] relative min-h-screen`}
+        className={`${mulish.variable} ${la_belle_aurora.variable} font-mono bg-[var(--base-bg-color)] text-[var(--light-text-color)] relative min-h-screen`}
       >
         <Header />
         <MobileDropdown />
-        <main className="font-sans relative contentContainer">{children}</main>
+        <main className="font-mono relative contentContainer">{children}</main>
         <Footer />
       </body>
     </html>

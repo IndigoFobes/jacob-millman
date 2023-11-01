@@ -35,7 +35,7 @@ const menuItems: MenuItem[] = [
 
 export default function Header() {
   return (
-    <header className="absolute top-0 right-0 header-bg hidden z-30 font-sans w-full md:flex md:flex-col justify-center">
+    <header className="absolute top-0 right-0 header-bg hidden z-30 w-full md:flex md:flex-col justify-center">
       <Link href="/" className="col-start-2 col-end-5">
         <h1 className=" font-[300] font-sans text-center text-[var(--light-text-color)] py-3 px-4 header-title">
           Jacob Millman
