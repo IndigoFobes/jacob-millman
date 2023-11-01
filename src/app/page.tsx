@@ -115,7 +115,7 @@ export default function Home() {
             </h2>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
-              href="/media/photos"
+              href="/resume"
             >
               see more
             </Link>
@@ -128,7 +128,7 @@ export default function Home() {
             <h2 className="title text-[var(--light-text-color)]">Media</h2>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
-              href="/media/photos"
+              href="/media"
             >
               see more media
             </Link>
