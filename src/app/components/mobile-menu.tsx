@@ -22,7 +22,7 @@ const menuItems: MenuItem[] = [
   },
 
   {
-    title: "RESUME",
+    title: "HEADSHOT + RESUME",
     route: "/resume",
   },
   {

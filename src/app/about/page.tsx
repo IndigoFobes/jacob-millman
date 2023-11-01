@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="w-9/12 mx-auto mt-48 mb-32">
-      <h1 className="title pb-10">About me</h1>
+    <div className="w-9/12 mx-auto pt-16 md:pt-48 mb-32">
+      <h1 className="title pb-10 text-center md:text-start">About me</h1>
       <Image
         src="/male_placeholder_image.jpeg"
         alt="Male placeholder"
         width={450}
         height={500}
-        className="float-right pl-8 pb-6"
+        className="mx-auto md:float-right md:pl-16 pb-10"
       />
-      <p className="text-[1.1rem] text-justify font-[400]">
+      <p className="text-[1.1rem] text-start font-[400]">
         A wonderful serenity has taken possession of my entire soul, like these
         sweet mornings of spring which I enjoy with my whole heart. I am alone,
         and feel the charm of existence in this spot, which was created for the

@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${la_belle_aurora.variable} ${oxygen.variable} ${hind.variable} bg-[var(--base-bg-color)] text-[var(--light-text-color)]`}
+        className={`${poppins.variable} ${la_belle_aurora.variable} ${oxygen.variable} ${hind.variable} bg-[var(--base-bg-color)] text-[var(--light-text-color)] relative min-h-screen`}
       >
         <Header />
         <MobileDropdown />

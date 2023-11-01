@@ -15,6 +15,7 @@
   --light-text-color: #F6F6F6;
   --rounded-tiny: .1rem;
   --dark-theme-transparent: rgba(41, 41, 41, 0);
+  --light-text-transparent: rgba(246, 246, 246, .5)
 }
 
 .header-bg {
@@ -36,6 +37,8 @@
 .contact-image {
   background-image: url("/pillowman_featured.jpg");
   background-size: cover;
+  background-position: center;
+  width: full;
 }
 
 .header-title {
@@ -105,4 +108,8 @@
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.verticalLine {
+  border-left: medium solid var(--light-text-color)
 }

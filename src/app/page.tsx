@@ -47,7 +47,7 @@ export default function Home() {
         </div>
       </div>
       {/* What's New Section */}
-      <div className="p-4 flex flex-col a-gradient pb-20">
+      <div className="p-4 flex flex-col a-gradient">
         <div className="title pt-12 pb-8 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4">What's New?</h1>
         </div>
@@ -170,27 +170,29 @@ export default function Home() {
         </Link>
       </div>
       {/* Contact section */}
-      <div className="contact-image flex">
+      <div className="w-screen contact-image flex">
         <div className="image-overlay w-full">
-          <div className="p-10 h-full flex flex-col justify-center md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
-            <div className="mb-8 md:mb-0 md:h-72 lg:h-96">
+          <div className="p-10 h-full flex flex-col md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
+            <div className="md:mr-8 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">
               <h2 className="title text-[var(--light-text-color)]">
                 Reach out!
               </h2>
             </div>
-            <div className="md:ml-16 place-self-center md:place-self-start flex w-1/3">
-              <div>
-                <h3 className="pt-2 pb-4 text-2xl font-[600] text-[var(--light-text-color)]">
+            {/* vertical line */}
+            <div className="verticalLine h-3/4 hidden md:flex"></div>
+            <div className="md:ml-8 md:place-self-start flex w-1/2">
+              <div className="flex flex-col">
+                <h3 className="pt-2 pb-4 sm:text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
                   (777)777-7777
                 </h3>
-                <h3 className="pb-8 text-2xl font-[600] text-[var(--light-text-color)]">
+                <h3 className="pb-8 sm:text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
                   jacobam*****@gmail.com
                 </h3>
                 <Link
-                  className="mx-auto my-16 font-[600] text-center bg-[var(--dark-theme-color)] py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--accent-color)] hover:text-[var(--dark-text-color)]"
+                  className="w-3/4 mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
                   href="mailto:jacobamillman@gmail.com"
                 >
-                  say hi!
+                  Send an email
                 </Link>
               </div>
             </div>

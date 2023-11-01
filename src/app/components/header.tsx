@@ -33,7 +33,7 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
-    title: "Resume",
+    title: "Headshot + Resume",
     route: "/resume",
   },
   {

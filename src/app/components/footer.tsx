@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="relative font-sans flex bg-[var(--light-theme-color)] min-h-[8rem] text-[var(--light-text-color)]">
-      <div></div>
       <div className="absolute flex flex-col top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 gap-5">
         <Link href="/">
           <h4 className="font-[600] text-xl lg:text-2xl xl:text-3xl text-center hover:cursor-pointer">
