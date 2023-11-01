@@ -13,17 +13,12 @@ const menuItems: MenuItem[] = [
     route: "/about",
   },
   {
-    title: "PHOTOS",
-    route: "/media/photos",
-  },
-  {
-    title: "VIDEOS",
-    route: "/media/videos",
-  },
-
-  {
     title: "HEADSHOT + RESUME",
     route: "/resume",
+  },
+  {
+    title: "MEDIA",
+    route: "/media",
   },
   {
     title: "CONTACT",
