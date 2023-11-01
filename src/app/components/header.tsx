@@ -42,7 +42,7 @@ export default function Header() {
         </h1>
       </Link>
       {/* only visible on screens medium and larger */}
-      <div className="menu-height flex w-screen">
+      <div className="menu-height flex w-screen place-items-end">
         <ul className="hidden w-full menu-item font-[400] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-md lg:text-lg">
           {menuItems.map((item) => {
             return item.hasOwnProperty("children") ? (

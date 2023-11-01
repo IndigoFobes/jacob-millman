@@ -110,12 +110,14 @@ export default function Home() {
           </div>
           {/* text/link */}
           <div className="col-start-4 col-end-11 flex flex-col gap-10 justify-center items-center mx-auto">
-            <h2 className="title text-[var(--light-text-color)]">Headshots</h2>
+            <h2 className="title text-[var(--light-text-color)]">
+              {`Headshots & Resume`}
+            </h2>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
               href="/media/photos"
             >
-              see more headshots
+              see more
             </Link>
           </div>
         </div>
@@ -123,14 +125,12 @@ export default function Home() {
         <div className="grid grid-cols-10 a-gradient h-1/2">
           {/* text/link */}
           <div className="col-start-1 col-end-8 flex flex-col gap-10 justify-center items-center mx-auto">
-            <h2 className="title text-[var(--light-text-color)]">
-              Production Shots
-            </h2>
+            <h2 className="title text-[var(--light-text-color)]">Media</h2>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
               href="/media/photos"
             >
-              see more production shots
+              see more media
             </Link>
           </div>
           {/* headshot */}
