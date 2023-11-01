@@ -170,7 +170,7 @@ export default function Home() {
         </Link>
       </div>
       {/* Contact section */}
-      <div className="w-screen contact-image flex">
+      <div className="w-screen contact-image flex" id="contact">
         <div className="image-overlay w-full">
           <div className="p-10 h-full flex flex-col md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
             <div className="md:mr-16 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">

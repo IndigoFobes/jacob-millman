@@ -22,7 +22,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "CONTACT",
-    route: "/",
+    route: "/#contact",
   },
 ];
 
