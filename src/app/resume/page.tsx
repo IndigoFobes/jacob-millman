@@ -36,9 +36,10 @@ const headshots: Headshots[] = [
 export default function Page() {
   return (
     <div>
-      <div className="mx-20 md:pt-48 mb-32">
+      <div className="mx-10 sm:mx-20 pt-10 md:pt-48 mb-16 sm:mb-32">
         <h1 className="title pb-10 text-center md:text-start">{`Headshots & Resume`}</h1>
-        <div className="grid grid-cols-2 w-full gap-5">
+        <div className="flex flex-col sm:grid sm:grid-cols-2 w-full gap-5">
+          {/* Headshots */}
           <div className="grid grid-cols-2 grid-rows-2 gap-4">
             {/* <div>headshots</div>
           <div>headshots</div>
@@ -56,6 +57,7 @@ export default function Page() {
               );
             })}
           </div>
+          {/* Resume */}
           <div className="w-full flex flex-col">
             <Image
               src={"/JacobMillman-Resume.png"}
