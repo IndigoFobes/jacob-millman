@@ -1,27 +1,28 @@
 "use client";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import React, { useState } from "react";
 import Link from "next/link";
 import { MenuItem } from "./header";
 
 const menuItems: MenuItem[] = [
   {
-    title: "HOME",
+    title: "Home",
     route: "/",
   },
   {
-    title: "ABOUT",
+    title: "About",
     route: "/about",
   },
   {
-    title: "HEADSHOT + RESUME",
+    title: "Headshot + Resume",
     route: "/resume",
   },
   {
-    title: "MEDIA",
+    title: "Media",
     route: "/media",
   },
   {
-    title: "CONTACT",
+    title: "Contact",
     route: "/#contact",
   },
 ];
@@ -38,19 +39,23 @@ export default function MobileDropdown() {
   };
 
   const transClass = mobileIsOpen ? "flex h-[212px]" : "flex h-0";
-  const textHidden = mobileIsOpen ? "flex" : "absolute -top-[200px] opacity-0";
+  const textHidden = mobileIsOpen
+    ? "flex"
+    : "absolute -top-[200px] opacity-0 rotate-45";
 
   return (
     <>
-      <div className="md:hidden font-sans font-[500] text-[var(--light-text-color)]">
-        <header className="font-sans w-full bg-[var(--dark-theme-color)] grid grid-cols-5 md:flex md:flex-col justify-center">
+      <div className="md:hidden font-[500] text-[var(--light-text-color)]">
+        <header className="font-mono w-full bg-[var(--dark-theme-color)] grid grid-cols-5 md:flex md:flex-col justify-center">
           <Link href="/" className="col-start-2 col-end-5">
             <h1 className="font-[300] text-center text-[var(--light-text-color)] py-3 px-4 header-title">
               Jacob Millman
             </h1>
           </Link>
           <div className="md:hidden text-[var(--light-text-color)] flex justify-center place-items-center">
-            <button onClick={toggle}>click here</button>
+            <button onClick={toggle} className="sm:text-2xl">
+              <AiOutlineMenu />
+            </button>
           </div>
         </header>
         {/* Dropdown */}
@@ -73,10 +78,13 @@ export default function MobileDropdown() {
             })}
           </ul>
           <p
-            className={`absolute top-5 right-5 ${textHidden} cursor-pointer`}
+            className={`absolute top-8 right-10 sm:top-10 sm:right-16 ${textHidden} cursor-pointer sm:text-2xl close-menu`}
             onClick={toggle}
+            style={{
+              transition: "all 300ms ease-in-out",
+            }}
           >
-            X
+            <AiOutlineClose />
           </p>
         </div>
         {/* </div> */}

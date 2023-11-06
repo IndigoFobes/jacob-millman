@@ -68,6 +68,7 @@ export default function Page() {
                 className="bg-[var(--light-theme-color)] hover:bg-[var(--accent-color)] place-self-center w-full text-center py-2"
                 href={"JacobMillman-Resume.pdf"}
                 download
+                target={"_blank"}
               >
                 Download Resume
               </Link>

@@ -154,3 +154,11 @@
 .verticalLine {
   border-left: medium solid var(--light-text-color)
 }
+
+/* .close-menu {
+  transition: transform 2s;
+}
+
+.close-menu:hover {
+  transform: rotate(90deg);
+} */
