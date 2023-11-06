@@ -14,15 +14,15 @@ const headshots: Headshots[] = [
     alt: "example",
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/Jacob_hs_2.jpg",
     alt: "example",
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/Jacob_hs_5.jpg",
     alt: "example",
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/Jacob_hs_4.jpg",
     alt: "example",
   },
 ];
