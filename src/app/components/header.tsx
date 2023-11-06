@@ -36,11 +36,11 @@ const menuItems: MenuItem[] = [
 export default function Header() {
   return (
     <header className="absolute top-0 right-0 header-bg hidden z-30 w-full md:flex md:flex-col justify-center">
-      <Link href="/" className="col-start-2 col-end-5">
-        <h1 className="absolute top-0 w-screen text-center text-[var(--light-text-color)] pt-3 px-4 header-title">
-          Jacob Millman
-        </h1>
-      </Link>
+      <div className="absolute flex justify-center top-0 w-screen text-center text-[var(--light-text-color)] pt-3 px-4 header-title">
+        <Link href="/" className="">
+          <h1>Jacob Millman</h1>
+        </Link>
+      </div>
       {/* only visible on screens medium and larger */}
       <div className="menu-height flex w-screen place-items-end">
         <ul className="hidden w-full menu-item font-[400] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-md lg:text-lg">

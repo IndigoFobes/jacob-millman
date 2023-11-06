@@ -100,18 +100,18 @@ export default function Home() {
         {/* Headshots section */}
         <div className="grid grid-cols-10 b-gradient h-1/2">
           {/* headshot */}
-          <div className="col-start-1 col-end-4 w-full relative h-full">
+          <div className="col-start-1 col-end-6 md:col-end-4 w-full relative h-full">
             <Image
               src="/Jacob_ main_hs.jpg"
-              alt="Male placeholder"
+              alt="Jacob's face"
               fill
               className="object-cover object-top"
             />
           </div>
           {/* text/link */}
-          <div className="col-start-4 col-end-11 flex flex-col gap-10 justify-center items-center mx-auto">
+          <div className="col-start-6 md:col-start-4 col-end-11 flex flex-col gap-10 justify-center items-center mx-auto">
             <h2 className="title text-[var(--light-text-color)]">
-              {`Headshots & Resume`}
+              {`Headshots`} <br className="sm:hidden"></br> {`& Resume`}
             </h2>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
@@ -124,7 +124,7 @@ export default function Home() {
         {/* Production shot section */}
         <div className="grid grid-cols-10 a-gradient h-1/2">
           {/* text/link */}
-          <div className="col-start-1 col-end-8 flex flex-col gap-10 justify-center items-center mx-auto">
+          <div className="col-start-1 col-end-6 md:col-end-8 flex flex-col gap-10 justify-center items-center mx-auto">
             <h2 className="title text-[var(--light-text-color)]">Media</h2>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
@@ -133,8 +133,8 @@ export default function Home() {
               see more media
             </Link>
           </div>
-          {/* headshot */}
-          <div className="col-start-8 col-end-11 w-full relative h-full">
+          {/* photo */}
+          <div className="col-start-6 md:col-start-8 col-end-11 w-full relative h-full">
             <Image
               src="/SFB_main.jpg"
               alt="Male placeholder"

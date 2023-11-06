@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${mulish.variable} ${la_belle_aurora.variable} font-mono bg-[var(--base-bg-color)] text-[var(--light-text-color)] relative min-h-screen`}
       >
