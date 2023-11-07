@@ -11,6 +11,12 @@ export interface Photos {
   id: number;
 }
 
+// buttons
+export interface Buttons {
+  id: number;
+  title: string;
+}
+
 const photos: Photos[] = [
   {
     src: "/Jacob_ main_hs.jpg",
@@ -50,12 +56,68 @@ const photos: Photos[] = [
   },
 ];
 
+const buttons: Buttons[] = [
+  {
+    id: 1,
+    title: "Video 1",
+  },
+  {
+    id: 2,
+    title: "Video 2",
+  },
+  {
+    id: 3,
+    title: "Video 3",
+  },
+];
+
+/* For Video State Rendering
+
+I am guessing I need UseState
+
+Dislay certain videos depending on which "button" is clicked/toggled  
+*/
+
 export default function Page() {
+  function handleClick(e) {
+    console.log(e.target.key);
+  }
+
+  const [rendered, setRendered] = useState(0);
+
+  let video;
+
+  if (rendered === 0) {
+    video = <p>Click below to see a video</p>;
+  } else if (rendered === 1) {
+    video = <p>Video 1</p>;
+  } else if (rendered === 2) {
+    video = <p>Video 2</p>;
+  } else if (rendered === 3) {
+    video = <p>Video 3</p>;
+  } else {
+    video = <p>So sorry, something went wrong!</p>;
+  }
+
   return (
     <div className="w-9/12 mx-auto pt-16 md:pt-48 mb-20 md:mb-32">
       <div className="grid grid-rows-2 gap-10 mt-5">
         {/* Videos section */}
-        <div className="bg-white/50">I WILL BE VIDEO SECTION</div>
+        <div className="bg-white/50 grid grid-rows-5">
+          <div className="row-start-1 row-span-4">{video}</div>
+          <div className="grid grid-cols-3">
+            {buttons.map((button) => {
+              return (
+                <button key={button.id} onClick={handleClick}>
+                  {button.title}
+                </button>
+              );
+            })}
+          </div>
+          {/* <button onClick={handleClick} className="bg-red-400 m-4 p-3">
+            Click me
+          </button> */}
+        </div>
         {/* Production photos section */}
         <div className="grid grid-cols-3 grid-rows-2 gap-4">
           {photos.map((item) => {
