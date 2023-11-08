@@ -2,6 +2,7 @@ import Header from "../components/header";
 import Link from "next/link";
 import Image from "next/image";
 import Resume from "../components/resume";
+import { AiOutlineDownload } from "react-icons/ai";
 
 // images
 export interface Headshots {
@@ -47,13 +48,23 @@ export default function Page() {
           <div>headshots</div> */}
             {headshots.map((item) => {
               return (
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  key={item.id}
-                  width={1000}
-                  height={500}
-                />
+                <Link href={item.src} download target={"_blank"}>
+                  <div className="relative">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      key={item.id}
+                      width={1000}
+                      height={500}
+                    />
+                    <div
+                      className="opacity-0 hover:opacity-100 absolute flex bg-black/80 top-0 left-0 w-full h-full justify-center"
+                      style={{ transition: "opacity 300ms ease-in-out" }}
+                    >
+                      <AiOutlineDownload className="place-self-center text-[4rem] text-slate-100/80" />
+                    </div>
+                  </div>
+                </Link>
               );
             })}
           </div>
@@ -71,6 +82,7 @@ export default function Page() {
                 href={"JacobMillman-Resume.pdf"}
                 download
                 target={"_blank"}
+                style={{ transition: "all 300ms ease-in-out" }}
               >
                 Download Resume
               </Link>

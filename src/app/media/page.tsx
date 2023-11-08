@@ -163,7 +163,9 @@ export default function Page() {
           <div className="lg:row-span-4">
             <div className="py-2 px-1 rounded-md flex justify-center">
               {rendered == 0 ? (
-                <div>Click to select a video</div>
+                <div className="bg-slate-100/20 w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
+                  Click to select a video
+                </div>
               ) : (
                 <div>{video}</div>
               )}
@@ -178,6 +180,7 @@ export default function Page() {
                   value={button.id}
                   onClick={handleClick}
                   className={`rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 m-4 w-3/4 place-self-center h-full`}
+                  style={{ transition: "all 300ms ease-in-out" }}
                 >
                   {button.title}
                 </button>
