@@ -17,6 +17,13 @@ export interface Buttons {
   title: string;
 }
 
+// video details
+export interface Videos {
+  id: number;
+  src: string;
+  alt: string;
+}
+
 const photos: Photos[] = [
   {
     src: "/Jacob_ main_hs.jpg",
@@ -71,6 +78,24 @@ const buttons: Buttons[] = [
   },
 ];
 
+const videos: Videos[] = [
+  {
+    id: 1,
+    src: "https://www.youtube.com/embed/Sjf0SbpnHXI?si=5WVqpKRmrtaV1YCS",
+    alt: "Morning Person – Shrek",
+  },
+  {
+    id: 2,
+    src: "https://www.youtube.com/embed/lB0VLzzSxcU?si=Wna_UX6s9Njs6zSZ",
+    alt: "What's Up Duloc",
+  },
+  {
+    id: 3,
+    src: "https://www.youtube.com/embed/3sPuuMg9G0Y?si=n4XEYAWO22zLgCJ7",
+    alt: "Who I'd Be",
+  },
+];
+
 /* For Video State Rendering
 
 I am guessing I need UseState
@@ -85,52 +110,42 @@ export default function Page() {
 
   const [rendered, setRendered] = useState(0);
 
-  let video:
-    | string
-    | number
-    | boolean
-    | React.JSX.Element
-    | Iterable<React.ReactNode>
-    | React.PromiseLikeOfReactNode;
+  // let video:
+  //   | string
+  //   | number
+  //   | boolean
+  //   | React.JSX.Element
+  //   | Iterable<React.ReactNode>
+  //   | React.PromiseLikeOfReactNode;
+
+  let source;
+  let title;
 
   if (rendered == 0) {
-    video = <p>Click below to see a video</p>;
   } else if (rendered == 1) {
-    video = (
-      <iframe
-        className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
-        src="https://www.youtube.com/embed/Sjf0SbpnHXI?si=5WVqpKRmrtaV1YCS"
-        title="Morning Person – Shrek"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    );
+    source = videos[0].src;
+    title = videos[0].alt;
+    // title = video[0].title;
   } else if (rendered == 2) {
-    video = (
-      <iframe
-        className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
-        src="https://www.youtube.com/embed/lB0VLzzSxcU?si=Wna_UX6s9Njs6zSZ"
-        title="What's Up Duloc"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    );
+    source = videos[1].src;
+    title = videos[1].alt;
   } else if (rendered == 3) {
-    video = (
-      <iframe
-        className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
-        src="https://www.youtube.com/embed/3sPuuMg9G0Y?si=n4XEYAWO22zLgCJ7"
-        title="Who I'd Be"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    );
+    source = videos[2].src;
+    title = videos[2].alt;
   } else {
-    video = <p>So sorry, something went wrong! {rendered}</p>;
+    console.log("Something went wrong.");
   }
+
+  const video = (
+    <iframe
+      className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
+      src={source}
+      title={title}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  );
 
   // ***RENDERED***
   return (
@@ -140,7 +155,12 @@ export default function Page() {
         <div className="flex flex-col mb-10">
           <div className="lg:row-span-4">
             <div className="py-2 px-1 rounded-md flex justify-center">
-              {video}
+              {rendered == 0 ? (
+                <div>Click to select a video</div>
+              ) : (
+                <div>{video}</div>
+              )}
+              {/* {video} */}
             </div>
           </div>
           <div className="grid grid-cols-3 mt-5 lg:mx-10">
