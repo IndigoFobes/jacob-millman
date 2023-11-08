@@ -80,23 +80,29 @@ Dislay certain videos depending on which "button" is clicked/toggled
 
 export default function Page() {
   function handleClick(e) {
-    console.log(e.target.key);
+    setRendered(e.target.value);
   }
 
   const [rendered, setRendered] = useState(0);
 
-  let video;
+  let video:
+    | string
+    | number
+    | boolean
+    | React.JSX.Element
+    | Iterable<React.ReactNode>
+    | React.PromiseLikeOfReactNode;
 
-  if (rendered === 0) {
+  if (rendered == 0) {
     video = <p>Click below to see a video</p>;
-  } else if (rendered === 1) {
+  } else if (rendered == 1) {
     video = <p>Video 1</p>;
-  } else if (rendered === 2) {
+  } else if (rendered == 2) {
     video = <p>Video 2</p>;
-  } else if (rendered === 3) {
+  } else if (rendered == 3) {
     video = <p>Video 3</p>;
   } else {
-    video = <p>So sorry, something went wrong!</p>;
+    video = <p>So sorry, something went wrong! {rendered}</p>;
   }
 
   return (
@@ -108,7 +114,7 @@ export default function Page() {
           <div className="grid grid-cols-3">
             {buttons.map((button) => {
               return (
-                <button key={button.id} onClick={handleClick}>
+                <button key={button.id} value={button.id} onClick={handleClick}>
                   {button.title}
                 </button>
               );
