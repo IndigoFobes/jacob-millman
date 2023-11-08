@@ -59,15 +59,15 @@ const photos: Photos[] = [
 const buttons: Buttons[] = [
   {
     id: 1,
-    title: "Video 1",
+    title: "Dramatic Reel",
   },
   {
     id: 2,
-    title: "Video 2",
+    title: "Comedic Reel",
   },
   {
     id: 3,
-    title: "Video 3",
+    title: "Performace Clips",
   },
 ];
 
@@ -96,25 +96,62 @@ export default function Page() {
   if (rendered == 0) {
     video = <p>Click below to see a video</p>;
   } else if (rendered == 1) {
-    video = <p>Video 1</p>;
+    video = (
+      <iframe
+        className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
+        src="https://www.youtube.com/embed/Sjf0SbpnHXI?si=5WVqpKRmrtaV1YCS"
+        title="Morning Person – Shrek"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    );
   } else if (rendered == 2) {
-    video = <p>Video 2</p>;
+    video = (
+      <iframe
+        className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
+        src="https://www.youtube.com/embed/lB0VLzzSxcU?si=Wna_UX6s9Njs6zSZ"
+        title="What's Up Duloc"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    );
   } else if (rendered == 3) {
-    video = <p>Video 3</p>;
+    video = (
+      <iframe
+        className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
+        src="https://www.youtube.com/embed/3sPuuMg9G0Y?si=n4XEYAWO22zLgCJ7"
+        title="Who I'd Be"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    );
   } else {
     video = <p>So sorry, something went wrong! {rendered}</p>;
   }
 
+  // ***RENDERED***
   return (
     <div className="w-9/12 mx-auto pt-16 md:pt-48 mb-20 md:mb-32">
-      <div className="grid grid-rows-2 gap-10 mt-5">
+      <div className="flex flex-col gap-10 mt-5">
         {/* Videos section */}
-        <div className="bg-white/50 grid grid-rows-5">
-          <div className="row-start-1 row-span-4">{video}</div>
-          <div className="grid grid-cols-3">
+        <div className="flex flex-col mb-10">
+          <div className="lg:row-span-4">
+            <div className="py-2 px-1 rounded-md flex justify-center">
+              {video}
+            </div>
+          </div>
+          <div className="grid grid-cols-3 mt-5 lg:mx-10">
             {buttons.map((button) => {
               return (
-                <button key={button.id} value={button.id} onClick={handleClick}>
+                <button
+                  key={button.id}
+                  value={button.id}
+                  onClick={handleClick}
+                  className={`rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 m-4 w-3/4 place-self-center h-full`}
+                >
                   {button.title}
                 </button>
               );
