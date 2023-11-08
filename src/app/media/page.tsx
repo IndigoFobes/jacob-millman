@@ -26,40 +26,46 @@ export interface Videos {
 
 const photos: Photos[] = [
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/sfb_1.jpg",
     alt: "example",
     title: "example title",
     id: 0,
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/our-town_1.JPG",
     alt: "example",
     title: "example title",
     id: 1,
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/singfeld_1.jpg",
     alt: "example",
     title: "example title",
     id: 2,
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/sfb_2.jpg",
     alt: "example",
     title: "example title",
     id: 3,
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/singfeld_2.jpg",
     alt: "example",
     title: "example title",
     id: 4,
   },
   {
-    src: "/Jacob_ main_hs.jpg",
+    src: "/pillowman_2.jpg",
     alt: "example",
     title: "example title",
     id: 5,
+  },
+  {
+    src: "/pillowman_1.jpg",
+    alt: "example",
+    title: "example title",
+    id: 4,
   },
 ];
 
@@ -153,6 +159,7 @@ export default function Page() {
       <div className="flex flex-col gap-10 mt-5">
         {/* Videos section */}
         <div className="flex flex-col mb-10">
+          <h1 className="title text-center mb-10">Videos</h1>
           <div className="lg:row-span-4">
             <div className="py-2 px-1 rounded-md flex justify-center">
               {rendered == 0 ? (
@@ -182,16 +189,17 @@ export default function Page() {
           </button> */}
         </div>
         {/* Production photos section */}
+        <h1 className="title text-center mb-5">Production Photos</h1>
         <div className="grid grid-cols-3 grid-rows-2 gap-4">
           {photos.map((item) => {
             return (
-              <div className="relative">
+              <div className="relative min-h-[12rem] md:min-h-[20rem] lg:min-h-[25rem] xl:min-h-[30rem]">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   key={item.id}
-                  width={1000}
-                  height={500}
+                  fill
+                  className="object-cover"
                 />
                 <p className="absolute bottom-0 py-2 px-3 bg-black/50 w-full">
                   {item.title}
