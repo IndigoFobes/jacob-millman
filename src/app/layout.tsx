@@ -8,6 +8,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import localFont from "next/font/local";
 config.autoAddCss = false;
+import { AnimatePresence } from "framer-motion";
 
 // import fonts
 import { Poppins, La_Belle_Aurore, Raleway, Mulish } from "next/font/google";

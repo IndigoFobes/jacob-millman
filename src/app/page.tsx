@@ -1,7 +1,46 @@
+"use client";
 import Header from "./components/header";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+  useMotionValue,
+  Variants,
+} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+
+const introPictureVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: -500,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 2,
+    },
+  },
+};
+
+const introTextVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: 500,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
 
 export default function Home() {
   return (
@@ -55,16 +94,28 @@ export default function Home() {
           {/* first show */}
           <li className="flex flex-col md:grid md:grid-cols-5 pb-24">
             {/* image */}
-            <div className="md:col-start-1 md:col-end-3 relative place-self-center h-96 w-full mb-10 md:mb-0 md:w-full md:h-full md:mr-10">
+            <motion.div
+              className="md:col-start-1 md:col-end-3 relative place-self-center h-96 w-full mb-10 md:mb-0 md:w-full md:h-full md:mr-10"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={introPictureVariants}
+            >
               <Image
                 src="/singfeld_3.jpg"
                 alt="Jacob in Singfeld"
                 fill
                 className="object-cover"
               />
-            </div>
+            </motion.div>
             {/* text */}
-            <div className="flex flex-col col-start-3 col-end-6 pl-10 mx-10 md:mx-0">
+            <motion.div
+              className="flex flex-col col-start-3 col-end-6 pl-10 mx-10 md:mx-0"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={introTextVariants}
+            >
               <h2 className="text-3xl md:text-4xl font-[500]">Singfeld</h2>
               <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
                 The Jerry Orbach Theatre
@@ -85,7 +136,7 @@ export default function Home() {
                   get details
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </li>
         </ul>
       </div>

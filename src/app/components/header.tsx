@@ -3,6 +3,16 @@ import Link from "next/link";
 import MediaDropdown from "./media-dropdown";
 import React, { useState } from "react";
 import MobileDropdown from "./mobile-menu";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+  useMotionValue,
+  Variants,
+} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export interface MenuItem {
   title: string;
@@ -35,7 +45,12 @@ const menuItems: MenuItem[] = [
 
 export default function Header() {
   return (
-    <header className="absolute top-0 right-0 header-bg hidden z-30 w-full md:flex md:flex-col justify-center">
+    <motion.header
+      className="absolute top-0 right-0 header-bg hidden z-30 w-full md:flex md:flex-col justify-center"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
       <div className="absolute flex justify-center top-0 w-screen text-center text-[var(--light-text-color)] pt-3 px-4 header-title">
         <Link href="/" className="">
           <h1>Jacob Millman</h1>
@@ -58,6 +73,6 @@ export default function Header() {
           })}
         </ul>
       </div>
-    </header>
+    </motion.header>
   );
 }
