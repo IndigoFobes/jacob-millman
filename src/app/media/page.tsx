@@ -26,46 +26,58 @@ export interface Videos {
 
 const photos: Photos[] = [
   {
-    src: "/sfb_1.jpg",
-    alt: "example",
-    title: "example title",
+    src: "/pillowman_1.jpg",
+    alt: "The Pillowman",
+    title: "The Pillowman",
     id: 0,
   },
   {
-    src: "/our-town_1.JPG",
-    alt: "example",
-    title: "example title",
+    src: "/sfb_1.jpg",
+    alt: "Stupid F**king Bird",
+    title: "Stupid F**king Bird",
     id: 1,
   },
   {
-    src: "/singfeld_1.jpg",
-    alt: "example",
-    title: "example title",
+    src: "/our-town_1.JPG",
+    alt: "Our Town",
+    title: "Our Town",
     id: 2,
   },
   {
-    src: "/sfb_2.jpg",
-    alt: "example",
-    title: "example title",
+    src: "/singfeld_1.jpg",
+    alt: "Singfeld, 2023",
+    title: "Singfeld, 2023",
     id: 3,
   },
   {
-    src: "/singfeld_2.jpg",
-    alt: "example",
-    title: "example title",
+    src: "/sfb_2.jpg",
+    alt: "Stupid F**king Bird",
+    title: "Stupid F**king Bird",
     id: 4,
   },
   {
-    src: "/pillowman_2.jpg",
-    alt: "example",
-    title: "example title",
+    src: "/singfeld_2.jpg",
+    alt: "Singfeld, 2023",
+    title: "Singfeld, 2023",
     id: 5,
   },
   {
-    src: "/pillowman_1.jpg",
-    alt: "example",
-    title: "example title",
-    id: 4,
+    src: "/pillowman_2.jpg",
+    alt: "The Pillowman",
+    title: "The Pillowman",
+    id: 6,
+  },
+  {
+    src: "/Singfeld_3.jpg",
+    alt: "Singfeld, 2023",
+    title: "Singfeld, 2023",
+    id: 7,
+  },
+  {
+    src: "/Pillowman_3.jpg",
+    alt: "The Pillowman",
+    title: "The Pillowman",
+    id: 8,
   },
 ];
 
@@ -126,18 +138,22 @@ export default function Page() {
 
   let source;
   let title;
+  let id;
 
   if (rendered == 0) {
   } else if (rendered == 1) {
     source = videos[0].src;
     title = videos[0].alt;
+    id = videos[0].id;
     // title = video[0].title;
   } else if (rendered == 2) {
     source = videos[1].src;
     title = videos[1].alt;
+    id = videos[1].id;
   } else if (rendered == 3) {
     source = videos[2].src;
     title = videos[2].alt;
+    id = videos[2].id;
   } else {
     console.log("Something went wrong.");
   }
@@ -147,6 +163,7 @@ export default function Page() {
       className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
       src={source}
       title={title}
+      key={id}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
@@ -155,16 +172,18 @@ export default function Page() {
 
   // ***RENDERED***
   return (
-    <div className="w-9/12 mx-auto pt-16 md:pt-48 mb-20 md:mb-32">
+    <div className="lg:w-9/12 mx-8 sm:mx-auto sm:px-8 pt-16 md:pt-48 mb-20 md:mb-32">
       <div className="flex flex-col gap-10 mt-5">
         {/* Videos section */}
-        <div className="flex flex-col mb-10">
+        <div className="flex flex-col justify-center content-center mb-10">
           <h1 className="title text-center mb-10">Videos</h1>
           <div className="lg:row-span-4">
             <div className="py-2 px-1 rounded-md flex justify-center">
               {rendered == 0 ? (
-                <div className="bg-slate-100/20 w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
-                  Click to select a video
+                <div className="flex justify-center b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
+                  <p className="place-self-center font-[500] text-[1.7rem] md:text-[2rem]">
+                    Click below to see a video
+                  </p>
                 </div>
               ) : (
                 <div>{video}</div>
@@ -172,14 +191,14 @@ export default function Page() {
               {/* {video} */}
             </div>
           </div>
-          <div className="grid grid-cols-3 mt-5 lg:mx-10">
+          <div className="flex flex-col place-self-center sm:grid sm:grid-cols-3 mt-10 lg:mx-10 w-full">
             {buttons.map((button) => {
               return (
                 <button
                   key={button.id}
                   value={button.id}
                   onClick={handleClick}
-                  className={`rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 m-4 w-3/4 place-self-center h-full`}
+                  className={`rounded-[var(--rounded-tiny)] text-md md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 p-2 m-2 md:m-4 w-3/4 place-self-center h-full`}
                   style={{ transition: "all 300ms ease-in-out" }}
                 >
                   {button.title}

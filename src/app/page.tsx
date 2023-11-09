@@ -49,7 +49,7 @@ export default function Home() {
       {/* What's New Section */}
       <div className="p-4 flex flex-col a-gradient">
         <div className="title pt-12 pb-8 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
-          <h1 className="col-start-1 md:col-end-3 col-end-4">What's New?</h1>
+          <h1 className="col-start-1 md:col-end-3 col-end-4">Most Recently</h1>
         </div>
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
           {/* first show */}
@@ -57,19 +57,17 @@ export default function Home() {
             {/* image */}
             <div className="md:col-start-1 md:col-end-3 relative place-self-center h-96 w-full mb-10 md:mb-0 md:w-full md:h-full md:mr-10">
               <Image
-                src="/pillowman_featured.jpg"
-                alt="Jacob in Pillowman"
+                src="/singfeld_3.jpg"
+                alt="Jacob in Singfeld"
                 fill
                 className="object-cover"
               />
             </div>
             {/* text */}
             <div className="flex flex-col col-start-3 col-end-6 pl-10 mx-10 md:mx-0">
-              <h2 className="text-3xl md:text-4xl font-[500]">
-                As You Like It
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-[500]">Singfeld</h2>
               <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
-                Theatre Name
+                The Jerry Orbach Theatre
               </h3>
               <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
                 Jacob is so excited to be playing.... Just brief snippet of info
@@ -79,9 +77,13 @@ export default function Home() {
                 of info about upcoming or current plays.
               </p>
               <div className="place-self-start">
-                <p className="hover-underline-animation pt-6 md:pt-10 text-lg lg:text-xl font-[500] text-[var(--light-text-color)] hover:cursor-pointer">
+                <Link
+                  className="hover-underline-animation pt-6 md:pt-10 text-lg lg:text-xl font-[500] text-[var(--light-text-color)] hover:cursor-pointer"
+                  href="https://www.singfeld.com/"
+                  target="_blank"
+                >
                   get details
-                </p>
+                </Link>
               </div>
             </div>
           </li>
@@ -90,9 +92,10 @@ export default function Home() {
       {/* Quote section */}
       <div className="bg-[var(--dark-theme-color)] p-8 md:p-10">
         <p className="font-mono title text-[var(--light-text-color)] text-center lg:mx-20 my-5">
-          {`"Review about Jacob in a show`}
-          <br className="hidden md:flex"></br> {`that he did that time.”`}
-          <br></br> {`- playbill.com`}
+          {`"Millman skillfully delivers a generous`}
+          <br className="hidden md:flex"></br>{" "}
+          {`dose of doubt and neuroses to George Costanza...”`}
+          <br></br> {`- Manhattan Digest`}
         </p>
       </div>
       {/* Image section */}
@@ -170,11 +173,11 @@ export default function Home() {
         </Link>
       </div>
       {/* Contact section */}
-      <div className="w-screen contact-image flex" id="contact">
+      <div className="w-screen contact-image flex min-h-screen" id="contact">
         <div className="image-overlay w-full">
           <div className="p-10 h-full flex flex-col md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
-            <div className="md:mr-16 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">
-              <h2 className="title text-[var(--light-text-color)]">
+            <div className="md:mr-10 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">
+              <h2 className="font-[600] text-[3rem] text-[var(--light-text-color)]">
                 Reach out
               </h2>
             </div>
@@ -182,14 +185,14 @@ export default function Home() {
             <div className="verticalLine h-3/4 hidden md:flex"></div>
             <div className="md:ml-8 md:place-self-start flex w-1/2">
               <div className="flex flex-col lg:mt-4">
-                <h3 className="pt-2 pb-4 sm:text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
+                <h3 className="pt-2 pb-4 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
                   (777)777-7777
                 </h3>
-                <h3 className="pb-8 sm:text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
+                <h3 className="pb-8 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
                   jacobam*****@gmail.com
                 </h3>
                 <Link
-                  className="w-3/4 mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
+                  className="w-full md:w-3/4 mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
                   href="mailto:jacobamillman@gmail.com"
                 >
                   Send an email
