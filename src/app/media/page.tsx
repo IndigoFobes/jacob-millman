@@ -180,10 +180,12 @@ export default function Page() {
           <div className="lg:row-span-4">
             <div className="py-2 px-1 rounded-md flex justify-center">
               {rendered == 0 ? (
-                <div className="flex justify-center b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
-                  <p className="place-self-center font-[500] text-[1.7rem] md:text-[2rem]">
-                    Click below to see a video
-                  </p>
+                <div className="video-image flex b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
+                  <div className="flex image-overlay w-full justify-center">
+                    <p className="place-self-center font-[500] text-[1.7rem] md:text-[2rem]">
+                      Click below to see a video
+                    </p>
+                  </div>
                 </div>
               ) : (
                 <div>{video}</div>
