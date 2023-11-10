@@ -2,13 +2,26 @@
 import Header from "../components/header";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { Carousel } from "react-bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "../styles/Bootstrap.module.css";
+import BootstrapCarousel from "../components/carousel";
 
-// images
+// images (Same as OG definition)
 export interface Photos {
   src: string;
   alt: string;
   title: string;
   id: number;
+}
+
+// shows with nested photos
+export interface Shows {
+  id: number;
+  title: string;
+  photos: {
+    [key: string]: Photos;
+  };
 }
 
 // buttons
@@ -23,61 +36,160 @@ export interface Videos {
   src: string;
   alt: string;
 }
+// OG photos layout***
+// const photos: Photos[] = [
+//   {
+//     src: "/pillowman_1.jpg",
+//     alt: "The Pillowman",
+//     title: "The Pillowman",
+//     id: 0,
+//   },
+//   {
+//     src: "/sfb_1.jpg",
+//     alt: "Stupid F**king Bird",
+//     title: "Stupid F**king Bird",
+//     id: 1,
+//   },
+//   {
+//     src: "/our-town_1.JPG",
+//     alt: "Our Town",
+//     title: "Our Town",
+//     id: 2,
+//   },
+//   {
+//     src: "/singfeld_1.jpg",
+//     alt: "Singfeld, 2023",
+//     title: "Singfeld, 2023",
+//     id: 3,
+//   },
+//   {
+//     src: "/sfb_2.jpg",
+//     alt: "Stupid F**king Bird",
+//     title: "Stupid F**king Bird",
+//     id: 4,
+//   },
+//   {
+//     src: "/singfeld_2.jpg",
+//     alt: "Singfeld, 2023",
+//     title: "Singfeld, 2023",
+//     id: 5,
+//   },
+//   {
+//     src: "/pillowman_2.jpg",
+//     alt: "The Pillowman",
+//     title: "The Pillowman",
+//     id: 6,
+//   },
+//   {
+//     src: "/Singfeld_3.jpg",
+//     alt: "Singfeld, 2023",
+//     title: "Singfeld, 2023",
+//     id: 7,
+//   },
+//   {
+//     src: "/Pillowman_3.jpg",
+//     alt: "The Pillowman",
+//     title: "The Pillowman",
+//     id: 8,
+//   },
+// ];
 
-const photos: Photos[] = [
+const shows: Shows[] = [
   {
-    src: "/pillowman_1.jpg",
-    alt: "The Pillowman",
-    title: "The Pillowman",
     id: 0,
+    title: "Stupid F**king Bird",
+    photos: {
+      a: {
+        id: 0,
+        title: "Stupid F**king Bird",
+        src: "/sfb_1.jpg",
+        alt: "Stupid F**king Bird",
+      },
+      b: {
+        id: 1,
+        title: "Stupid F**king Bird",
+        src: "/sfb_2.jpg",
+        alt: "Stupid F**king Bird",
+      },
+      c: {
+        id: 2,
+        title: "Stupid F**king Bird",
+        src: "/sfb_2.jpg",
+        alt: "Stupid F**king Bird",
+      },
+    },
   },
   {
-    src: "/sfb_1.jpg",
-    alt: "Stupid F**king Bird",
-    title: "Stupid F**king Bird",
     id: 1,
-  },
-  {
-    src: "/our-town_1.JPG",
-    alt: "Our Town",
     title: "Our Town",
+    photos: {
+      a: {
+        id: 0,
+        title: "Our Town",
+        src: "/our-town_1.JPG",
+        alt: "Our Town",
+      },
+      b: {
+        id: 1,
+        title: "Our Town",
+        src: "/our-town_1.JPG",
+        alt: "Our Town",
+      },
+      c: {
+        id: 2,
+        title: "Our Town",
+        src: "/our-town_1.JPG",
+        alt: "Our Town",
+      },
+    },
+  },
+  {
     id: 2,
+    title: "Singfeld",
+    photos: {
+      a: {
+        id: 0,
+        title: "Singfeld, 2023",
+        src: "/singfeld_1.jpg",
+        alt: "Singfeld, 2023",
+      },
+      b: {
+        id: 1,
+        title: "Singfeld, 2023",
+        src: "/singfeld_1.jpg",
+        alt: "Singfeld, 2023",
+      },
+      c: {
+        id: 2,
+        title: "Singfeld, 2023",
+        src: "/singfeld_1.jpg",
+        alt: "Singfeld, 2023",
+      },
+    },
   },
   {
-    src: "/singfeld_1.jpg",
-    alt: "Singfeld, 2023",
-    title: "Singfeld, 2023",
     id: 3,
-  },
-  {
-    src: "/sfb_2.jpg",
-    alt: "Stupid F**king Bird",
-    title: "Stupid F**king Bird",
-    id: 4,
-  },
-  {
-    src: "/singfeld_2.jpg",
-    alt: "Singfeld, 2023",
-    title: "Singfeld, 2023",
-    id: 5,
-  },
-  {
-    src: "/pillowman_2.jpg",
-    alt: "The Pillowman",
     title: "The Pillowman",
-    id: 6,
-  },
-  {
-    src: "/Singfeld_3.jpg",
-    alt: "Singfeld, 2023",
-    title: "Singfeld, 2023",
-    id: 7,
-  },
-  {
-    src: "/Pillowman_3.jpg",
-    alt: "The Pillowman",
-    title: "The Pillowman",
-    id: 8,
+    photos: {
+      a: {
+        id: 0,
+        title: "The Pillowman",
+        src: "/pillowman_1.jpg",
+        alt: "The Pillowman",
+      },
+      b: {
+        id: 1,
+        title: "The Pillowman",
+        src: "/pillowman_2.jpg",
+        alt: "The Pillowman",
+      },
+      c: {
+        id: 2,
+        title: "The Pillowman",
+        src: "/Pillowman_3.jpg",
+        alt: "The Pillowman",
+      },
+    },
   },
 ];
 
@@ -214,7 +326,12 @@ export default function Page() {
         </div>
         {/* Production photos section */}
         <h1 className="title text-center mb-5">Production Photos</h1>
-        <div className="grid grid-cols-3 grid-rows-2 gap-4">
+        {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
+        {shows.map((show) => {
+          return <div key={show.id}>{show.title}</div>;
+        })}
+        {/* OG photo layout, just 3 rows of 3 */}
+        {/* <div className="grid grid-cols-3 grid-rows-2 gap-4">
           {photos.map((item) => {
             return (
               <div className="relative min-h-[12rem] md:min-h-[20rem] lg:min-h-[25rem] xl:min-h-[30rem]">
@@ -231,7 +348,7 @@ export default function Page() {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );
