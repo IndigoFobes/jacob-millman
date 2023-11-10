@@ -13,6 +13,8 @@ import {
   Variants,
 } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { link } from "fs";
 
 export interface MenuItem {
   title: string;
@@ -44,6 +46,8 @@ const menuItems: MenuItem[] = [
 ];
 
 export default function Header() {
+  const path = usePathname();
+
   return (
     <motion.header
       className="absolute top-0 right-0 header-bg hidden z-30 w-full md:flex md:flex-col justify-center"
@@ -64,9 +68,17 @@ export default function Header() {
               <MediaDropdown item={item} />
             ) : (
               <Link
-                className="hover:text-[var(--accent-color)] place-self-center hover-underline-animation"
+                className={`relative hover:text-[var(--accent-color)] place-self-center ${
+                  item.route === path ? `` : `hover-underline-animation`
+                }`}
                 href={item?.route || ""}
               >
+                {item.route === path && (
+                  <motion.span
+                    layoutId="underline"
+                    className="absolute left-0 top-full -translate-y-[2px] block h-[2px] w-full bg-[var(--light-text-color)]"
+                  />
+                )}
                 {item.title}
               </Link>
             );

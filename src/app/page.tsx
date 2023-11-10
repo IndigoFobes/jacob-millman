@@ -218,7 +218,7 @@ export default function Home() {
         </div>
         <Link
           className="mx-auto my-16 font-[600] text-center rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover-underline-animation"
-          href="/media/videos"
+          href="/media"
         >
           see more videos
         </Link>
