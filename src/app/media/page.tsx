@@ -14,6 +14,7 @@ export interface Photos {
   title: string;
   id: number;
 }
+[];
 
 // shows with nested photos
 export interface Shows {
@@ -282,7 +283,14 @@ export default function Page() {
     ></iframe>
   );
 
+  let photosArray;
   // For mapping photos within shows
+  shows.map((show) => {
+    const photosArray = Object.keys(show.photos).map(function (photoIndex) {
+      let photo = show.photos[photoIndex];
+      return photo;
+    });
+  });
 
   // ***RENDERED***
   return (
@@ -333,8 +341,10 @@ export default function Page() {
           return (
             <div key={show.id}>
               <p>{show.title}</p>
-              <div></div>
-              {/* <div>{show.photos["a"].title}</div> */}
+              {Object.keys(show.photos).map(function (photoIndex) {
+                var photo = show.photos[photoIndex];
+                return <div>{photo.title}</div>;
+              })}
             </div>
           );
         })}
