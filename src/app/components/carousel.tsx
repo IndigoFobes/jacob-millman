@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
-
+// import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Bootstrap.module.css";
 import { Shows } from "../media/page";
 

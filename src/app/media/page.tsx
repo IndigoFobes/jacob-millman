@@ -282,6 +282,8 @@ export default function Page() {
     ></iframe>
   );
 
+  // For mapping photos within shows
+
   // ***RENDERED***
   return (
     <div className="lg:w-9/12 mx-8 sm:mx-auto sm:px-8 pt-16 md:pt-48 mb-20 md:mb-32">
@@ -328,7 +330,13 @@ export default function Page() {
         <h1 className="title text-center mb-5">Production Photos</h1>
         {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
         {shows.map((show) => {
-          return <div key={show.id}>{show.title}</div>;
+          return (
+            <div key={show.id}>
+              <p>{show.title}</p>
+              <div></div>
+              {/* <div>{show.photos["a"].title}</div> */}
+            </div>
+          );
         })}
         {/* OG photo layout, just 3 rows of 3 */}
         {/* <div className="grid grid-cols-3 grid-rows-2 gap-4">
