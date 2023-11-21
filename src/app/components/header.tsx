@@ -56,7 +56,7 @@ export default function Header() {
       transition={{ duration: 1 }}
     >
       <div className="absolute flex justify-center top-0 w-screen text-center text-[var(--light-text-color)] pt-3 px-4 header-title">
-        <Link href="/" className="">
+        <Link href="/" className="header-title link-no-dec">
           <h1>Jacob Millman</h1>
         </Link>
       </div>
@@ -68,7 +68,7 @@ export default function Header() {
               <MediaDropdown item={item} />
             ) : (
               <Link
-                className={`relative hover:text-[var(--accent-color)] place-self-center ${
+                className={`relative hover:text-[var(--accent-color)] place-self-center link-no-dec ${
                   item.route === path ? `` : `hover-underline-animation`
                 }`}
                 href={item?.route || ""}

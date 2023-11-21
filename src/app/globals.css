@@ -32,6 +32,11 @@
   font-style: italic;
 }
 
+link {
+text-decoration: none;
+}
+
+
 .header-bg {
   background-image: linear-gradient( var(--dark-theme-color) 50%, var(--dark-theme-transparent));
 }

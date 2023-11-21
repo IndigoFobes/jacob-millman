@@ -2,10 +2,9 @@
 import Header from "../components/header";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "../styles/Bootstrap.module.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapCarousel from "../components/carousel";
+import "../../../src/app/globals.css";
 
 // images (Same as OG definition)
 export interface Photos {
