@@ -3,7 +3,7 @@ import Header from "../components/header";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Bootstrap.module.css";
 import BootstrapCarousel from "../components/carousel";
 
@@ -338,15 +338,16 @@ export default function Page() {
         <h1 className="title text-center mb-5">Production Photos</h1>
         {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
         {shows.map((show) => {
-          return (
-            <div key={show.id}>
-              <p>{show.title}</p>
-              {Object.keys(show.photos).map(function (photoIndex) {
-                var photo = show.photos[photoIndex];
-                return <div>{photo.title}</div>;
-              })}
-            </div>
-          );
+          return <BootstrapCarousel show={show} />;
+          // return (
+          // <div key={show.id}>
+          //   <p>{show.title}</p>
+          //   {Object.keys(show.photos).map(function (photoIndex) {
+          //     var photo = show.photos[photoIndex];
+          //     return <div>{photo.title}</div>;
+          //   })}
+          // </div>
+          // );
         })}
         {/* OG photo layout, just 3 rows of 3 */}
         {/* <div className="grid grid-cols-3 grid-rows-2 gap-4">
