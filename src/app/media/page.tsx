@@ -100,21 +100,21 @@ const shows: Shows[] = [
     title: "Stupid F**king Bird",
     photos: {
       a: {
-        id: 0,
+        id: 1,
         title: "Stupid F**king Bird",
         src: "/sfb_1.jpg",
         alt: "Stupid F**king Bird",
       },
       b: {
-        id: 1,
+        id: 2,
         title: "Stupid F**king Bird",
         src: "/sfb_2.jpg",
         alt: "Stupid F**king Bird",
       },
       c: {
-        id: 2,
+        id: 3,
         title: "Stupid F**king Bird",
-        src: "/sfb_2.jpg",
+        src: "/SFB_main-cropped.jpg",
         alt: "Stupid F**king Bird",
       },
     },
@@ -124,19 +124,19 @@ const shows: Shows[] = [
     title: "Our Town",
     photos: {
       a: {
-        id: 0,
-        title: "Our Town",
-        src: "/our-town_1.JPG",
-        alt: "Our Town",
-      },
-      b: {
         id: 1,
         title: "Our Town",
         src: "/our-town_1.JPG",
         alt: "Our Town",
       },
-      c: {
+      b: {
         id: 2,
+        title: "Our Town",
+        src: "/our-town_1.JPG",
+        alt: "Our Town",
+      },
+      c: {
+        id: 3,
         title: "Our Town",
         src: "/our-town_1.JPG",
         alt: "Our Town",
@@ -148,19 +148,19 @@ const shows: Shows[] = [
     title: "Singfeld",
     photos: {
       a: {
-        id: 0,
-        title: "Singfeld, 2023",
-        src: "/singfeld_1.jpg",
-        alt: "Singfeld, 2023",
-      },
-      b: {
         id: 1,
         title: "Singfeld, 2023",
         src: "/singfeld_1.jpg",
         alt: "Singfeld, 2023",
       },
-      c: {
+      b: {
         id: 2,
+        title: "Singfeld, 2023",
+        src: "/singfeld_1.jpg",
+        alt: "Singfeld, 2023",
+      },
+      c: {
+        id: 3,
         title: "Singfeld, 2023",
         src: "/singfeld_1.jpg",
         alt: "Singfeld, 2023",
@@ -172,19 +172,19 @@ const shows: Shows[] = [
     title: "The Pillowman",
     photos: {
       a: {
-        id: 0,
+        id: 1,
         title: "The Pillowman",
         src: "/pillowman_1.jpg",
         alt: "The Pillowman",
       },
       b: {
-        id: 1,
+        id: 2,
         title: "The Pillowman",
         src: "/pillowman_2.jpg",
         alt: "The Pillowman",
       },
       c: {
-        id: 2,
+        id: 3,
         title: "The Pillowman",
         src: "/Pillowman_3.jpg",
         alt: "The Pillowman",
@@ -337,36 +337,14 @@ export default function Page() {
         <h1 className="title text-center mb-5">Production Photos</h1>
         {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
         {shows.map((show) => {
-          return <BootstrapCarousel show={show} />;
-          // return (
-          // <div key={show.id}>
-          //   <p>{show.title}</p>
-          //   {Object.keys(show.photos).map(function (photoIndex) {
-          //     var photo = show.photos[photoIndex];
-          //     return <div>{photo.title}</div>;
-          //   })}
-          // </div>
-          // );
+          return (
+            <div>
+              <h2 className="text-[2rem] py-4">{show.title}</h2>
+              <BootstrapCarousel show={show} key={show.id} />
+            </div>
+          );
         })}
-        {/* OG photo layout, just 3 rows of 3 */}
-        {/* <div className="grid grid-cols-3 grid-rows-2 gap-4">
-          {photos.map((item) => {
-            return (
-              <div className="relative min-h-[12rem] md:min-h-[20rem] lg:min-h-[25rem] xl:min-h-[30rem]">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  key={item.id}
-                  fill
-                  className="object-cover"
-                />
-                <p className="absolute bottom-0 py-2 px-3 bg-black/50 w-full">
-                  {item.title}
-                </p>
-              </div>
-            );
-          })}
-        </div> */}
+        {/* OG photo layout, just 3 rows of 3, look at previous commits */}
       </div>
     </div>
   );

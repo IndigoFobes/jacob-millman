@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
-// import styles from "../styles/Bootstrap.module.css";
 import { Shows } from "../media/page";
 
 interface Props {
@@ -13,18 +12,22 @@ interface Props {
 
 export default function BootstrapCarousel(props: Props) {
   const { show } = props;
-  const [index, setIndex] = useState(0);
+
+  const [index, setIndex] = useState(1);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
+    // console.log(show.photos);
   };
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      <div>{show.title}</div>
+      {/* <div className="text-2xl text-center py-4">{show.title}</div> */}
       {Object.keys(show.photos).map(function (photoIndex) {
         var photo = show.photos[photoIndex];
         return (
-          <Carousel.Item key={photo.id} interval={4000}>
-            <img src={photo.src} alt="slides" />
+          <Carousel.Item key={photo.id} interval={4000} className="slide">
+            <div className="max-h-[30rem] md:max-h-[40rem] 2xl:max-h-[50rem] slide">
+              <img src={photo.src} alt={photo.alt} />
+            </div>
             <Carousel.Caption>
               <h3>{photo.title}</h3>
             </Carousel.Caption>
