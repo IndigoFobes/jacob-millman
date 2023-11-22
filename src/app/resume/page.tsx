@@ -1,8 +1,47 @@
+"use client";
 import Header from "../components/header";
 import Link from "next/link";
 import Image from "next/image";
 import Resume from "../components/resume";
 import { AiOutlineDownload } from "react-icons/ai";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+  useMotionValue,
+  Variants,
+} from "framer-motion";
+
+// Variants for animations
+const headshotVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: -200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const resumeVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: 200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 // images
 export interface Headshots {
@@ -41,7 +80,13 @@ export default function Page() {
         <h1 className="title pb-10 text-center md:text-start">{`Headshots & Resume`}</h1>
         <div className="flex flex-col sm:grid sm:grid-cols-2 w-full gap-5">
           {/* Headshots */}
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <motion.div
+            className="grid grid-cols-2 grid-rows-2 gap-4"
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={headshotVariants}
+          >
             {/* <div>headshots</div>
           <div>headshots</div>
           <div>headshots</div>
@@ -67,9 +112,15 @@ export default function Page() {
                 </Link>
               );
             })}
-          </div>
+          </motion.div>
           {/* Resume */}
-          <div className="w-full flex flex-col">
+          <motion.div
+            className="w-full flex flex-col"
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={resumeVariants}
+          >
             <Image
               src={"/JacobMillman-Resume.png"}
               alt={"Jacob's resume"}
@@ -90,7 +141,7 @@ export default function Page() {
 
             {/* Really cool PDF viewer, but I think we have to pay for this, so maybe not. */}
             {/* <Resume /> */}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

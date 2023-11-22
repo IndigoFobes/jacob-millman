@@ -5,6 +5,44 @@ import React, { useState, useEffect } from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapCarousel from "../components/carousel";
 import "../../../src/app/globals.css";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+  useMotionValue,
+  Variants,
+} from "framer-motion";
+
+// Variants for animations
+const titleVariants: Variants = {
+  hide: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+
+const imageVariants: Variants = {
+  hide: {
+    opacity: 0,
+    y: 75,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+    },
+  },
+};
 
 // images (Same as OG definition)
 export interface Photos {
@@ -36,63 +74,7 @@ export interface Videos {
   src: string;
   alt: string;
 }
-// OG photos layout***
-// const photos: Photos[] = [
-//   {
-//     src: "/pillowman_1.jpg",
-//     alt: "The Pillowman",
-//     title: "The Pillowman",
-//     id: 0,
-//   },
-//   {
-//     src: "/sfb_1.jpg",
-//     alt: "Stupid F**king Bird",
-//     title: "Stupid F**king Bird",
-//     id: 1,
-//   },
-//   {
-//     src: "/our-town_1.JPG",
-//     alt: "Our Town",
-//     title: "Our Town",
-//     id: 2,
-//   },
-//   {
-//     src: "/singfeld_1.jpg",
-//     alt: "Singfeld, 2023",
-//     title: "Singfeld, 2023",
-//     id: 3,
-//   },
-//   {
-//     src: "/sfb_2.jpg",
-//     alt: "Stupid F**king Bird",
-//     title: "Stupid F**king Bird",
-//     id: 4,
-//   },
-//   {
-//     src: "/singfeld_2.jpg",
-//     alt: "Singfeld, 2023",
-//     title: "Singfeld, 2023",
-//     id: 5,
-//   },
-//   {
-//     src: "/pillowman_2.jpg",
-//     alt: "The Pillowman",
-//     title: "The Pillowman",
-//     id: 6,
-//   },
-//   {
-//     src: "/Singfeld_3.jpg",
-//     alt: "Singfeld, 2023",
-//     title: "Singfeld, 2023",
-//     id: 7,
-//   },
-//   {
-//     src: "/Pillowman_3.jpg",
-//     alt: "The Pillowman",
-//     title: "The Pillowman",
-//     id: 8,
-//   },
-// ];
+// OG photos layout; check out previous commits ***
 
 const shows: Shows[] = [
   {
@@ -288,10 +270,24 @@ export default function Page() {
       <div className="flex flex-col gap-6 mt-5">
         {/* Videos section */}
         <div className="flex flex-col justify-center content-center mb-10">
-          <h1 className="title text-center">Videos</h1>
-          <hr className="w-3/4 border-solid mt-2 place-self-center horizontal-line-light mb-8"></hr>
+          <motion.h1
+            className="title text-center"
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={titleVariants}
+          >
+            Videos
+          </motion.h1>
+          <hr className="w-3/4 border-solid mt-4 place-self-center horizontal-line-light mb-8"></hr>
           <div className="lg:row-span-4">
-            <div className="py-2 px-1 rounded-md flex justify-center">
+            <motion.div
+              className="py-2 px-1 rounded-md flex justify-center"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={imageVariants}
+            >
               {rendered == 0 ? (
                 <div className="video-image flex b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
                   <div className="flex image-overlay w-full justify-center">
@@ -304,7 +300,7 @@ export default function Page() {
                 <div>{video}</div>
               )}
               {/* {video} */}
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-col place-self-center sm:grid sm:grid-cols-3 mt-10 lg:mx-10 w-full">
             {buttons.map((button) => {
@@ -327,14 +323,30 @@ export default function Page() {
         </div>
         {/* Production photos section */}
         <div className="flex flex-col justify-center content-center">
-          <h1 className="title text-center">Production Photos</h1>
-          <hr className="w-3/4 border-solid mt-2 place-self-center horizontal-line-light mb-2"></hr>
+          <motion.h1
+            className="title text-center"
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={titleVariants}
+          >
+            Production Photos
+          </motion.h1>
+          <hr className="w-3/4 border-solid mt-4 place-self-center horizontal-line-light mb-2"></hr>
         </div>
         {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
         {shows.map((show) => {
           return (
             <div>
-              <h2 className="text-[2rem] py-4">{show.title}</h2>
+              <motion.h2
+                className="text-[2rem] py-4"
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={titleVariants}
+              >
+                {show.title}
+              </motion.h2>
               <BootstrapCarousel show={show} key={show.id} />
             </div>
           );

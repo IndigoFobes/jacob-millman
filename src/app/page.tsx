@@ -42,6 +42,48 @@ const introTextVariants: Variants = {
   },
 };
 
+const titleVariants: Variants = {
+  hide: {
+    opacity: 0,
+    y: 75,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const reachOutVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: -200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+
+const reachOutTextVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: 200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+
 export default function Home() {
   return (
     <div>
@@ -166,9 +208,15 @@ export default function Home() {
           </div>
           {/* text/link */}
           <div className="col-start-6 md:col-start-4 col-end-11 w-full flex flex-col gap-6 justify-center items-center mx-auto">
-            <h2 className="title text-[var(--light-text-color)]">
+            <motion.h2
+              className="title text-[var(--light-text-color)]"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={titleVariants}
+            >
               {`Headshots`} <br className="sm:hidden"></br> {`& Resume`}
-            </h2>
+            </motion.h2>
             <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
@@ -182,7 +230,15 @@ export default function Home() {
         <div className="grid grid-cols-10 a-gradient h-1/2">
           {/* text/link */}
           <div className="col-start-1 col-end-6 md:col-end-8 w-full flex flex-col gap-6 justify-center items-center mx-auto">
-            <h2 className="title text-[var(--light-text-color)]">Media</h2>
+            <motion.h2
+              className="title text-[var(--light-text-color)]"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={titleVariants}
+            >
+              Media
+            </motion.h2>
             <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
@@ -232,14 +288,26 @@ export default function Home() {
         <div className="image-overlay w-full">
           <div className="p-10 h-full flex flex-col md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
             <div className="md:mr-10 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">
-              <h2 className="font-[600] text-[3rem] text-[var(--light-text-color)]">
+              <motion.h2
+                className="font-[600] text-[3rem] text-[var(--light-text-color)]"
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={reachOutVariants}
+              >
                 Reach out
-              </h2>
+              </motion.h2>
             </div>
             {/* vertical line */}
             <div className="verticalLine h-3/4 hidden md:flex"></div>
             <div className="md:ml-8 md:place-self-start flex w-1/2">
-              <div className="flex flex-col lg:mt-4">
+              <motion.div
+                className="flex flex-col lg:mt-4"
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={reachOutTextVariants}
+              >
                 <h3 className="pt-2 pb-4 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
                   (777)777-7777
                 </h3>
@@ -252,7 +320,7 @@ export default function Home() {
                 >
                   Send an email
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

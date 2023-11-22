@@ -1,5 +1,43 @@
+"use client";
 import Header from "../components/header";
 import Image from "next/image";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+  useMotionValue,
+  Variants,
+} from "framer-motion";
+
+const textVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: -200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const imageVariants: Variants = {
+  hide: {
+    opacity: 0,
+    x: 200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 export default function Page() {
   return (
@@ -7,8 +45,20 @@ export default function Page() {
       <h1 className="title pb-10 text-center md:text-start">About me</h1>
       {/* mobile */}
       <div className="md:hidden flex flex-col justify-center">
-        <div className="h-[20rem] w-[20rem] about-image place-self-center"></div>
-        <p className="text-[.9rem] text-start font-[400] mt-10">
+        <motion.div
+          className="h-[20rem] w-[20rem] about-image place-self-center"
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={imageVariants}
+        ></motion.div>
+        <motion.p
+          className="text-[.9rem] text-start font-[400] mt-10"
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={textVariants}
+        >
           A wonderful serenity has taken possession of my entire soul, like
           these sweet mornings of spring which I enjoy with my whole heart. I am
           alone, and feel the charm of existence in this spot, which was created
@@ -41,17 +91,29 @@ export default function Page() {
           world among the stalks, and grow familiar with the countless
           indescribable forms of the insects and flies, then I feel the presence
           of the Almighty, who formed us in his own image, and the breath
-        </p>
+        </motion.p>
       </div>
-      <div className="md:relative md:float-right md:h-[22.4rem] md:w-[19.2rem] lg:h-[28rem] lg:w-[24rem] xl:h-[35rem] xl:w-[30rem] about-image ml-6 mb-4">
+      <motion.div
+        className="md:relative md:float-right md:h-[22.4rem] md:w-[19.2rem] lg:h-[28rem] lg:w-[24rem] xl:h-[35rem] xl:w-[30rem] about-image ml-6 mb-4"
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={imageVariants}
+      >
         {/* <Image
           src="/Jacob_hs_2.jpg"
           alt="Male placeholder"
           fill={true}
           className="mx-auto object-cover md:pl-16 pb-10 bg-top"
         /> */}
-      </div>
-      <p className="hidden md:block text-[1.1rem] text-start font-[400]">
+      </motion.div>
+      <motion.p
+        className="hidden md:block text-[1.1rem] text-start font-[400]"
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={textVariants}
+      >
         A wonderful serenity has taken possession of my entire soul, like these
         sweet mornings of spring which I enjoy with my whole heart. I am alone,
         and feel the charm of existence in this spot, which was created for the
@@ -83,7 +145,7 @@ export default function Page() {
         familiar with the countless indescribable forms of the insects and
         flies, then I feel the presence of the Almighty, who formed us in his
         own image, and the breath
-      </p>
+      </motion.p>
     </div>
   );
 }
