@@ -228,8 +228,6 @@ const videos: Videos[] = [
 
 /* For Video State Rendering
 
-I am guessing I need UseState
-
 Dislay certain videos depending on which "button" is clicked/toggled  
 */
 
@@ -239,14 +237,6 @@ export default function Page() {
   }
 
   const [rendered, setRendered] = useState(0);
-
-  // let video:
-  //   | string
-  //   | number
-  //   | boolean
-  //   | React.JSX.Element
-  //   | Iterable<React.ReactNode>
-  //   | React.PromiseLikeOfReactNode;
 
   let source;
   let title;
@@ -270,6 +260,7 @@ export default function Page() {
     console.log("Something went wrong.");
   }
 
+  // Video frame
   const video = (
     <iframe
       className="rounded-sm w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]"
@@ -294,10 +285,11 @@ export default function Page() {
   // ***RENDERED***
   return (
     <div className="lg:w-9/12 mx-8 sm:mx-auto sm:px-8 pt-16 md:pt-48 mb-20 md:mb-32">
-      <div className="flex flex-col gap-10 mt-5">
+      <div className="flex flex-col gap-6 mt-5">
         {/* Videos section */}
         <div className="flex flex-col justify-center content-center mb-10">
-          <h1 className="title text-center mb-10">Videos</h1>
+          <h1 className="title text-center">Videos</h1>
+          <hr className="w-3/4 border-solid mt-2 place-self-center horizontal-line-light mb-8"></hr>
           <div className="lg:row-span-4">
             <div className="py-2 px-1 rounded-md flex justify-center">
               {rendered == 0 ? (
@@ -334,7 +326,10 @@ export default function Page() {
           </button> */}
         </div>
         {/* Production photos section */}
-        <h1 className="title text-center mb-5">Production Photos</h1>
+        <div className="flex flex-col justify-center content-center">
+          <h1 className="title text-center">Production Photos</h1>
+          <hr className="w-3/4 border-solid mt-2 place-self-center horizontal-line-light mb-2"></hr>
+        </div>
         {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
         {shows.map((show) => {
           return (

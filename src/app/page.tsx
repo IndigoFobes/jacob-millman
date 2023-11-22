@@ -89,7 +89,7 @@ export default function Home() {
       <div className="p-4 flex flex-col a-gradient">
         <div className="title py-12 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4">Most Recently</h1>
-          <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid border-[var(--light-theme-color)] border-[.07rem] mt-2"></hr>
+          <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
 
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
@@ -169,7 +169,7 @@ export default function Home() {
             <h2 className="title text-[var(--light-text-color)]">
               {`Headshots`} <br className="sm:hidden"></br> {`& Resume`}
             </h2>
-            <hr className="w-3/4 xl:w-1/2 border-solid border-[var(--light-theme-color)] border-[.07rem] mt-2"></hr>
+            <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
               href="/resume"
@@ -183,7 +183,7 @@ export default function Home() {
           {/* text/link */}
           <div className="col-start-1 col-end-6 md:col-end-8 w-full flex flex-col gap-6 justify-center items-center mx-auto">
             <h2 className="title text-[var(--light-text-color)]">Media</h2>
-            <hr className="w-3/4 xl:w-1/2 border-solid border-[var(--light-theme-color)] border-[.07rem] mt-2"></hr>
+            <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
               href="/media"

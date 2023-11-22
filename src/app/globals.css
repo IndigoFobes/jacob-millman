@@ -15,7 +15,7 @@
   --light-text-color: #F6F6F6;
   --rounded-tiny: .1rem;
   --dark-theme-transparent: rgba(41, 41, 41, 0);
-  --light-text-transparent: rgba(246, 246, 246, .5)
+  --light-text-transparent: rgba(246, 246, 246, .5);
 }
 
 @font-face {
@@ -78,6 +78,16 @@ text-decoration: none;
   font-size: 6.5rem;
   font-family: "Manchester", serif;
   font-style: italic;
+}
+
+.horizontal-line-dark {
+  border-color: var(--light-theme-color);
+  border-width: .07rem;
+}
+
+.horizontal-line-light {
+  border-color: var(--light-text-color);
+  border-width: .07rem;
 }
 
 .image-overlay {
