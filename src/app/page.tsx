@@ -23,7 +23,7 @@ const introPictureVariants: Variants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 2,
+      duration: 1,
     },
   },
 };
@@ -37,7 +37,7 @@ const introTextVariants: Variants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.8,
+      duration: 1,
     },
   },
 };
@@ -87,9 +87,11 @@ export default function Home() {
       </div>
       {/* What's New Section */}
       <div className="p-4 flex flex-col a-gradient">
-        <div className="title pt-12 pb-8 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
+        <div className="title py-12 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4">Most Recently</h1>
+          <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid border-[var(--light-theme-color)] border-[.07rem] mt-2"></hr>
         </div>
+
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
           {/* first show */}
           <li className="flex flex-col md:grid md:grid-cols-5 pb-24">
@@ -163,10 +165,11 @@ export default function Home() {
             />
           </div>
           {/* text/link */}
-          <div className="col-start-6 md:col-start-4 col-end-11 flex flex-col gap-10 justify-center items-center mx-auto">
+          <div className="col-start-6 md:col-start-4 col-end-11 w-full flex flex-col gap-6 justify-center items-center mx-auto">
             <h2 className="title text-[var(--light-text-color)]">
               {`Headshots`} <br className="sm:hidden"></br> {`& Resume`}
             </h2>
+            <hr className="w-3/4 xl:w-1/2 border-solid border-[var(--light-theme-color)] border-[.07rem] mt-2"></hr>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
               href="/resume"
@@ -178,8 +181,9 @@ export default function Home() {
         {/* Production shot section */}
         <div className="grid grid-cols-10 a-gradient h-1/2">
           {/* text/link */}
-          <div className="col-start-1 col-end-6 md:col-end-8 flex flex-col gap-10 justify-center items-center mx-auto">
+          <div className="col-start-1 col-end-6 md:col-end-8 w-full flex flex-col gap-6 justify-center items-center mx-auto">
             <h2 className="title text-[var(--light-text-color)]">Media</h2>
+            <hr className="w-3/4 xl:w-1/2 border-solid border-[var(--light-theme-color)] border-[.07rem] mt-2"></hr>
             <Link
               className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
               href="/media"
