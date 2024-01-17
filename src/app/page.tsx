@@ -108,35 +108,45 @@ export default function Home() {
             Jacob A. Millman
           </div> */}
         </div>
-        <div className="col-start-1 col-end-8 flex flex-col justify-center content-center my-auto px-4 md:px-20 py-10 2xl:pr-60 bg-[var(--dark-theme-color)]">
-          <h1 className=" text-[var(--light-text-color)] font-[300] text-md md:text-xl leading-normal mb-10 mx-8 md:mx-20 lg:mx-40 text-center">
-            Small paragraph about me. Something that will very clearly express
-            who I am as an{" "}
-            <span className="text-[var(--light-text-color)]">actor</span> and a{" "}
-            <span className="text-[var(--light-text-color)]">person</span>. Just
-            enough to make them want to read more and to show a bit of
-            personality.
+        <div className="col-start-1 col-end-8 flex flex-col justify-center content-center my-auto px-4 py-10 2xl:pr-60 bg-[var(--dark-theme-color)]">
+          <h1 className=" text-[var(--accent-color)] font-[300] mom-quote leading-normal mb-2 mx-8 md:mx-10 lg:mx-20 xl:mx-40 text-center">
+            "A{" "}
+            <span className="text-[var(--accent-color)] font-[700]">
+              once-in-a-lifetime talent,
+            </span>{" "}
+            backed up by an{" "}
+            <span className="text-[var(--accent-color)] font-[700]">
+              electrifying personality{" "}
+            </span>
+            and a
+            <span className="text-[var(--accent-color)] font-[700]">
+              {" "}
+              flood of charisma
+            </span>
+            "<span className=" text-[1.5rem] ml-4">- Nancy Millman</span>
+            {/* <span className="text-[var(--light-text-color)] font-[500]">
+              actor
+            </span>{" "} */}
           </h1>
           <div className="flex justify-center">
             <Link
               className="font-[600] text-center bg-[var(--dark-theme-color)] my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover-underline-animation"
               href="/about"
             >
-              read more
+              read more about Jacob
             </Link>
           </div>
         </div>
       </div>
-      {/* What's New Section */}
+      {/* What's New / Most Recently Section */}
       <div className="p-4 flex flex-col a-gradient">
-        <div className="title py-12 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
+        <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4">Most Recently</h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
-
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
           {/* first show */}
-          <li className="flex flex-col md:grid md:grid-cols-5 pb-24">
+          <li className="flex flex-col md:grid md:grid-cols-5">
             {/* image */}
             <motion.div
               className="md:col-start-1 md:col-end-3 relative place-self-center h-96 w-full mb-10 md:mb-0 md:w-full md:h-full md:mr-10"
@@ -146,7 +156,7 @@ export default function Home() {
               variants={introPictureVariants}
             >
               <Image
-                src="/singfeld_3.jpg"
+                src="/singfeld_1.jpg"
                 alt="Jacob in Singfeld"
                 fill
                 className="object-cover"
@@ -165,11 +175,11 @@ export default function Home() {
                 The Jerry Orbach Theatre
               </h3>
               <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
-                Jacob is so excited to be playing.... Just brief snippet of info
-                about upcoming or current plays. Jacob is so excited to be
-                playing.... Just brief snippet of info about upcoming or current
-                plays. Jacob is so excited to be playing.... Just brief snippet
-                of info about upcoming or current plays.
+                {`Jacob was most recently seen in Off-Broadway’s Singfeld,
+                originating the on-stage iterations of George Costanza and
+                Newman. After a solid six months of musical theatre comedy,
+                Jacob is excited to utilize the lessons he learned and newfound
+                Seinfeld knowledge in the next chapter of his career.`}
               </p>
               <div className="place-self-start">
                 <Link
@@ -183,15 +193,14 @@ export default function Home() {
             </motion.div>
           </li>
         </ul>
-      </div>
-      {/* Quote section */}
-      <div className="bg-[var(--dark-theme-color)] p-8 md:p-10">
-        <p className="font-mono title text-[var(--light-text-color)] text-center lg:mx-20 my-5">
-          {`"Millman skillfully delivers a generous`}
-          <br className="hidden md:flex"></br>{" "}
-          {`dose of doubt and neuroses to George Costanza...”`}
-          <br></br> {`- Manhattan Digest`}
-        </p>
+        {/* Quote section */}
+        <div className="p-8 md:p-10">
+          <p className="font-mono md:text-xl lg:text-2xl 2xl:text-3xl font-[300] text-[var(--accent-color)] text-center lg:mx-20 my-5">
+            {`"Millman`} <span className="font-[700]">skillfully delivers</span>{" "}
+            {`a generous dose of doubt and neuroses to George Costanza...”`}
+            <br></br> {`- Manhattan Digest`}
+          </p>
+        </div>
       </div>
       {/* Image section */}
       <div className="h-screen">
@@ -259,30 +268,7 @@ export default function Home() {
         </div>
       </div>
       {/* Video section */}
-      <div className="p-4 flex flex-col b-gradient">
-        <h1 className="title pt-12 pb-4 place-self-center">
-          Check out some of my work
-        </h1>
-        {/* Youtube video */}
-        <div className="bg-fixed flex flex-col items-center w-full relative">
-          <div className="py-2 px-1 rounded-md">
-            <iframe
-              className="rounded-sm w-[calc(1000px*1/3)] h-[calc(500px*1/3)] sm:w-[calc(1000px*1/2)] sm:h-[calc(500px*1/2)] md:w-[calc(1000px*2/3)] md:h-[calc(500px*2/3)] lg:w-[1000px] lg:h-[500px]"
-              src="https://www.youtube.com/embed/Sjf0SbpnHXI?si=5WVqpKRmrtaV1YCS"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-        <Link
-          className="mx-auto my-16 font-[600] text-center rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover-underline-animation"
-          href="/media"
-        >
-          see more videos
-        </Link>
-      </div>
+      {/* See Previous version for code here. */}
       {/* Contact section */}
       <div className="w-screen contact-image flex min-h-screen" id="contact">
         <div className="image-overlay w-full">

@@ -55,9 +55,9 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="absolute flex justify-center top-0 w-screen text-center text-[var(--light-text-color)] pt-3 px-4 header-title">
+      <div className="absolute flex justify-center top-0 w-screen text-center text-[var(--light-text-color)] pt-3 px-4 header-title ">
         <Link href="/" className="header-title link-no-dec">
-          <h1>Jacob Millman</h1>
+          <h1 className="pb-4">Jacob Millman</h1>
         </Link>
       </div>
       {/* only visible on screens medium and larger */}

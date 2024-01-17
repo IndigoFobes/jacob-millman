@@ -67,11 +67,13 @@ const headshots: Headshots[] = [
     id: 2,
   },
   {
-    src: "/Jacob_hs_4.jpg",
+    src: "/Jacob_hs_2.jpg",
     alt: "example",
     id: 3,
   },
 ];
+
+// New Headshot will go in position 4!
 
 export default function Page() {
   return (
