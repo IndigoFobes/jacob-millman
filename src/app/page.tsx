@@ -130,10 +130,10 @@ export default function Home() {
           </h1>
           <div className="flex justify-center">
             <Link
-              className="font-[600] text-center bg-[var(--dark-theme-color)] my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover-underline-animation"
+              className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/about"
             >
-              read more about Jacob
+              Read More About Jacob
             </Link>
           </div>
         </div>
@@ -181,13 +181,13 @@ export default function Home() {
                 Jacob is excited to utilize the lessons he learned and newfound
                 Seinfeld knowledge in the next chapter of his career.`}
               </p>
-              <div className="place-self-start">
+              <div className="flex">
                 <Link
-                  className="hover-underline-animation pt-6 md:pt-10 text-lg lg:text-xl font-[500] text-[var(--light-text-color)] hover:cursor-pointer"
+                  className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
                   href="https://www.singfeld.com/"
                   target="_blank"
                 >
-                  get details
+                  Get Details
                 </Link>
               </div>
             </motion.div>
@@ -228,10 +228,10 @@ export default function Home() {
             </motion.h2>
             <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
-              className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
+              className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/resume"
             >
-              see more
+              See More
             </Link>
           </div>
         </div>
@@ -250,10 +250,10 @@ export default function Home() {
             </motion.h2>
             <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
-              className="font-[600] text-center my-2 mx-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] place-self-center hover-underline-animation"
+              className=" mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/media"
             >
-              see more media
+              See More Media
             </Link>
           </div>
           {/* photo */}
@@ -304,7 +304,7 @@ export default function Home() {
                   className="w-full md:w-3/4 mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
                   href="mailto:jacobamillman@gmail.com"
                 >
-                  Send an email
+                  Send an Email
                 </Link>
               </motion.div>
             </div>
