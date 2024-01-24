@@ -55,18 +55,16 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="absolute flex justify-center top-0 w-screen text-center text-[var(--light-text-color)] pt-3 px-4 header-title ">
-        <Link href="/" className="header-title link-no-dec">
-          <h1 className="pb-4">Jacob Millman</h1>
+      <div className="absolute flex justify-center top-0 w-screen text-center text-[var(--light-text-color)] header-title pt-3">
+        <Link href="/" className="header-title">
+          <h1 className="">Jacob Millman</h1>
         </Link>
       </div>
       {/* only visible on screens medium and larger */}
-      <div className="menu-height flex w-screen place-items-end">
+      <div className="menu-height flex flex-row w-screen place-items-end">
         <ul className="hidden w-full menu-item font-[400] md:grid grid-cols-5 text-[var(--light-text-color)] text-center pb-3 text-sm md:text-md lg:text-lg">
           {menuItems.map((item) => {
-            return item.hasOwnProperty("children") ? (
-              <MediaDropdown item={item} />
-            ) : (
+            return (
               <Link
                 className={`relative hover:text-[var(--accent-color)] place-self-center link-no-dec ${
                   item.route === path ? `` : `hover-underline-animation`

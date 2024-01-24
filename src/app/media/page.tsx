@@ -266,7 +266,7 @@ export default function Page() {
 
   // ***RENDERED***
   return (
-    <div className="lg:w-9/12 mx-8 sm:mx-auto sm:px-8 pt-16 md:pt-48 mb-20 md:mb-32">
+    <div className="w-9/12 mx-auto pt-20 md:pt-48 mb-20 md:mb-32">
       <div className="flex flex-col gap-6 mt-5">
         {/* Videos section */}
         <div className="flex flex-col justify-center content-center mb-10">
@@ -347,7 +347,7 @@ export default function Page() {
               >
                 {show.title}
               </motion.h2>
-              <BootstrapCarousel show={show} key={show.id} />
+              {/* <BootstrapCarousel show={show} key={show.id} /> */}
             </div>
           );
         })}
