@@ -89,8 +89,9 @@ export default function Page() {
           every now and again. Unless…?`}
         </motion.p>
       </div>
+      {/* desktop */}
       <motion.div
-        className="md:relative md:float-right md:h-[22.4rem] md:w-[19.2rem] lg:h-[28rem] lg:w-[24rem] xl:h-[35rem] xl:w-[30rem] about-image ml-6 mb-4"
+        className="md:relative md:float-right md:h-[22.4rem] md:w-[19.2rem] lg:h-[28rem] lg:w-[24rem] xl:h-[35rem] xl:w-[30rem] about-image mt-16 ml-6 mb-4"
         initial="hide"
         whileInView="show"
         viewport={{ once: true }}
