@@ -10,12 +10,13 @@
   --dark-theme-color: rgb(0, 0, 0);
   --light-theme-color: #202020;
   --base-bg-color: #151515;  
-  --accent-color: #7a7a6e;
+  --accent-color: #8d8d70;
   --dark-text-color: #151515;
   --light-text-color: #dbd5d5;
   --rounded-tiny: .1rem;
   --dark-theme-transparent: rgba(41, 41, 41, 0);
   --light-text-transparent: rgba(246, 246, 246, .5);
+  --dark-text-transparent: rgba(52, 52, 52, 0.5);
 }
 
 
@@ -48,6 +49,10 @@ text-decoration: none;
 
 .b-gradient {
   background: linear-gradient(135deg, var(--light-theme-color), var(--dark-theme-color));
+}
+
+.c-gradient {
+  background: linear-gradient(135deg, white, var(--light-text-color));
 }
 
 .contentContainer {

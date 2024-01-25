@@ -2,6 +2,7 @@ import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import Link from "next/link";
 import { Component } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 // export interface SocialMedia {
 //   href: string;
@@ -46,7 +47,12 @@ export default function Footer() {
             <FaInstagram />
           </Link>
           <Link href={"https://www.facebook.com/"} target={"_blank"}>
-            <FaFacebook />
+            <Image
+              src={"/actors_access.png"}
+              alt={"Actors Access Icon"}
+              width={30}
+              height={30}
+            ></Image>
           </Link>
         </div>
       </div>

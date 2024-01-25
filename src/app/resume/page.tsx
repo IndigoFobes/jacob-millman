@@ -53,22 +53,22 @@ export interface Headshots {
 const headshots: Headshots[] = [
   {
     src: "/Jacob_ main_hs.jpg",
-    alt: "example",
+    alt: "Jacob in green shirt, looking straight forward.",
     id: 0,
   },
   {
     src: "/Jacob_hs_2.jpg",
-    alt: "example",
+    alt: "Jacob in denim jacket, smiling.",
     id: 1,
   },
   {
     src: "/Jacob_hs_5.jpg",
-    alt: "example",
+    alt: "Jacob in green quarter zip, serious.",
     id: 2,
   },
   {
-    src: "/Jacob_hs_2.jpg",
-    alt: "example",
+    src: "/jacob_headshot_green.jpg",
+    alt: "Jacob in green shirt.",
     id: 3,
   },
 ];

@@ -132,6 +132,7 @@ export default function Home() {
             <Link
               className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/about"
+              style={{ transition: "all 300ms ease-in-out" }}
             >
               Read More About Jacob
             </Link>
@@ -139,7 +140,7 @@ export default function Home() {
         </div>
       </div>
       {/* What's New / Most Recently Section */}
-      <div className="p-4 flex flex-col a-gradient">
+      <div className="p-4 flex flex-col c-gradient text-[var(--dark-text-color)]">
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4">Most Recently</h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
@@ -183,9 +184,10 @@ export default function Home() {
               </p>
               <div className="flex">
                 <Link
-                  className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
+                  className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--dark-text-transparent)] hover:text-white border-[var(--light-text-color)] border-2"
                   href="https://www.singfeld.com/"
                   target="_blank"
+                  style={{ transition: "all 300ms ease-in-out" }}
                 >
                   Get Details
                 </Link>
@@ -230,6 +232,7 @@ export default function Home() {
             <Link
               className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/resume"
+              style={{ transition: "all 300ms ease-in-out" }}
             >
               See More
             </Link>
@@ -252,6 +255,7 @@ export default function Home() {
             <Link
               className=" mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/media"
+              style={{ transition: "all 300ms ease-in-out" }}
             >
               See More Media
             </Link>
@@ -259,10 +263,10 @@ export default function Home() {
           {/* photo */}
           <div className="col-start-6 md:col-start-8 col-end-11 w-full relative h-full">
             <Image
-              src="/SFB_main.jpg"
-              alt="Male placeholder"
+              src="/media-pic.jpg"
+              alt="Jacob in Anything Goes"
               fill
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
         </div>
@@ -303,6 +307,7 @@ export default function Home() {
                 <Link
                   className="w-full md:w-3/4 mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
                   href="mailto:jacobamillman@gmail.com"
+                  style={{ transition: "all 300ms ease-in-out" }}
                 >
                   Send an Email
                 </Link>

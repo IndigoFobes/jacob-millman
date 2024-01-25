@@ -178,33 +178,33 @@ const shows: Shows[] = [
 const buttons: Buttons[] = [
   {
     id: 1,
-    title: "Dramatic Reel",
+    title: "Chigaco Fire",
   },
   {
     id: 2,
-    title: "Comedic Reel",
+    title: "Shrek",
   },
   {
     id: 3,
-    title: "Performace Clips",
+    title: "WHAS Coop",
   },
 ];
 
 const videos: Videos[] = [
   {
     id: 1,
-    src: "https://www.youtube.com/embed/Sjf0SbpnHXI?si=5WVqpKRmrtaV1YCS",
-    alt: "Morning Person – Shrek",
+    src: "https://www.youtube.com/embed/ThQE-MVn4Vk?si=f04dsHNkooMcwQeL",
+    alt: "Chicago Fire",
   },
   {
     id: 2,
-    src: "https://www.youtube.com/embed/lB0VLzzSxcU?si=Wna_UX6s9Njs6zSZ",
-    alt: "What's Up Duloc",
+    src: "https://www.youtube.com/embed/q3UnUWocP0E?si=1zQf9b1TzwEdDVRG",
+    alt: "Shrek",
   },
   {
     id: 3,
     src: "https://www.youtube.com/embed/3sPuuMg9G0Y?si=n4XEYAWO22zLgCJ7",
-    alt: "Who I'd Be",
+    alt: "WHAS Coop",
   },
 ];
 
@@ -339,7 +339,7 @@ export default function Page() {
           return (
             <div>
               <motion.h2
-                className="text-[2rem] py-4"
+                className="text-[2rem] py-4 w-3/4"
                 initial="hide"
                 whileInView="show"
                 viewport={{ once: true }}
@@ -347,7 +347,7 @@ export default function Page() {
               >
                 {show.title}
               </motion.h2>
-              {/* <BootstrapCarousel show={show} key={show.id} /> */}
+              <BootstrapCarousel show={show} key={show.id} />
             </div>
           );
         })}
