@@ -96,7 +96,13 @@ const shows: Shows[] = [
       c: {
         id: 3,
         title: "Stupid F**king Bird",
-        src: "/SFB_main-cropped.jpg",
+        src: "/sfb_3.jpg",
+        alt: "Stupid F**king Bird",
+      },
+      d: {
+        id: 4,
+        title: "Stupid F**king Bird",
+        src: "/sfb_4.jpg",
         alt: "Stupid F**king Bird",
       },
     },
@@ -114,13 +120,31 @@ const shows: Shows[] = [
       b: {
         id: 2,
         title: "Our Town",
-        src: "/our-town_1.JPG",
+        src: "/our-town_2.JPG",
         alt: "Our Town",
       },
       c: {
         id: 3,
         title: "Our Town",
-        src: "/our-town_1.JPG",
+        src: "/our-town_3.JPG",
+        alt: "Our Town",
+      },
+      d: {
+        id: 4,
+        title: "Our Town",
+        src: "/our-town_4.JPG",
+        alt: "Our Town",
+      },
+      e: {
+        id: 5,
+        title: "Our Town",
+        src: "/our-town_5.JPG",
+        alt: "Our Town",
+      },
+      f: {
+        id: 6,
+        title: "Our Town",
+        src: "/our-town_6.JPG",
         alt: "Our Town",
       },
     },
@@ -173,6 +197,66 @@ const shows: Shows[] = [
       },
     },
   },
+  {
+    id: 4,
+    title: "Anything Goes",
+    photos: {
+      a: {
+        id: 1,
+        title: "Anything Goes",
+        src: "/DSC_0003.jpg",
+        alt: "Anything Goes",
+      },
+      b: {
+        id: 2,
+        title: "Anything Goes",
+        src: "/DSC_0167.jpg",
+        alt: "Anything Goes",
+      },
+      c: {
+        id: 3,
+        title: "Anything Goes",
+        src: "/DSC_0283(1).jpg",
+        alt: "Anything Goes",
+      },
+      d: {
+        id: 4,
+        title: "Anything Goes",
+        src: "/DSC_0294.jpgg",
+        alt: "Anything Goes",
+      },
+      e: {
+        id: 5,
+        title: "Anything Goes",
+        src: "/DSC_0322.jpg",
+        alt: "Anything Goes",
+      },
+      f: {
+        id: 6,
+        title: "Anything Goes",
+        src: "/DSC_0433.jpg",
+        alt: "Anything Goes",
+      },
+      g: {
+        id: 7,
+        title: "Anything Goes",
+        src: "/IMG_2556cropped.jpeg",
+        alt: "Anything Goes",
+      },
+      h: {
+        id: 8,
+        title: "Anything Goes",
+        src: "/IMG_2721 cropped.jpeg",
+        alt: "Anything Goes",
+      },
+      i: {
+        id: 9,
+        title: "Anything Goes",
+        src: "/IMG_3134 cropped.jpeg",
+        alt: "Anything Goes",
+      },
+    },
+  },
 ];
 
 const buttons: Buttons[] = [
@@ -182,11 +266,15 @@ const buttons: Buttons[] = [
   },
   {
     id: 2,
-    title: "Shrek",
+    title: "Shrek the Musical (Lord Farquaad)",
   },
   {
     id: 3,
-    title: "WHAS Coop",
+    title: "Wet Hot American Summer (Coop)",
+  },
+  {
+    id: 4,
+    title: "NBC Singfeld! Interview",
   },
 ];
 
@@ -203,8 +291,13 @@ const videos: Videos[] = [
   },
   {
     id: 3,
-    src: "https://www.youtube.com/embed/3sPuuMg9G0Y?si=n4XEYAWO22zLgCJ7",
-    alt: "WHAS Coop",
+    src: "https://www.youtube.com/embed/2rKWIdMMr50?si=na2YDcIF-JHP11pm",
+    alt: "Wet Hot American Summer (Coop)",
+  },
+  {
+    id: 4,
+    src: "https://www.youtube.com/embed/p2EIvRfL6Cw?si=MeRCWhrMD6eGx-I9",
+    alt: "NBC Singfeld! Interview",
   },
 ];
 
@@ -302,7 +395,7 @@ export default function Page() {
               {/* {video} */}
             </motion.div>
           </div>
-          <div className="flex flex-col place-self-center sm:grid sm:grid-cols-3 mt-10 lg:mx-10 w-full">
+          <div className="flex flex-col place-self-center sm:grid sm:grid-cols-4 mt-10 lg:mx-10 w-full">
             {buttons.map((button) => {
               return (
                 <button

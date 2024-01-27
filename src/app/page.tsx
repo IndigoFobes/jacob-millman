@@ -185,7 +185,7 @@ export default function Home() {
               <div className="flex">
                 <Link
                   className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--dark-text-transparent)] hover:text-white border-[var(--light-text-color)] border-2"
-                  href="https://www.singfeld.com/"
+                  href="https://www.nbcnewyork.com/entertainment/the-scene/new-york-live/go-see-the-musical-about-nothing/4688883/"
                   target="_blank"
                   style={{ transition: "all 300ms ease-in-out" }}
                 >

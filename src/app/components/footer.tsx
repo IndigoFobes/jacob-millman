@@ -2,6 +2,7 @@ import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import Link from "next/link";
 import { Component } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 
 // export interface SocialMedia {
@@ -40,13 +41,23 @@ export default function Footer() {
               </Link>
             );
           })} */}
-          <Link href={"https://www.facebook.com/"} target={"_blank"}>
+          {/* <Link href={"https://www.facebook.com/"} target={"_blank"}>
             <FaFacebook />
+          </Link> */}
+          {/* email */}
+          <Link href={"mailto:jacobamillman@gmail.com"} target={"_blank"}>
+            <MdEmail />
           </Link>
-          <Link href={"https://www.instagram.com/"} target={"_blank"}>
+          <Link
+            href={" https://www.instagram.com/jacob.millman/"}
+            target={"_blank"}
+          >
             <FaInstagram />
           </Link>
-          <Link href={"https://www.facebook.com/"} target={"_blank"}>
+          <Link
+            href={"https://resumes.actorsaccess.com/jacobmillman"}
+            target={"_blank"}
+          >
             <Image
               src={"/actors_access.png"}
               alt={"Actors Access Icon"}
