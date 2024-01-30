@@ -379,6 +379,10 @@ export default function Page() {
     source = videos[2].src;
     title = videos[2].alt;
     id = videos[2].id;
+  } else if (rendered == 4) {
+    source = videos[3].src;
+    title = videos[3].alt;
+    id = videos[3].id;
   } else {
     console.log("Something went wrong.");
   }
