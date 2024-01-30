@@ -482,7 +482,7 @@ export default function Page() {
         {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
         {shows.map((show) => {
           return (
-            <div>
+            <div key={show.id}>
               <motion.h2
                 className="text-[2rem] py-4 w-3/4"
                 initial="hide"

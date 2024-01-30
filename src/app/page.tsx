@@ -110,7 +110,7 @@ export default function Home() {
         </div>
         <div className="col-start-1 col-end-8 flex flex-col justify-center content-center my-auto px-4 py-10 2xl:pr-60 bg-[var(--dark-theme-color)]">
           <h1 className=" text-[var(--accent-color)] font-[300] mom-quote leading-normal mb-2 mx-8 md:mx-10 lg:mx-20 xl:mx-40 text-center">
-            "A{" "}
+            &quot;A{" "}
             <span className="text-[var(--accent-color)] font-[700]">
               once-in-a-lifetime talent,
             </span>{" "}
@@ -123,7 +123,7 @@ export default function Home() {
               {" "}
               flood of charisma
             </span>
-            "<span className=" text-[1.5rem] ml-4">- Nancy Millman</span>
+            &quot;<span className=" text-[1.5rem] ml-4">- Nancy Millman</span>
             {/* <span className="text-[var(--light-text-color)] font-[500]">
               actor
             </span>{" "} */}
