@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import type { Metadata } from "next";
 import Header from "./components/header";
@@ -13,6 +12,9 @@ import { AnimatePresence } from "framer-motion";
 
 // import fonts
 import { Poppins, La_Belle_Aurore, Raleway, Mulish } from "next/font/google";
+
+// import bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const poppins = Poppins({
   subsets: ["latin"],
