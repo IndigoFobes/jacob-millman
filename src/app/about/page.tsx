@@ -41,12 +41,12 @@ const imageVariants: Variants = {
 
 export default function Page() {
   return (
-    <div className="w-9/12 mx-auto pt-20 md:pt-48 mb-20 md:mb-32">
+    <div className="w-9/12 mx-auto pt-20 md:pt-48 mb-20 md:mb-32 relative">
       {/* <h1 className="title pb-10 text-center md:text-start">About me</h1> */}
       {/* mobile */}
       <div className="md:hidden flex flex-col justify-center">
         <motion.div
-          className="h-[20rem] w-[20rem] about-image place-self-center"
+          className="h-[20rem] w-[20rem] about-image-3 place-self-center"
           initial="hide"
           whileInView="show"
           viewport={{ once: true }}
@@ -78,7 +78,21 @@ export default function Page() {
           with people so different from him, and he is constantly pulling
           inspiration from the outside world into his work.`}
           {<br></br>}
-          {<br></br>}
+        </motion.p>
+        <motion.div
+          className="h-[20rem] w-[20rem] about-image-2 place-self-center mt-6"
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={imageVariants}
+        ></motion.div>
+        <motion.p
+          className="text-[.9rem] text-start font-[400] mt-6"
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={textVariants}
+        >
           {`A wise teacher once
           told Jacob, “The best way to grow as an actor is by living your life
           to the fullest,” which he embraced. Jacob loves to cook, box, and pet
@@ -88,22 +102,22 @@ export default function Page() {
           totally safe, healthy, and marketable way). Maybe just a little prank
           every now and again. Unless…?`}
         </motion.p>
+        <motion.div
+          className="h-[20rem] w-[20rem] about-image place-self-center mt-6"
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={imageVariants}
+        ></motion.div>
       </div>
       {/* desktop */}
       <motion.div
-        className="md:relative md:float-right md:h-[22.4rem] md:w-[19.2rem] lg:h-[28rem] lg:w-[24rem] xl:h-[35rem] xl:w-[30rem] about-image mt-16 ml-6 mb-4"
+        className="about-image-3 md:relative md:float-right md:h-[18rem] md:w-[15.43rem] xl:h-[24rem] xl:w-[20rem] mt-16 ml-6 mb-4"
         initial="hide"
         whileInView="show"
         viewport={{ once: true }}
         variants={imageVariants}
-      >
-        {/* <Image
-          src="/Jacob_hs_2.jpg"
-          alt="Male placeholder"
-          fill={true}
-          className="mx-auto object-cover md:pl-16 pb-10 bg-top"
-        /> */}
-      </motion.div>
+      ></motion.div>
       <motion.p
         className="hidden md:block text-[1.1rem] text-start font-[400] pt-16"
         initial="hide"
@@ -122,6 +136,21 @@ export default function Page() {
           and Gender Studies. Jacob currently resides in Manhattan with his
           plants and Legos.`}
         {<br></br>}
+      </motion.p>
+      <motion.div
+        className="about-image md:relative md:float-left md:h-[18rem] md:w-[13rem] xl:h-[24rem] xl:w-[20rem] mt-8 mr-6"
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={textVariants}
+      ></motion.div>
+      <motion.p
+        className="hidden md:block text-[1.1rem] text-start font-[400]"
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={imageVariants}
+      >
         {<br></br>}
         {`Jacob’s main focus in his work is the character.
           Their journey and relationships. Their hopes and dreams. From The
@@ -130,7 +159,22 @@ export default function Page() {
           with people so different from him, and he is constantly pulling
           inspiration from the outside world into his work.`}
         {<br></br>}
-        {<br></br>}
+      </motion.p>
+      {<br></br>}
+      <motion.div
+        className="about-image-2 md:relative md:float-right md:h-[18rem] md:w-[15.43rem] ml-6 "
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={imageVariants}
+      ></motion.div>
+      <motion.p
+        className="hidden md:block text-[1.1rem] text-start font-[400]"
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={textVariants}
+      >
         {`A wise teacher once
           told Jacob, “The best way to grow as an actor is by living your life
           to the fullest,” which he embraced. Jacob loves to cook, box, and pet

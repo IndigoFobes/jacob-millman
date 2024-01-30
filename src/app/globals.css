@@ -74,7 +74,21 @@ text-decoration: none;
 }
 
 .about-image {
-  background-image: url("/Jacob_hs_2.jpg");
+  background-image: url("/Jacob_about-1.jpg");
+  background-size: cover;
+  background-position: top;
+  width: full;
+}
+
+.about-image-2 {
+  background-image: url("/Jacob_about-2.jpg");
+  background-size: cover;
+  background-position: top;
+  width: full;
+}
+
+.about-image-3 {
+  background-image: url("/jacob_about-3.JPG");
   background-size: cover;
   background-position: top;
   width: full;
