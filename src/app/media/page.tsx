@@ -162,13 +162,31 @@ const shows: Shows[] = [
       b: {
         id: 2,
         title: "Singfeld, 2023",
-        src: "/singfeld_1.jpg",
+        src: "/DSC_3490.jpg",
         alt: "Singfeld, 2023",
       },
       c: {
         id: 3,
         title: "Singfeld, 2023",
-        src: "/singfeld_1.jpg",
+        src: "/DSC_3554 copy.jpg",
+        alt: "Singfeld, 2023",
+      },
+      d: {
+        id: 4,
+        title: "Singfeld, 2023",
+        src: "/DSC_4385.jpg",
+        alt: "Singfeld, 2023",
+      },
+      e: {
+        id: 5,
+        title: "Singfeld, 2023",
+        src: "/DSC_5267.jpg",
+        alt: "Singfeld, 2023",
+      },
+      f: {
+        id: 6,
+        title: "Singfeld, 2023",
+        src: "/DSC_5433.jpg",
         alt: "Singfeld, 2023",
       },
     },
@@ -180,7 +198,7 @@ const shows: Shows[] = [
       a: {
         id: 1,
         title: "The Pillowman",
-        src: "/pillowman_1.jpg",
+        src: "/IMG_2975 no button.png",
         alt: "The Pillowman",
       },
       b: {
@@ -192,7 +210,37 @@ const shows: Shows[] = [
       c: {
         id: 3,
         title: "The Pillowman",
-        src: "/Pillowman_3.jpg",
+        src: "/IMG_3052-copy.jpg",
+        alt: "The Pillowman",
+      },
+      d: {
+        id: 4,
+        title: "The Pillowman",
+        src: "/IMG_2945-copy.jpg",
+        alt: "The Pillowman",
+      },
+      e: {
+        id: 5,
+        title: "The Pillowman",
+        src: "/IMG_2957 copy.jpg",
+        alt: "The Pillowman",
+      },
+      f: {
+        id: 6,
+        title: "The Pillowman",
+        src: "/IMG_3013 copy.jpg",
+        alt: "The Pillowman",
+      },
+      g: {
+        id: 7,
+        title: "The Pillowman",
+        src: "/IMG_3016 copy.jpg",
+        alt: "The Pillowman",
+      },
+      h: {
+        id: 8,
+        title: "The Pillowman",
+        src: "/IMG_3027 cropped.jpeg",
         alt: "The Pillowman",
       },
     },
