@@ -150,6 +150,10 @@ text-decoration: none;
   .menu-height {
     height: 9rem
   }
+
+  .mom-quote {
+    font-size: 1.8rem
+  }
 }
 
 /* Media Query for sm screen */
@@ -161,6 +165,10 @@ text-decoration: none;
   .title {
     font-size: 1.9rem
   }
+
+  .mom-quote {
+    font-size: 1.5rem
+  }
 }
 
 /* Media Query for xs screen */
@@ -171,6 +179,10 @@ text-decoration: none;
 
   .title {
     font-size: 1.7rem;
+  }
+
+  .mom-quote {
+    font-size: 1.2rem
   }
 }
 
