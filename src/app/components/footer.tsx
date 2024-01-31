@@ -75,7 +75,12 @@ export default function Footer() {
         </Link>
         <div className="text-center text-xs xl:text-sm font-mono">
           <p className="">Copyright 2023 Jacob A. Millman</p>
-          <p>Site designed and built by Indigo Fobes</p>
+          <p>
+            Site designed and built by{" "}
+            <Link href="mailto:indigo.crandell@gmail.com" className="underline">
+              Indigo Fobes
+            </Link>
+          </p>
         </div>
       </div>
     </div>

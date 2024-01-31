@@ -228,3 +228,10 @@ text-decoration: none;
 .close-menu:hover {
   transform: rotate(90deg);
 } */
+
+/* for safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .media-buttons {
+    max-height: 3rem;
+  }
+}

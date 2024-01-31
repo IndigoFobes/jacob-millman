@@ -454,7 +454,7 @@ export default function Page() {
                   key={button.id}
                   value={button.id}
                   onClick={handleClick}
-                  className={`rounded-[var(--rounded-tiny)] lg:text-md text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 p-2 m-2 md:m-4 w-3/4 place-self-center h-full`}
+                  className={`media-buttons rounded-[var(--rounded-tiny)] lg:text-md text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 p-2 m-2 md:m-4 w-3/4 place-self-center h-full`}
                   style={{ transition: "all 300ms ease-in-out" }}
                 >
                   {button.title}

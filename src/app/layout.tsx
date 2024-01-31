@@ -44,7 +44,7 @@ export const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Jacob A. Millman",
+  title: "Jacob Millman",
   description: "NYC based actor.",
 };
 
