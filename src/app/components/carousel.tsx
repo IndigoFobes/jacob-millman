@@ -25,14 +25,18 @@ export default function BootstrapCarousel(props: Props) {
         {Object.keys(show.photos).map(function (photoIndex) {
           var photo = show.photos[photoIndex];
           return (
-            <Carousel.Item key={photo.id} interval={4000} className="">
+            <Carousel.Item
+              key={photo.id}
+              interval={4000}
+              className="max-h-[50rem]"
+            >
               <div className="">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   key={photo.id}
                   width={1200}
-                  height={1000}
+                  height={500}
                 />
               </div>
               <Carousel.Caption>
