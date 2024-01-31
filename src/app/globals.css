@@ -19,6 +19,14 @@
   --dark-text-transparent: rgba(52, 52, 52, 0.5);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative
+}
 
 @font-face {
   font-family: "Manchester";
@@ -174,7 +182,7 @@ text-decoration: none;
 /* Media Query for xs screen */
 @media screen and (max-width: 640px) {
   .header-title {
-    font-size: 2.4rem
+    font-size: 2.7rem
   }
 
   .title {

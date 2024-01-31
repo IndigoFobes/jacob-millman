@@ -17,7 +17,7 @@ import { AnimatePresence } from "framer-motion";
 const introPictureVariants: Variants = {
   hide: {
     opacity: 0,
-    x: -500,
+    x: -200,
   },
   show: {
     opacity: 1,
@@ -31,7 +31,7 @@ const introPictureVariants: Variants = {
 const introTextVariants: Variants = {
   hide: {
     opacity: 0,
-    x: 500,
+    x: 200,
   },
   show: {
     opacity: 1,
@@ -123,7 +123,10 @@ export default function Home() {
               {" "}
               flood of charisma
             </span>
-            &quot;<span className="text-[1.5rem] ml-4">- Nancy Millman</span>
+            &quot;
+            <span className="text-[1rem] md:text-[1.5rem]  ml-4">
+              - Nancy Millman
+            </span>
             {/* <span className="text-[var(--light-text-color)] font-[500]">
               actor
             </span>{" "} */}
@@ -165,7 +168,7 @@ export default function Home() {
             </motion.div>
             {/* text */}
             <motion.div
-              className="flex flex-col col-start-3 col-end-6 pl-10 mx-10 md:mx-0"
+              className="flex flex-col col-start-3 col-end-6 md:pl-10 md:mx-10 md:mx-0"
               initial="hide"
               whileInView="show"
               viewport={{ once: true }}
@@ -196,8 +199,8 @@ export default function Home() {
           </li>
         </ul>
         {/* Quote section */}
-        <div className="p-8 md:p-10">
-          <p className="font-mono md:text-xl lg:text-2xl 2xl:text-3xl font-[300] text-[var(--accent-color)] text-center lg:mx-20 my-5">
+        <div className=" md:p-10">
+          <p className="font-mono text-xl lg:text-2xl 2xl:text-3xl font-[300] text-[var(--accent-color)] text-center lg:mx-20 my-5">
             {`"Millman`} <span className="font-[700]">skillfully delivers</span>{" "}
             {`a generous dose of doubt and neuroses to George Costanza...”`}
             <br></br> {`- Manhattan Digest`}
@@ -230,7 +233,7 @@ export default function Home() {
             </motion.h2>
             <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
-              className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
+              className="min-w-[180px] mt-6 font-[600] text-center py-1 px-3 md:py-2 md:px-8 rounded-[var(--rounded-tiny)] md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/resume"
               style={{ transition: "all 300ms ease-in-out" }}
             >
@@ -253,7 +256,7 @@ export default function Home() {
             </motion.h2>
             <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
-              className=" mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
+              className="mt-6 font-[600] text-center py-1 px-3 md:py-2 md:px-8 rounded-[var(--rounded-tiny)] md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/media"
               style={{ transition: "all 300ms ease-in-out" }}
             >

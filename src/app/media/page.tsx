@@ -270,7 +270,7 @@ const shows: Shows[] = [
       d: {
         id: 4,
         title: "Anything Goes",
-        src: "/DSC_0294.jpgg",
+        src: "/DSC_0294.jpg",
         alt: "Anything Goes",
       },
       e: {
@@ -436,7 +436,7 @@ export default function Page() {
               {rendered == 0 ? (
                 <div className="video-image flex b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
                   <div className="flex image-overlay w-full justify-center">
-                    <p className="place-self-center font-[500] text-[1.7rem] md:text-[2rem]">
+                    <p className="place-self-center font-[500] text-[1rem] md:text-[2rem]">
                       Click below to see a video
                     </p>
                   </div>
@@ -447,14 +447,14 @@ export default function Page() {
               {/* {video} */}
             </motion.div>
           </div>
-          <div className="flex flex-col place-self-center sm:grid sm:grid-cols-4 mt-10 lg:mx-10 w-full">
+          <div className="flex flex-col place-self-center md:grid md:grid-cols-4 mt-10 lg:mx-10 w-full">
             {buttons.map((button) => {
               return (
                 <button
                   key={button.id}
                   value={button.id}
                   onClick={handleClick}
-                  className={`rounded-[var(--rounded-tiny)] text-md md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 p-2 m-2 md:m-4 w-3/4 place-self-center h-full`}
+                  className={`rounded-[var(--rounded-tiny)] lg:text-md text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 p-2 m-2 md:m-4 w-3/4 place-self-center h-full`}
                   style={{ transition: "all 300ms ease-in-out" }}
                 >
                   {button.title}
