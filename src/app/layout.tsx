@@ -46,6 +46,9 @@ export const mulish = Mulish({
 export const metadata: Metadata = {
   title: "Jacob Millman",
   description: "NYC based actor.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
