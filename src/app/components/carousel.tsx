@@ -31,7 +31,7 @@ export default function BootstrapCarousel(props: Props) {
           return (
             <Carousel.Item
               key={photo.id}
-              className="max-h-[50rem]"
+              className="max-h-[17rem] md:max-h-[50rem]"
               interval={10000}
             >
               <div className="">
