@@ -74,7 +74,7 @@ export default function Footer() {
           </h4>
         </Link>
         <div className="text-center text-xs xl:text-sm font-mono">
-          <p className="">Copyright 2023 Jacob A. Millman</p>
+          <p className="">Copyright 2023 Jacob Millman</p>
           <p>
             Site designed and built by{" "}
             <Link href="mailto:indigo.crandell@gmail.com" className="underline">

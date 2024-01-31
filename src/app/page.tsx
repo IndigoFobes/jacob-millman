@@ -301,11 +301,11 @@ export default function Home() {
                 viewport={{ once: true }}
                 variants={reachOutTextVariants}
               >
-                <h3 className="pt-2 pb-4 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
+                {/* <h3 className="pt-2 pb-4 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
                   (777)777-7777
-                </h3>
+                </h3> */}
                 <h3 className="pb-8 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
-                  jacobam*****@gmail.com
+                  jacobamillman@gmail.com
                 </h3>
                 <Link
                   className="w-full md:w-3/4 mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
