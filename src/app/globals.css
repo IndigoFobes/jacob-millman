@@ -231,7 +231,6 @@ text-decoration: none;
 
 /* for safari */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  .media-buttons {
-    max-height: 3rem;
-  }
+  
 }
+

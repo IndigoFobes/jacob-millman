@@ -411,93 +411,91 @@ export default function Page() {
 
   // ***RENDERED***
   return (
-    <div className="w-9/12 mx-auto pt-20 md:pt-48 mb-20 md:mb-32">
-      <div className="flex flex-col gap-6 mt-5">
-        {/* Videos section */}
-        <div className="flex flex-col justify-center content-center mb-10">
-          <motion.h1
-            className="title text-center"
+    <div className="w-9/12 mx-auto pt-20 md:pt-48 mb-20 md:mb-32 flex flex-col gap-6 mt-5">
+      {/* Videos section */}
+      <div className="flex flex-col justify-center content-center mb-10">
+        <motion.h1
+          className="title text-center"
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={titleVariants}
+        >
+          Videos
+        </motion.h1>
+        <hr className="w-3/4 border-solid mt-4 place-self-center horizontal-line-light mb-8"></hr>
+        <div className="flex justify-center lg:row-span-4">
+          <motion.div
+            className="py-2 px-1 rounded-md flex justify-center"
             initial="hide"
             whileInView="show"
             viewport={{ once: true }}
-            variants={titleVariants}
+            variants={imageVariants}
           >
-            Videos
-          </motion.h1>
-          <hr className="w-3/4 border-solid mt-4 place-self-center horizontal-line-light mb-8"></hr>
-          <div className="lg:row-span-4">
-            <motion.div
-              className="py-2 px-1 rounded-md flex justify-center"
+            {rendered == 0 ? (
+              <div className="video-image flex b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
+                <div className="flex image-overlay w-full justify-center">
+                  <p className="place-self-center font-[500] text-[1rem] md:text-[2rem]">
+                    Click below to see a video
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div>{video}</div>
+            )}
+            {/* {video} */}
+          </motion.div>
+        </div>
+        <div className="flex flex-col lg:flex-row lg:h-[5rem] place-self-center mt-10 lg:mx-10 w-full">
+          {buttons.map((button) => {
+            return (
+              <button
+                key={button.id}
+                value={button.id}
+                onClick={handleClick}
+                className={`media-buttons rounded-[var(--rounded-tiny)] lg:text-md text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 p-2 m-2 md:m-4 w-3/4 place-self-center h-full`}
+                style={{ transition: "all 300ms ease-in-out" }}
+              >
+                {button.title}
+              </button>
+            );
+          })}
+        </div>
+        {/* <button onClick={handleClick} className="bg-red-400 m-4 p-3">
+            Click me
+          </button> */}
+      </div>
+      {/* Production photos section */}
+      <div className="flex flex-col justify-center content-center">
+        <motion.h1
+          className="title text-center"
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={titleVariants}
+        >
+          Production Photos
+        </motion.h1>
+        <hr className="w-3/4 border-solid mt-4 place-self-center horizontal-line-light mb-2"></hr>
+      </div>
+      {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
+      {shows.map((show) => {
+        return (
+          <div key={show.id}>
+            <motion.h2
+              className="text-[2rem] py-4 w-3/4"
               initial="hide"
               whileInView="show"
               viewport={{ once: true }}
-              variants={imageVariants}
+              variants={titleVariants}
             >
-              {rendered == 0 ? (
-                <div className="video-image flex b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
-                  <div className="flex image-overlay w-full justify-center">
-                    <p className="place-self-center font-[500] text-[1rem] md:text-[2rem]">
-                      Click below to see a video
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <div>{video}</div>
-              )}
-              {/* {video} */}
-            </motion.div>
+              {show.title}
+            </motion.h2>
+            <BootstrapCarousel show={show} key={show.id} />
           </div>
-          <div className="flex flex-col place-self-center md:grid md:grid-cols-4 mt-10 lg:mx-10 w-full">
-            {buttons.map((button) => {
-              return (
-                <button
-                  key={button.id}
-                  value={button.id}
-                  onClick={handleClick}
-                  className={`media-buttons rounded-[var(--rounded-tiny)] lg:text-md text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2 p-2 m-2 md:m-4 w-3/4 place-self-center h-full`}
-                  style={{ transition: "all 300ms ease-in-out" }}
-                >
-                  {button.title}
-                </button>
-              );
-            })}
-          </div>
-          {/* <button onClick={handleClick} className="bg-red-400 m-4 p-3">
-            Click me
-          </button> */}
-        </div>
-        {/* Production photos section */}
-        <div className="flex flex-col justify-center content-center">
-          <motion.h1
-            className="title text-center"
-            initial="hide"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={titleVariants}
-          >
-            Production Photos
-          </motion.h1>
-          <hr className="w-3/4 border-solid mt-4 place-self-center horizontal-line-light mb-2"></hr>
-        </div>
-        {/* map through each show, with photos from each show. I can either create new interfaces with photos nested into shows. I don't know another good option. */}
-        {shows.map((show) => {
-          return (
-            <div key={show.id}>
-              <motion.h2
-                className="text-[2rem] py-4 w-3/4"
-                initial="hide"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={titleVariants}
-              >
-                {show.title}
-              </motion.h2>
-              <BootstrapCarousel show={show} key={show.id} />
-            </div>
-          );
-        })}
-        {/* OG photo layout, just 3 rows of 3, look at previous commits */}
-      </div>
+        );
+      })}
+      {/* OG photo layout, just 3 rows of 3, look at previous commits */}
     </div>
   );
 }
