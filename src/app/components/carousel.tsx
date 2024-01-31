@@ -20,12 +20,20 @@ export default function BootstrapCarousel(props: Props) {
   };
   return (
     <div className="h-1/2">
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        // data-interval={false}
+      >
         {/* <div className="text-2xl text-center py-4">{show.title}</div> */}
         {Object.keys(show.photos).map(function (photoIndex) {
           var photo = show.photos[photoIndex];
           return (
-            <Carousel.Item key={photo.id} className="max-h-[50rem]">
+            <Carousel.Item
+              key={photo.id}
+              className="max-h-[50rem]"
+              interval={10000}
+            >
               <div className="">
                 <Image
                   src={photo.src}
