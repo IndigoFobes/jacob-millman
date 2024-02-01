@@ -124,7 +124,7 @@ export default function Page() {
             variants={resumeVariants}
           >
             <Image
-              src={"/JacobMillman-Resume.png"}
+              src={"/JacobMillman-Resume2.png"}
               alt={"Jacob's resume"}
               width={1000}
               height={500}
