@@ -132,7 +132,7 @@ export default function Page() {
             <div className="w-full h-full flex justify-center">
               <Link
                 className="bg-[var(--light-theme-color)] hover:bg-[var(--accent-color)] place-self-center w-full text-center py-2"
-                href={"JacobMillman-Resume.pdf"}
+                href={"JacobMillman–Resume.pdf"}
                 download
                 target={"_blank"}
                 style={{ transition: "all 300ms ease-in-out" }}

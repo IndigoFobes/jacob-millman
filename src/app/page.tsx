@@ -256,11 +256,11 @@ export default function Home() {
             </motion.h2>
             <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2"></hr>
             <Link
-              className="mt-6 font-[600] text-center py-1 px-1 md:py-2 md:px-8 rounded-[var(--rounded-tiny)] md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
+              className=" mt-6 font-[600] text-center py-1 px-3 md:py-2 md:px-8 rounded-[var(--rounded-tiny)] md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/media"
               style={{ transition: "all 300ms ease-in-out" }}
             >
-              See More Media
+              See More
             </Link>
           </div>
           {/* photo */}
