@@ -1,6 +1,8 @@
 "use client";
 import Header from "./components/header";
 import Image from "next/image";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import React, { useState } from "react";
 import {
@@ -168,7 +170,7 @@ export default function Home() {
             </motion.div>
             {/* text */}
             <motion.div
-              className="flex flex-col col-start-3 col-end-6 md:pl-10 md:mx-10 md:mx-0"
+              className="flex flex-col col-start-3 col-end-6 md:pl-10 md:mx-0"
               initial="hide"
               whileInView="show"
               viewport={{ once: true }}
@@ -187,7 +189,7 @@ export default function Home() {
               </p>
               <div className="flex">
                 <Link
-                  className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--dark-text-transparent)] hover:text-white border-[var(--light-text-color)] border-2"
+                  className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--light-text-color)] hover:text-[var(--accent-color)] border-[var(--light-text-color)] border-2"
                   href="https://www.nbcnewyork.com/entertainment/the-scene/new-york-live/go-see-the-musical-about-nothing/4688883/"
                   target="_blank"
                   style={{ transition: "all 300ms ease-in-out" }}
@@ -277,45 +279,84 @@ export default function Home() {
       {/* Video section */}
       {/* See Previous version for code here. */}
       {/* Contact section */}
-      <div className="w-screen contact-image flex min-h-screen" id="contact">
-        <div className="image-overlay w-full">
-          <div className="p-10 h-full flex flex-col md:flex-row mx-auto my-20 max-w-[35rem] md:max-w-[60rem]">
-            <div className="md:mr-10 mb-8 md:mb-0 md:h-72 lg:h-96 flex md:justify-end md:w-1/3">
-              <motion.h2
-                className="font-[600] text-[3rem] text-[var(--light-text-color)]"
-                initial="hide"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={reachOutVariants}
-              >
-                Reach out
-              </motion.h2>
-            </div>
-            {/* vertical line */}
-            <div className="verticalLine h-3/4 hidden md:flex"></div>
-            <div className="md:ml-8 md:place-self-start flex w-1/2">
-              <motion.div
-                className="flex flex-col lg:mt-4"
-                initial="hide"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={reachOutTextVariants}
-              >
-                {/* <h3 className="pt-2 pb-4 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
-                  (777)777-7777
-                </h3> */}
-                <h3 className="pb-8 text-lg md:text-2xl font-[600] text-[var(--light-text-color)]">
-                  jacobamillman@gmail.com
-                </h3>
+      <div className="w-screen flex min-h-screen" id="contact">
+        {/* image portion of contact - hidden on mobile */}
+        <div className="hidden md:block md:relative w-2/5">
+          <Image
+            src={"/SFB_main-cropped.jpg"}
+            alt={
+              "Jacob sitting on a wooden box, smiling, wearing green flannel."
+            }
+            fill
+            className="object-cover"
+          ></Image>
+        </div>
+        {/* Text portion of Reach Out Contact section */}
+        <div className="contact-bg w-full md:w-3/5 text-[var(--dark-text-color)] flex flex-col md:p-6">
+          <div className="contact-overlay w-full h-full">
+            <motion.div
+              className="flex flex-col ml-10 mt-4 md:ml-4 lg:mt-4 lg:ml-20"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={reachOutTextVariants}
+            >
+              <h2 className="title mb-2">Reach out!</h2>
+              <hr className="w-3/4 xl:w-1/2 border-solid horizontal-line-dark mt-2 mb-12"></hr>
+              {/* email */}
+              <div className="pb-3">
                 <Link
-                  className="w-full md:w-3/4 mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
-                  href="mailto:jacobamillman@gmail.com"
-                  style={{ transition: "all 300ms ease-in-out" }}
+                  href={"mailto:jacobamillman@gmail.com"}
+                  target={"_blank"}
+                  className={"text-3xl flex flex-row"}
                 >
-                  Send an Email
+                  <MdEmail className="mr-2" />
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-[600]">
+                    jacobamillman@gmail.com
+                  </h3>
                 </Link>
-              </motion.div>
-            </div>
+              </div>
+              {/* instagram */}
+              <div className="pb-3">
+                <Link
+                  href={" https://www.instagram.com/jacob.millman/"}
+                  target={"_blank"}
+                  className={"text-3xl flex flex-row"}
+                >
+                  <FaInstagram className="mr-2" />
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-[600]">
+                    instagram
+                  </h3>
+                </Link>
+              </div>
+              {/* actors access */}
+              <div className="pb-8 flex flex-row">
+                <Link
+                  href={"https://resumes.actorsaccess.com/jacobmillman"}
+                  target={"_blank"}
+                  className={"flex flex-row"}
+                >
+                  <Image
+                    src={"/actors_access.png"}
+                    alt={"Actors Access Icon"}
+                    width={30}
+                    height={30}
+                    className={"mr-2"}
+                  ></Image>
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-[600]">
+                    actors access
+                  </h3>
+                </Link>
+              </div>
+
+              <Link
+                className="min-w-[180px] mt-6 font-[600] place-self-start text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--light-text-color)] hover:text-[var(--accent-color)] border-[var(--light-text-color)] border-2"
+                href="mailto:jacobamillman@gmail.com"
+                style={{ transition: "all 300ms ease-in-out" }}
+              >
+                Send an Email
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>

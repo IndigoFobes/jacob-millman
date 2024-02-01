@@ -68,10 +68,18 @@ text-decoration: none;
 }
 
 .contact-image {
-  background-image: url("/pillowman_featured.jpg");
+  background-image: url("/SFB_main-cropped.jpg");
   background-size: cover;
   background-position: center;
   width: full;
+}
+
+.contact-bg {
+  background: linear-gradient(135deg, white, var(--light-text-color));
+}
+
+.contact-overlay {
+  background-color: rgb(255, 255, 255, 0);
 }
 
 .video-image {
@@ -152,7 +160,7 @@ text-decoration: none;
   }
   
   .title {
-    font-size: 2.5rem
+    font-size: 2.1rem
   }
 
   .menu-height {
@@ -176,6 +184,17 @@ text-decoration: none;
 
   .mom-quote {
     font-size: 1.5rem
+  }
+
+  .contact-bg {
+  background-image: url("/SFB_main-cropped.jpg");
+  background-size: cover;
+  background-position: center;
+  width: full;
+  }
+
+  .contact-overlay {
+    background-color: rgb(255, 255, 255, .5);
   }
 }
 
