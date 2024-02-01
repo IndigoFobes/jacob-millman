@@ -18,13 +18,10 @@ export default function BootstrapCarousel(props: Props) {
     setIndex(selectedIndex);
     // console.log(show.photos);
   };
+
   return (
-    <div className="h-1/2">
-      <Carousel
-        activeIndex={index}
-        onSelect={handleSelect}
-        // data-interval={false}
-      >
+    <div className="">
+      <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
         {/* <div className="text-2xl text-center py-4">{show.title}</div> */}
         {Object.keys(show.photos).map(function (photoIndex) {
           var photo = show.photos[photoIndex];
@@ -32,9 +29,9 @@ export default function BootstrapCarousel(props: Props) {
             <Carousel.Item
               key={photo.id}
               className="max-h-[17rem] md:max-h-[50rem]"
-              interval={10000}
+              interval={null}
             >
-              <div className="">
+              <div className="h-[20rem] md:h-[80vh] md:max-h-[80vh]">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
@@ -43,9 +40,9 @@ export default function BootstrapCarousel(props: Props) {
                   height={500}
                 />
               </div>
-              <Carousel.Caption>
+              {/* <Carousel.Caption>
                 <h3>{photo.title}</h3>
-              </Carousel.Caption>
+              </Carousel.Caption> */}
             </Carousel.Item>
           );
         })}
