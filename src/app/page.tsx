@@ -148,7 +148,9 @@ export default function Home() {
       <div className="p-4 flex flex-col c-gradient text-[var(--dark-text-color)]">
         {/* What's Next */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
-          <h1 className="col-start-1 md:col-end-3 col-end-4">What's Next?</h1>
+          <h1 className="col-start-1 md:col-end-3 col-end-4 text-left">
+            What's Next?
+          </h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto pb-10">
@@ -176,12 +178,12 @@ export default function Home() {
               viewport={{ once: true }}
               variants={introTextVariants}
             >
-              <h2 className="text-3xl md:text-4xl font-[500]">
+              <h2 className="text-3xl md:text-4xl font-[500] mb-4">
                 The Roles We Play
               </h2>
-              <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
+              {/* <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
                 Short Film by Linsy Segarra
-              </h3>
+              </h3> */}
               <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
                 {`Jacob will be portraying Jack in The Roles We Play, written and directed by Linsy Segarra. The short film depicts Jack and Honey, his partner, taking absurd measures to cope with the end of the world. Filming will begin in June 2024. `}
               </p>
@@ -200,7 +202,7 @@ export default function Home() {
         </ul>
         {/* Most Recent */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
-          <h1 className="col-start-1 md:col-start-2 col-end-4 text-end pr-10">
+          <h1 className="col-start-1 md:col-start-2 col-end-4 text-right md:pr-10">
             Most Recently
           </h1>
           <hr className="col-start-1 md:col-start-2 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
