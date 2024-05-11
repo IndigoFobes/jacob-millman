@@ -146,9 +146,64 @@ export default function Home() {
       </div>
       {/* What's New / Most Recently Section */}
       <div className="p-4 flex flex-col c-gradient text-[var(--dark-text-color)]">
+        {/* What's Next */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
-          <h1 className="col-start-1 md:col-end-3 col-end-4">Most Recently</h1>
+          <h1 className="col-start-1 md:col-end-3 col-end-4">What's Next?</h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
+        </div>
+        <ul className="md:px-12 lg:px-20 xl:px-36 h-auto pb-10">
+          <li className="flex flex-col md:grid md:grid-cols-5">
+            {/* image */}
+            {/* <motion.div
+              className="md:col-start-1 md:col-end-3 relative place-self-center h-96 w-full mb-10 md:mb-0 md:w-full md:h-full md:mr-10"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={introPictureVariants}
+            >
+              <Image
+                src="/singfeld_1.jpg"
+                alt="Jacob in Singfeld"
+                fill
+                className="object-cover"
+              />
+            </motion.div> */}
+            {/* text */}
+            <motion.div
+              className="flex flex-col col-start-1 col-end-6 md:mx-0"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={introTextVariants}
+            >
+              <h2 className="text-3xl md:text-4xl font-[500]">
+                The Roles We Play
+              </h2>
+              <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
+                Short Film by Linsy Segarra
+              </h3>
+              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
+                {`Jacob will be portraying Jack in The Roles We Play, written and directed by Linsy Segarra. The short film depicts Jack and Honey, his partner, taking absurd measures to cope with the end of the world. Filming will begin in June 2024. `}
+              </p>
+              {/* <div className="flex">
+                <Link
+                  className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--light-text-color)] hover:text-[var(--accent-color)] border-[var(--light-text-color)] border-2"
+                  href="https://www.nbcnewyork.com/entertainment/the-scene/new-york-live/go-see-the-musical-about-nothing/4688883/"
+                  target="_blank"
+                  style={{ transition: "all 300ms ease-in-out" }}
+                >
+                  Get Details
+                </Link>
+              </div> */}
+            </motion.div>
+          </li>
+        </ul>
+        {/* Most Recent */}
+        <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
+          <h1 className="col-start-1 md:col-start-2 col-end-4 text-end pr-10">
+            Most Recently
+          </h1>
+          <hr className="col-start-1 md:col-start-2 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
           {/* first show */}
