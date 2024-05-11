@@ -330,7 +330,7 @@ export default function Home() {
                 </Link>
               </div>
               {/* actors access */}
-              <div className="pb-8 flex flex-row">
+              <div className="pb-3 flex flex-row">
                 <Link
                   href={"https://resumes.actorsaccess.com/jacobmillman"}
                   target={"_blank"}
@@ -348,7 +348,26 @@ export default function Home() {
                   </h3>
                 </Link>
               </div>
-
+              {/* backstage */}
+              <div className="pb-8 flex flex-row">
+                <Link
+                  href={"https://www.backstage.com/u/jacob-millman/"}
+                  target={"_blank"}
+                  className={"flex flex-row"}
+                >
+                  <Image
+                    src={"/backstage-logo.png"}
+                    alt={"Actors Access Icon"}
+                    width={30}
+                    height={30}
+                    className={"mr-2"}
+                  ></Image>
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-[600]">
+                    backstage
+                  </h3>
+                </Link>
+              </div>
+              {/* button */}
               <Link
                 className="min-w-[180px] mt-6 font-[600] place-self-start text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--light-text-color)] hover:text-[var(--accent-color)] border-[var(--dark-text-color)] hover:border-[var(--light-text-color)] md:border-[var(--light-text-color)] border-2"
                 href="mailto:jacobamillman@gmail.com"
