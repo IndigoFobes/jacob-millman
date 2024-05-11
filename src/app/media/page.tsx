@@ -318,7 +318,7 @@ const shows: Shows[] = [
 const buttons: Buttons[] = [
   {
     id: 1,
-    title: "Chigaco Fire",
+    title: "Wet Hot American Summer (Coop)",
   },
   {
     id: 2,
@@ -326,7 +326,7 @@ const buttons: Buttons[] = [
   },
   {
     id: 3,
-    title: "Wet Hot American Summer (Coop)",
+    title: "Chigaco Fire",
   },
   {
     id: 4,
@@ -337,8 +337,8 @@ const buttons: Buttons[] = [
 const videos: Videos[] = [
   {
     id: 1,
-    src: "https://www.youtube.com/embed/ThQE-MVn4Vk?si=f04dsHNkooMcwQeL",
-    alt: "Chicago Fire",
+    src: "https://www.youtube.com/embed/Ad4ltc1UpC4?si=jilBEVBML8V5rk7a",
+    alt: "Wet Hot American Summer (Coop)",
   },
   {
     id: 2,
@@ -347,8 +347,8 @@ const videos: Videos[] = [
   },
   {
     id: 3,
-    src: "https://www.youtube.com/embed/2rKWIdMMr50?si=na2YDcIF-JHP11pm",
-    alt: "Wet Hot American Summer (Coop)",
+    src: "https://www.youtube.com/embed/ThQE-MVn4Vk?si=f04dsHNkooMcwQeL",
+    alt: "Chicago Fire",
   },
   {
     id: 4,
