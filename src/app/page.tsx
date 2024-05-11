@@ -149,7 +149,7 @@ export default function Home() {
         {/* What's Next */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4 text-left">
-            What's Next?
+            {`What's Next?`}
           </h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
