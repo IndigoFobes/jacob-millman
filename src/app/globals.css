@@ -145,6 +145,8 @@ text-decoration: none;
   margin-right: none
 }
 
+
+
 /* TODO: distinguish thumbnail swiper-wrapper from big image swiper-wrapper*/
 .swiper-wrapper {
   justify-content: space-between !important;
@@ -247,6 +249,10 @@ text-decoration: none;
 
   .mom-quote {
     font-size: 1.2rem
+  }
+
+  .main-headshot {
+    height: 100vw;
   }
 }
 

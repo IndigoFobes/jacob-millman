@@ -26,7 +26,7 @@ export default function ImageSlideshow(props: Props) {
 
   return (
     <>
-      <div className="sm:w-4/5 h-full flex flex-col overflow-hidden">
+      <div className="w-full sm:w-4/5 h-full flex flex-col overflow-hidden">
         {/* main photo */}
         <Swiper
           loop={true}
@@ -43,7 +43,7 @@ export default function ImageSlideshow(props: Props) {
 
             return (
               <SwiperSlide key={headshot.id}>
-                <div className="flex h-full w-full items-center justify-center relative">
+                <div className="main-headshot flex sm:h-full w-full items-center justify-center relative">
                   <Image
                     src={headshot.src}
                     alt={headshot.alt}
