@@ -13,6 +13,7 @@ import {
   useMotionValue,
   Variants,
 } from "framer-motion";
+import ImageSlideshow from "../components/swiper";
 
 // Variants for animations
 const headshotVariants: Variants = {
@@ -74,8 +75,14 @@ const headshots: Headshots[] = [
 ];
 
 // New Headshot will go in position 4!
+let photoArray;
 
 export default function Page() {
+  // const photoArray = Object.keys(headshots).map(function (photoIndex) {
+  //   let photo = headshots[photoIndex];
+  //   return photo;
+  // });
+
   return (
     <div>
       <div className="mx-10 sm:mx-20 pt-10 md:pt-48 mb-16 sm:mb-32">
@@ -83,37 +90,13 @@ export default function Page() {
         <div className="flex flex-col sm:grid sm:grid-cols-2 w-full gap-5">
           {/* Headshots */}
           <motion.div
-            className="grid grid-cols-2 grid-rows-2 gap-4"
+            className="flex justify-center flex-row sm:flex-col"
             initial="hide"
             whileInView="show"
             viewport={{ once: true }}
             variants={headshotVariants}
           >
-            {/* <div>headshots</div>
-          <div>headshots</div>
-          <div>headshots</div>
-          <div>headshots</div> */}
-            {headshots.map((item) => {
-              return (
-                <Link key={item.id} href={item.src} download target={"_blank"}>
-                  <div className="relative">
-                    <Image
-                      src={item.src}
-                      alt={item.alt}
-                      key={item.id}
-                      width={1000}
-                      height={500}
-                    />
-                    <div
-                      className="opacity-[0] absolute flex bg-black/80 hover:opacity-100 top-0 left-0 w-full h-full justify-center"
-                      style={{ transition: "opacity 300ms ease-in-out" }}
-                    >
-                      <AiOutlineDownload className="place-self-center text-[4rem] text-slate-100/80" />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
+            <ImageSlideshow headshots={headshots} />
           </motion.div>
           {/* Resume */}
           <motion.div

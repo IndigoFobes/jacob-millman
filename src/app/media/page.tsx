@@ -318,18 +318,22 @@ const shows: Shows[] = [
 const buttons: Buttons[] = [
   {
     id: 1,
-    title: "Wet Hot American Summer (Coop)",
+    title: "Juno (2007)",
   },
   {
     id: 2,
-    title: "Shrek the Musical (Lord Farquaad)",
+    title: "The Notebook (2004)",
   },
   {
     id: 3,
-    title: "Chigaco Fire",
+    title: "Shrek the Musical (Lord Farquaad)",
   },
   {
     id: 4,
+    title: "Chigaco Fire",
+  },
+  {
+    id: 5,
     title: "NBC Singfeld! Interview",
   },
 ];
@@ -337,22 +341,27 @@ const buttons: Buttons[] = [
 const videos: Videos[] = [
   {
     id: 1,
-    src: "https://www.youtube.com/embed/Ad4ltc1UpC4?si=jilBEVBML8V5rk7a",
-    alt: "Wet Hot American Summer (Coop)",
+    src: "https://www.youtube.com/embed/Ei8UmDwlKHc?si=RHqfAQTmewUlJfjb",
+    alt: "Juno (2007)",
   },
   {
     id: 2,
+    src: "https://www.youtube.com/embed/8ebAS-OoTZg?si=soq7UOt8hfdlihf4",
+    alt: "The Notebook (2004)",
+  },
+  {
+    id: 3,
     src: "https://www.youtube.com/embed/q3UnUWocP0E?si=1zQf9b1TzwEdDVRG",
     alt: "Shrek",
   },
   {
-    id: 3,
+    id: 4,
     src: "https://www.youtube.com/embed/ThQE-MVn4Vk?si=f04dsHNkooMcwQeL",
     alt: "Chicago Fire",
   },
   {
-    id: 4,
-    src: "https://www.youtube.com/embed/p2EIvRfL6Cw?si=MeRCWhrMD6eGx-I9",
+    id: 5,
+    src: "https://www.youtube.com/embed/p2EIvRfL6Cw?si=Az7IUnjF2fX2BfWg",
     alt: "NBC Singfeld! Interview",
   },
 ];
@@ -373,6 +382,7 @@ export default function Page() {
   let title;
   let id;
 
+  // TODO: Tighten up this code using a formula
   if (rendered == 0) {
   } else if (rendered == 1) {
     source = videos[0].src;
@@ -391,6 +401,10 @@ export default function Page() {
     source = videos[3].src;
     title = videos[3].alt;
     id = videos[3].id;
+  } else if (rendered == 5) {
+    source = videos[4].src;
+    title = videos[4].alt;
+    id = videos[4].id;
   } else {
     console.log("Something went wrong.");
   }

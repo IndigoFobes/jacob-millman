@@ -120,6 +120,10 @@ text-decoration: none;
   font-size: 2rem
 }
 
+.slide-height {
+  height: 500px
+}
+
 .horizontal-line-dark {
   border-color: var(--light-theme-color);
   border-width: .07rem;
@@ -132,6 +136,39 @@ text-decoration: none;
 
 .image-overlay {
   background-color: rgba(23, 23, 23, 0.6);
+}
+
+.thumbs {
+  display: flex;
+  flex-direction: row; 
+  width: full !important;
+  margin-right: none
+}
+
+/* TODO: distinguish thumbnail swiper-wrapper from big image swiper-wrapper*/
+.swiper-wrapper {
+  justify-content: space-between !important;
+}
+
+.custom-slide {
+  margin-right: 0 !important;
+  width: 22% !important;
+  aspect-ratio: 2/3 !important;
+}
+
+
+/* .swiper-slide .swiper-slide-visible .swiper-slide-fully-visible .swiper-slide-active .custom-slide {
+  width: 10px !important;
+  margin-right: 0 !important;
+} */
+
+/* .swiper-wrapper > children {
+  aspect-ratio: 1/1 !important;
+}  */
+
+.custom-slide {
+  aspect-ratio: 2/3 !important;
+  width: fit-content;
 }
 
 .title {
