@@ -142,7 +142,6 @@ text-decoration: none;
   display: flex;
   flex-direction: row; 
   width: full !important;
-  margin-right: none
 }
 
 
@@ -154,7 +153,7 @@ text-decoration: none;
 
 .custom-slide {
   margin-right: 0 !important;
-  width: 22% !important;
+  margin-right: 12px !important;
   aspect-ratio: 2/3 !important;
 }
 
@@ -168,10 +167,7 @@ text-decoration: none;
   aspect-ratio: 1/1 !important;
 }  */
 
-.custom-slide {
-  aspect-ratio: 2/3 !important;
-  width: fit-content;
-}
+
 
 .title {
   font-size: 2.3rem;

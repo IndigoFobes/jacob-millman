@@ -64,7 +64,7 @@ export default function ImageSlideshow(props: Props) {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="thumbs mt-3  w-full flex justify-between thumb-swiper"
+          className="thumbs mt-3  w-full flex flex-wrap justify-between thumb-swiper"
         >
           {Object.keys(headshots).map(function (photoIndex) {
             var headshot = headshots[photoIndex];
