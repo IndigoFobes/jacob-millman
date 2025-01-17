@@ -101,7 +101,7 @@ export default function Home() {
           {/* mobile */}
           <Image
             src="/Jacob-header-photo-2025.jpg"
-            alt="Jacob on couch with potted plant."
+            alt="Jacob on a couch with potted plant."
             width={1000}
             height={500}
             className="md:hidden object-cover"
