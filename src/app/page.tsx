@@ -94,7 +94,7 @@ export default function Home() {
         <div className="md:relative col-start-1 col-end-8 md:min-h-[30rem] lg:min-h-[40rem] xl:min-h-[50rem] xl:max-h-[60rem] w-full">
           <Image
             src="/Jacob-header-photo-2025.jpg"
-            alt="Jacob on couch with potted plant."
+            alt="Jacob on a couch with potted plant."
             fill={true}
             className="hidden md:flex object-cover"
           />
