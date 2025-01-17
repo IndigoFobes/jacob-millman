@@ -100,7 +100,7 @@ export default function Home() {
           />
           {/* mobile */}
           <Image
-            src="/Jacob-header-photo-2025.jpg"
+            src="/Jacob-header-photo-2025-mobile.jpg"
             alt="Jacob on a couch with potted plant."
             width={1000}
             height={500}
