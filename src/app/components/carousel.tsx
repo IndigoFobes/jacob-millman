@@ -13,7 +13,7 @@ interface Props {
 export default function BootstrapCarousel(props: Props) {
   const { show } = props;
 
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
     // console.log(show.photos);

@@ -93,15 +93,15 @@ export default function Home() {
       <div className="font-mono font-[400] relative bg-[var(--light-theme-color)] flex flex-col md:grid grid-cols-7">
         <div className="md:relative col-start-1 col-end-8 md:min-h-[30rem] lg:min-h-[40rem] xl:min-h-[50rem] xl:max-h-[60rem] w-full">
           <Image
-            src="/Jacob_pillowman.jpg"
-            alt="Male placeholder"
+            src="/Jacob-header-photo-2025.jpg"
+            alt="Jacob on couch with potted plant."
             fill={true}
             className="hidden md:flex object-cover"
           />
           {/* mobile */}
           <Image
-            src="/Jacob_pillowman.jpg"
-            alt="Male placeholder"
+            src="/Jacob-header-photo-2025.jpg"
+            alt="Jacob on couch with potted plant."
             width={1000}
             height={500}
             className="md:hidden object-cover"
@@ -185,7 +185,7 @@ export default function Home() {
                 Short Film by Linsy Segarra
               </h3> */}
               <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
-                {`Jacob will be portraying Jack in The Roles We Play, written and directed by Linsy Segarra. The short film depicts Jack and Honey, his partner, taking absurd measures to cope with the end of the world. Filming will begin in June 2024. `}
+                {`Jacob will be portraying Jack in The Roles We Play, written and directed by Linsy Segarra. The short film depicts Jack and Honey, his partner, taking absurd measures to cope with the end of the world. Filming wrapped in December 2024, and will be released in 2025.`}
               </p>
               {/* <div className="flex">
                 <Link
