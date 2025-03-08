@@ -149,7 +149,7 @@ export default function Home() {
         {/* What's Next */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4 text-left">
-            {`What's Next?`}
+            {`Coming Soon`}
           </h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
@@ -178,15 +178,19 @@ export default function Home() {
               viewport={{ once: true }}
               variants={introTextVariants}
             >
-              <h2 className="text-3xl md:text-4xl font-[500] mb-4">
-                The Roles We Play
-              </h2>
+              {/* <h2 className="text-3xl md:text-4xl font-[500] mb-4">
+                {`Short Films`}
+              </h2> */}
               {/* <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
                 Short Film by Linsy Segarra
               </h3> */}
-              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
-                {`Jacob will be portraying Jack in The Roles We Play, written and directed by Linsy Segarra. The short film depicts Jack and Honey, his partner, taking absurd measures to cope with the end of the world. Filming wrapped in December 2024, and will be released in 2025.`}
+              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-full">
+                {`Jacob wrapped on Red Light, a short film written by Carlos A. Hiciano and directed by Louis Carrasco. Jacob played Wally, a cheerful, but shy man who is spending the night with a prostitute, without either of them realizing their intertwined past. Filming wrapped in March 2025, with release plans to be announced soon.`}
+                <br></br>
+                <br></br>
+                {`Jacob also portrayed Jack in The Roles We Play, written and directed by Linsy Segarra. The short film depicts Jack and Honey, his partner, taking absurd measures to cope with the end of the world. Filming wrapped in December 2024, with a planned Summer 2025 release. `}
               </p>
+
               {/* <div className="flex">
                 <Link
                   className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--light-text-color)] hover:text-[var(--accent-color)] border-[var(--light-text-color)] border-2"
@@ -201,17 +205,17 @@ export default function Home() {
           </li>
         </ul>
         {/* Most Recent */}
-        <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
+        {/* <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-start-2 col-end-4 text-right md:pr-10">
             Most Recently
           </h1>
           <hr className="col-start-1 md:col-start-2 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
-        </div>
+        </div> */}
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
           {/* first show */}
           <li className="flex flex-col md:grid md:grid-cols-5">
             {/* image */}
-            <motion.div
+            {/* <motion.div
               className="md:col-start-1 md:col-end-3 relative place-self-center h-96 w-full mb-10 md:mb-0 md:w-full md:h-full md:mr-10"
               initial="hide"
               whileInView="show"
@@ -224,9 +228,9 @@ export default function Home() {
                 fill
                 className="object-cover"
               />
-            </motion.div>
+            </motion.div> */}
             {/* text */}
-            <motion.div
+            {/* <motion.div
               className="flex flex-col col-start-3 col-end-6 md:pl-10 md:mx-0"
               initial="hide"
               whileInView="show"
@@ -254,7 +258,7 @@ export default function Home() {
                   Get Details
                 </Link>
               </div>
-            </motion.div>
+            </motion.div> */}
           </li>
         </ul>
         {/* Quote section */}
@@ -273,8 +277,8 @@ export default function Home() {
           {/* headshot */}
           <div className="col-start-1 col-end-6 md:col-end-4 w-full relative h-full">
             <Image
-              src="/Jacob_ main_hs.jpg"
-              alt="Jacob's face"
+              src="/hs5.jpg"
+              alt="Jacob in denim jacket, kind smile."
               fill
               className="object-cover object-top"
             />
