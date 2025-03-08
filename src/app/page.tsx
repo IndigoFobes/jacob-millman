@@ -153,7 +153,7 @@ export default function Home() {
           </h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
-        <ul className="md:px-12 lg:px-20 xl:px-36 h-auto pb-10">
+        <ul className="md:px-12 lg:px-20 xl:px-36 h-auto pb-10 lg:pb-20">
           <li className="flex flex-col md:grid md:grid-cols-5">
             {/* image */}
             {/* <motion.div
@@ -262,13 +262,13 @@ export default function Home() {
           </li>
         </ul>
         {/* Quote section */}
-        <div className=" md:p-10">
+        {/* <div className=" md:p-10">
           <p className="font-mono text-xl lg:text-2xl 2xl:text-3xl font-[300] text-[var(--accent-color)] text-center lg:mx-20 my-5">
             {`"Millman`} <span className="font-[700]">skillfully delivers</span>{" "}
             {`a generous dose of doubt and neuroses to George Costanza...”`}
             <br></br> {`- Manhattan Digest`}
           </p>
-        </div>
+        </div> */}
       </div>
       {/* Image section */}
       <div className="h-screen">

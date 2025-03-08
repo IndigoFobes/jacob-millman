@@ -57,6 +57,7 @@ export interface Photos {
 export interface Shows {
   id: number;
   title: string;
+  subtitle: string;
   photos: {
     [key: string]: Photos;
   };
@@ -80,6 +81,7 @@ const shows: Shows[] = [
   {
     id: 0,
     title: "The Pillowman",
+    subtitle: "",
     photos: {
       a: {
         id: 1,
@@ -136,6 +138,8 @@ const shows: Shows[] = [
   {
     id: 1,
     title: "Singfeld",
+    subtitle: `"Millman skillfully delivers a generous dose of doubt and neuroses to George Costanza...”
+- Manhattan Digest`,
     photos: {
       a: {
         id: 1,
@@ -178,6 +182,7 @@ const shows: Shows[] = [
   {
     id: 2,
     title: "Stupid F**king Bird",
+    subtitle: "",
     photos: {
       a: {
         id: 1,
@@ -208,6 +213,7 @@ const shows: Shows[] = [
   {
     id: 3,
     title: "Anything Goes",
+    subtitle: "",
     photos: {
       a: {
         id: 1,
@@ -268,6 +274,7 @@ const shows: Shows[] = [
   {
     id: 4,
     title: "Our Town",
+    subtitle: "",
     photos: {
       a: {
         id: 1,
@@ -505,7 +512,7 @@ export default function Page() {
         return (
           <div key={show.id}>
             <motion.h2
-              className="text-[2rem] py-4 w-3/4"
+              className="md:text-[1.5rem] lg:text-[2rem] pb-4 md:pt-[3rem] w-3/4"
               initial="hide"
               whileInView="show"
               viewport={{ once: true }}
@@ -513,6 +520,14 @@ export default function Page() {
             >
               {show.title}
             </motion.h2>
+            {show.subtitle ? (
+              <h3 className="pb-4 text-xs md:text-sm lg:text-[1.2rem]">
+                {show.subtitle}
+              </h3>
+            ) : (
+              <></>
+            )}
+
             <BootstrapCarousel show={show} key={show.id} />
           </div>
         );
