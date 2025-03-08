@@ -60,23 +60,10 @@ export default function Page() {
           variants={textVariants}
         >
           <span className="text-[1.5rem]">Jacob Millman </span>
-          {`was born in Buffalo, NY in the sweltering month of August.
-          Always interested in acting, it wasn’t until he received numerous
-          accolades from his middle school film festival that he decided to
-          pursue it as a career. From that point on, Jacob was a force to be
-          reckoned with. If there was an opportunity to learn, he took it. He
-          was at every workshop, class, and audition possible. In 2021, he
-          graduated from SUNY Fredonia with a BFA in Acting with minors in Music
-          and Gender Studies. Jacob currently resides in Manhattan with his
-          plants and Legos.`}
+          {`was born in Buffalo, NY in the sweltering month of August. Always interested in acting, it wasn’t until he received numerous accolades from his middle school film festival that he decided to pursue it as a career. From that point on, Jacob was a force to be reckoned with. If there was an opportunity to learn, he took it. He was at every workshop, class, and audition possible. He graduated from SUNY Fredonia with a BFA in Acting with minors in Music and Human Studies. Jacob currently resides in Manhattan with his plants and Legos.`}
           {<br></br>}
           {<br></br>}
-          {`Jacob’s main focus in his work is the character.
-          Their journey and relationships. Their hopes and dreams. From The
-          Pillowman to Singfeld!, he is able to be successful across many
-          genres. Jacob takes pride in his ability to understand and empathize
-          with people so different from him, and he is constantly pulling
-          inspiration from the outside world into his work.`}
+          {`Jacob’s main focus in his work is the character. Their journey and relationships. Their hopes and dreams. From The Pillowman to Singfeld, he is able to be successful across many genres. Jacob takes pride in his ability to understand and empathize with people so different from him, and he is constantly pulling inspiration from the outside world into his work.`}
           {<br></br>}
         </motion.p>
         <motion.div
@@ -93,14 +80,7 @@ export default function Page() {
           viewport={{ once: true }}
           variants={textVariants}
         >
-          {`A wise teacher once
-          told Jacob, “The best way to grow as an actor is by living your life
-          to the fullest,” which he embraced. Jacob loves to cook, box, and pet
-          dogs, although not always at the same time. His favorite places to be
-          are in a park or a movie theater. Jacob loves to spread positivity and
-          make people laugh, though sometimes he can be a real rascal (in a
-          totally safe, healthy, and marketable way). Maybe just a little prank
-          every now and again. Unless…?`}
+          {`A wise teacher once told Jacob, “The best way to grow as an actor is by living your life to the fullest,” which he embraced. Jacob loves to cook, jump, and pet dogs, although not always at the same time. His favorite places to be are in a park or a movie theater. Jacob loves to spread positivity and make people laugh, though sometimes he can be a real rascal (in a totally safe, healthy, and marketable way). Maybe just a little prank every now and again. Unless…?`}
         </motion.p>
         <motion.div
           className="h-[20rem] w-[20rem] about-image place-self-center mt-6"
