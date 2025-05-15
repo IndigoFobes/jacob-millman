@@ -111,9 +111,9 @@ export default function Page() {
           accolades from his middle school film festival that he decided to
           pursue it as a career. From that point on, Jacob was a force to be
           reckoned with. If there was an opportunity to learn, he took it. He
-          was at every workshop, class, and audition possible. In 2021, he
-          graduated from SUNY Fredonia with a BFA in Acting with minors in Music
-          and Gender Studies. Jacob currently resides in Manhattan with his
+          was at every workshop, class, and audition possible. He
+          graduated from SUNY Fredonia with a BFA in Acting and minors in Music
+          and Human Studies. Jacob currently resides in Manhattan with his
           plants and Legos.`}
         {<br></br>}
       </motion.p>
