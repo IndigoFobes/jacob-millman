@@ -60,7 +60,11 @@ export default function Page() {
           variants={textVariants}
         >
           <span className="text-[1.5rem]">Jacob Millman </span>
-          {`was born in Buffalo, NY in the sweltering month of August. Always interested in acting, it wasn’t until he received numerous accolades from his middle school film festival that he decided to pursue it as a career. From that point on, Jacob was a force to be reckoned with. If there was an opportunity to learn, he took it. He was at every workshop, class, and audition possible. He graduated from SUNY Fredonia with a BFA in Acting with minors in Music and Human Studies. Jacob currently resides in Manhattan with his plants and Legos.`}
+          {`was born in Buffalo, NY in the sweltering month of August. Always interested in acting, it wasn’t until he received numerous accolades from his middle school film festival that he decided to pursue it as a career. From that point on, Jacob was a force to be reckoned with. If there was an opportunity to learn, he took it. He
+          was at every workshop, class, and audition possible. He
+          graduated from SUNY Fredonia with a BFA in Acting and minors in Music
+          and Human Studies. Jacob currently resides in Manhattan with his
+          plants and Legos.`}
           {<br></br>}
           {<br></br>}
           {`Jacob’s main focus in his work is the character. Their journey and relationships. Their hopes and dreams. From The Pillowman to Singfeld, he is able to be successful across many genres. Jacob takes pride in his ability to understand and empathize with people so different from him, and he is constantly pulling inspiration from the outside world into his work.`}
