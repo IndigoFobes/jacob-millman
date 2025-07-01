@@ -122,7 +122,7 @@ export default function Page() {
             variants={resumeVariants}
           >
             <Image
-              src={"/Jacob-Millman-Resume.jpg"}
+              src={`/Jacob Millman Resume 2025.jpg`}
               alt={"Jacob's resume"}
               width={1000}
               height={500}
@@ -130,7 +130,7 @@ export default function Page() {
             <div className="w-full h-full flex justify-center">
               <Link
                 className="bg-[var(--light-theme-color)] hover:bg-[var(--accent-color)] place-self-center w-full text-center py-2"
-                href={"Jacob-Millman-Resume.pdf"}
+                href={`/Jacob Millman Resume PDF.pdf`}
                 download
                 target={"_blank"}
                 style={{ transition: "all 300ms ease-in-out" }}
