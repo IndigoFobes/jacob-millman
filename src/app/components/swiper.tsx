@@ -82,6 +82,7 @@ export default function ImageSlideshow(props: Props) {
             );
           })}
         </Swiper>
+        <h2 className="pt-4 text-[var(--light-text-color)]">Corey Bryant</h2>
       </div>
     </>
   );
