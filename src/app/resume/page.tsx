@@ -100,13 +100,16 @@ export default function Page() {
         <div className="flex flex-col sm:grid sm:grid-cols-2 w-full gap-5">
           {/* Headshots */}
           <motion.div
-            className="flex justify-center flex-row sm:flex-col"
+            className="flex justify-center flex-row sm:flex-col relative mb-10 sm:mb-0"
             initial="hide"
             whileInView="show"
             viewport={{ once: true }}
             variants={headshotVariants}
           >
             <ImageSlideshow headshots={headshots} />
+            <h2 className="absolute z-10 bottom-[-40px] left-0 pt-4 sm:pl-[10%] text-[var(--light-text-color)]">
+              Corey Bryant
+            </h2>
           </motion.div>
           {/* Resume */}
           <motion.div
