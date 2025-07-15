@@ -277,7 +277,7 @@ export default function Home() {
           {/* headshot */}
           <div className="col-start-1 col-end-6 md:col-end-4 w-full relative h-full">
             <Image
-              src="/hs5.jpg"
+              src="/hs1.jpg"
               alt="Jacob in denim jacket, kind smile."
               fill
               className="object-cover object-top"

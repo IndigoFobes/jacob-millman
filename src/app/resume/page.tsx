@@ -82,11 +82,6 @@ const headshots: Headshots[] = [
     alt: "Jacob in green shirt, soft smile.",
     id: 5,
   },
-  {
-    src: "/hs7.jpg",
-    alt: "Jacob in green sweater, smirking.",
-    id: 6,
-  },
 ];
 
 // New Headshot will go in position 4!
