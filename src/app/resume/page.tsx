@@ -108,7 +108,7 @@ export default function Page() {
           >
             <ImageSlideshow headshots={headshots} />
             <h2 className="absolute z-10 bottom-[-40px] left-0 pt-4 sm:pl-[10%] text-[var(--light-text-color)]">
-              Corey Bryant
+              Photos by Corey Bryant
             </h2>
           </motion.div>
           {/* Resume */}
