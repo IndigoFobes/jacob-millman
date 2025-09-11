@@ -137,7 +137,9 @@ export default function Home() {
             <Link
               className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/about"
-              style={{ transition: "all 300ms ease-in-out" }}
+              style={{
+                transition: "all 300ms ease-in-out",
+              }}
             >
               Read More About Jacob
             </Link>
@@ -145,15 +147,15 @@ export default function Home() {
         </div>
       </div>
       {/* What's New / Most Recently Section */}
-      <div className="p-4 flex flex-col c-gradient text-[var(--dark-text-color)]">
+      <div className="px-4 pt-4 pb-20 flex flex-col c-gradient text-[var(--dark-text-color)]">
         {/* What's Next */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4 text-left">
-            {`Coming Soon`}
+            {`What's New?`}
           </h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
-        <ul className="md:px-12 lg:px-20 xl:px-36 h-auto pb-10 lg:pb-20">
+        <ul className="md:px-12 lg:px-20 xl:px-36 h-auto pb-8">
           <li className="flex flex-col md:grid md:grid-cols-5">
             {/* image */}
             {/* <motion.div
@@ -178,17 +180,50 @@ export default function Home() {
               viewport={{ once: true }}
               variants={introTextVariants}
             >
-              {/* <h2 className="text-3xl md:text-4xl font-[500] mb-4">
-                {`Short Films`}
-              </h2> */}
-              {/* <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
-                Short Film by Linsy Segarra
-              </h3> */}
               <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-full">
-                {`Jacob wrapped on Red Light, a short film written by Carlos A. Hiciano and directed by Louis Carrasco. Jacob played Wally, a cheerful, but shy man who is spending the night with a prostitute, without either of them realizing their intertwined past. Filming wrapped in March 2025, with release plans to be announced soon.`}
+                {`Jacob will return Off-Broadway this fall, understudying the roles of Lorne Michaels and John Belushi in Not Ready for Prime Time. As a lifelong fan of SNL, he is delighted to be a part of this production. As an actor, he is thrilled to be able to study these two legends and their lives.`}
                 <br></br>
                 <br></br>
-                {`Jacob also portrayed Jack in The Roles We Play, written and directed by Linsy Segarra. The short film depicts Jack and Honey, his partner, taking absurd measures to cope with the end of the world. Filming wrapped in December 2024, with a planned Summer 2025 release. `}
+                {/* {`Per ${(
+                  <a href="https://www.broadwayworld.com/article/NOT-READY-FOR-PRIME-TIME-Play-Based-on-SATURDAY-NIGHT-LIVE-Will-Premiere-Off-Broadway-This-Fall-20250707">
+                    Broadway World
+                  </a>
+                )}, `} */}
+                {`Per `}
+                <a
+                  className="text-blue-500 underline hover:text-blue-600"
+                  target="_blank"
+                  href="https://www.broadwayworld.com/article/NOT-READY-FOR-PRIME-TIME-Play-Based-on-SATURDAY-NIGHT-LIVE-Will-Premiere-Off-Broadway-This-Fall-20250707"
+                >
+                  Broadway World
+                </a>
+                {`, `}
+              </p>
+              <p className="md:text-md lg:text-lg 2xl:text-xl font-[400] lg:w-full ml-10 italic pt-2">
+                {`Not Ready For Prime Time is a fictionalized account about the origins of “Saturday Night Live,” the ground-breaking NBC show that launched on October 11, 1975, and revolutionized American political and cultural satire. Audiences are introduced to nine misfit comedians – originally known as the “Not Ready For Prime Time Players” - as they rise to stardom: Dan Aykroyd, John Belushi, Chevy Chase, Jane Curtin, Garrett Morris, Bill Murray, Laraine Newman and Gilda Radner, and a young TV producer and writer, Lorne Michaels. The play follows their turbulent journey as they create comedic television history, producing a show that is still going strong after almost 50 years.`}
+              </p>
+              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-full">
+                <br></br>
+                {`"This new play pulses with live music, quick wit, and backstage mayhem, capturing the electric atmosphere of a cultural revolution in the making." (`}
+                <a
+                  className="text-blue-500 underline hover:text-blue-600"
+                  target="_blank"
+                  href="https://playbill.com/article/new-play-about-the-early-days-of-snl-not-ready-for-prime-time-will-bow-off-broadway"
+                >
+                  Playbill
+                </a>
+                {`)`}
+                <br></br>
+                <br></br>
+                {`Playing Off-Broadway at the Robert W. Wilson MCC Theater Space, previews begin October 5, with opening night set for October 20. Tickets are available `}
+                <a
+                  className="text-blue-500 underline hover:text-blue-600"
+                  target="_blank"
+                  href="https://notreadyforprimetimeplay.com/?utm_source=google&utm_medium=cpc&utm_campaign=onsale&gad_source=1&gad_campaignid=22913864316&gbraid=0AAAABBKkq6FArAoggMUEysDxrw3MGLGUh&gclid=Cj0KCQjwwsrFBhD6ARIsAPnUFD1KQUZLLUf4SD0HBy473oVhmKNGGfaxqwom_KmE-hhDvGyJEm-V_xkaAhYoEALw_wcB"
+                >
+                  here
+                </a>
+                {`.`}
               </p>
 
               {/* <div className="flex">
@@ -205,12 +240,12 @@ export default function Home() {
           </li>
         </ul>
         {/* Most Recent */}
-        {/* <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
+        <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-start-2 col-end-4 text-right md:pr-10">
-            Most Recently
+            Most Recent
           </h1>
           <hr className="col-start-1 md:col-start-2 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
-        </div> */}
+        </div>
         <ul className="md:px-12 lg:px-20 xl:px-36 h-auto">
           {/* first show */}
           <li className="flex flex-col md:grid md:grid-cols-5">
@@ -230,37 +265,50 @@ export default function Home() {
               />
             </motion.div> */}
             {/* text */}
-            {/* <motion.div
-              className="flex flex-col col-start-3 col-end-6 md:pl-10 md:mx-0"
+            <motion.div
+              className="flex flex-col col-start-1 col-end-6 md:mx-0"
               initial="hide"
               whileInView="show"
               viewport={{ once: true }}
               variants={introTextVariants}
             >
-              <h2 className="text-3xl md:text-4xl font-[500]">Singfeld</h2>
-              <h3 className="text-2xl 2xl:text-3xl font-[400] mt-2 mb-4">
-                The Jerry Orbach Theatre
-              </h3>
-              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-10/12">
-                {`Jacob was most recently seen in Off-Broadway’s Singfeld,
-                originating the on-stage iterations of George Costanza and
-                Newman. After a solid six months of musical theatre comedy,
-                Jacob is excited to utilize the lessons he learned and newfound
-                Seinfeld knowledge in the next chapter of his career.`}
+              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-full">
+                {`Jacob also portrayed Jack in The Roles We Play, written and directed by Linsy Segarra. The film follows Jack and his partner, Honey, taking absurd measures to cope with the end of the world. Currently in post-production with a planned 2025 release. `}
               </p>
-              <div className="flex">
-                <Link
-                  className="min-w-[180px] mt-6 font-[600] text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--light-text-color)] hover:text-[var(--accent-color)] border-[var(--light-text-color)] border-2"
-                  href="https://www.nbcnewyork.com/entertainment/the-scene/new-york-live/go-see-the-musical-about-nothing/4688883/"
-                  target="_blank"
-                  style={{ transition: "all 300ms ease-in-out" }}
-                >
-                  Get Details
-                </Link>
-              </div>
-            </motion.div> */}
+            </motion.div>
           </li>
         </ul>
+        {/* Posters */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-y-4 gap-x-20 mt-12 md:mt-16 md:mb-4 place-self-center w-[90%] md:w-[60%]">
+          <motion.div
+            className="relative place-self-center aspect-[2/3] w-full"
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={introPictureVariants}
+          >
+            <Image
+              src="/nfrpt-poster.jpg"
+              alt="Not Ready For Prime Time poster"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+          <motion.div
+            className="relative place-self-center aspect-[2/3] w-full"
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={introPictureVariants}
+          >
+            <Image
+              src="/The-Roles-We-Play-poster.jpg"
+              alt="The Roles We Play poster"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
         {/* Quote section */}
         {/* <div className=" md:p-10">
           <p className="font-mono text-xl lg:text-2xl 2xl:text-3xl font-[300] text-[var(--accent-color)] text-center lg:mx-20 my-5">
@@ -298,7 +346,9 @@ export default function Home() {
             <Link
               className=" mt-6 font-[600] text-center py-1 px-3 md:py-2 md:px-8 rounded-[var(--rounded-tiny)] md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/resume"
-              style={{ transition: "all 300ms ease-in-out" }}
+              style={{
+                transition: "all 300ms ease-in-out",
+              }}
             >
               See More
             </Link>
@@ -321,7 +371,9 @@ export default function Home() {
             <Link
               className=" mt-6 font-[600] text-center py-1 px-3 md:py-2 md:px-8 rounded-[var(--rounded-tiny)] md:text-lg text-[var(--light-text-color)] hover:bg-[var(--light-text-transparent)] hover:text-[var(--dark-text-color)] border-[var(--light-text-color)] border-2"
               href="/media"
-              style={{ transition: "all 300ms ease-in-out" }}
+              style={{
+                transition: "all 300ms ease-in-out",
+              }}
             >
               See More
             </Link>
@@ -432,7 +484,9 @@ export default function Home() {
               <Link
                 className="min-w-[180px] mt-6 font-[600] place-self-start text-center py-2 px-8 rounded-[var(--rounded-tiny)] text-lg text-[var(--dark-text-color)] hover:bg-[var(--light-text-color)] hover:text-[var(--accent-color)] border-[var(--dark-text-color)] hover:border-[var(--light-text-color)] md:border-[var(--light-text-color)] border-2"
                 href="mailto:jacobamillman@gmail.com"
-                style={{ transition: "all 300ms ease-in-out" }}
+                style={{
+                  transition: "all 300ms ease-in-out",
+                }}
               >
                 Send an Email
               </Link>
