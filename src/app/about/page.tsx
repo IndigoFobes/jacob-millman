@@ -41,17 +41,10 @@ const imageVariants: Variants = {
 
 export default function Page() {
   return (
-    <div className="w-9/12 mx-auto pt-20 md:pt-48 mb-20 md:mb-32 relative">
+    <div className="w-9/12 mx-auto md:pt-40 lg:pt-48 mb-20 md:mb-32 relative">
       {/* <h1 className="title pb-10 text-center md:text-start">About me</h1> */}
       {/* mobile */}
       <div className="md:hidden flex flex-col justify-center">
-        <motion.div
-          className="h-[20rem] w-[20rem] about-image-3 place-self-center"
-          initial="hide"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={imageVariants}
-        ></motion.div>
         <motion.p
           className="text-[.9rem] text-start font-[400] mt-10"
           initial="hide"
@@ -59,24 +52,13 @@ export default function Page() {
           viewport={{ once: true }}
           variants={textVariants}
         >
-          <span className="text-[1.5rem]">Jacob Millman </span>
-          {`was born in Buffalo, NY in the sweltering month of August. Always interested in acting, it wasn’t until he received numerous accolades from his middle school film festival that he decided to pursue it as a career. From that point on, Jacob was a force to be reckoned with. If there was an opportunity to learn, he took it. He
-          was at every workshop, class, and audition possible. He
-          graduated from SUNY Fredonia with a BFA in Acting and minors in Music
-          and Human Studies. Jacob currently resides in Manhattan with his
-          plants and Legos.`}
+          {/* <span className="text-[1.5rem]">Jacob Millman </span> */}
+          {`From a very young age, Jacob would constantly study the words and actions of others, seeing how it affected the world around them. The books he read would become reality, the films he watched would become lessons. He did not realize what he was doing until he was asked to be in some friends’ short films. He proceeded to win Best Lead Actor (Sci-Fi Fantasy) and Best Supporting Actor (Drama) at the ~Mill Middle School Young Playwrights Film Festival~. It all clicked – he was an Actor. He was working on his Craft.`}
           {<br></br>}
           {<br></br>}
-          {`Jacob’s main focus in his work is the character. Their journey and relationships. Their hopes and dreams. From The Pillowman to Singfeld, he is able to be successful across many genres. Jacob takes pride in his ability to understand and empathize with people so different from him, and he is constantly pulling inspiration from the outside world into his work.`}
+          {`Yes, Jacob Millman is an Actor. He uses “craft” as a noun. Never out of arrogance – he just finds the craft (👀) so fascinating. We’ve had to cut supporting sentences following that statement because we asked Jacob what made it so fascinating and he got too excited and got the zoomies and then he ran into a wall, so we are on our way to the ER, but we’ll circle back soon.`}
           {<br></br>}
         </motion.p>
-        <motion.div
-          className="h-[20rem] w-[20rem] about-image-2 place-self-center mt-6"
-          initial="hide"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={imageVariants}
-        ></motion.div>
         <motion.p
           className="text-[.9rem] text-start font-[400] mt-6"
           initial="hide"
@@ -84,24 +66,19 @@ export default function Page() {
           viewport={{ once: true }}
           variants={textVariants}
         >
-          {`A wise teacher once told Jacob, “The best way to grow as an actor is by living your life to the fullest,” which he embraced. Jacob loves to cook, jump, and pet dogs, although not always at the same time. His favorite places to be are in a park or a movie theater. Jacob loves to spread positivity and make people laugh, though sometimes he can be a real rascal (in a totally safe, healthy, and marketable way). Maybe just a little prank every now and again. Unless…?`}
+          {`Colleagues and audiences alike consistently commend the intelligence, strength and authenticity that Jacob brings to his work. While he may not always take himself too seriously, he will always be focused on elevating the text and doing the story justice. As an artist, Jacob leads with generosity, prioritizing his collaborators and storytelling above glamour. From farce to family drama, from musical theater to mockumentary, Jacob’s work is elevated by his clear understanding of technique, allowing him to transcend genres and mediums.`}
         </motion.p>
-        <motion.div
-          className="h-[20rem] w-[20rem] about-image place-self-center mt-6"
+        <motion.p
+          className="text-[.9rem] text-start font-[400] mt-6"
           initial="hide"
           whileInView="show"
           viewport={{ once: true }}
-          variants={imageVariants}
-        ></motion.div>
+          variants={textVariants}
+        >
+          {`At the end of the day, it’s midnight. And in conclusion, as hard as we try, a brief bio will not do Jacob Millman justice. Experience his work for yourself. Or even better, ask him about it – watch as he lights up and brings you into his world, one full of curiosity and hope and torment and resilience andddd he ran into a wall again.`}
+        </motion.p>
       </div>
       {/* desktop */}
-      <motion.div
-        className="about-image-3 md:relative md:float-right md:h-[18rem] md:w-[15.43rem] xl:h-[24rem] xl:w-[20rem] mt-16 ml-6 mb-4"
-        initial="hide"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={imageVariants}
-      ></motion.div>
       <motion.p
         className="hidden md:block text-[1.1rem] text-start font-[400] pt-16"
         initial="hide"
@@ -109,25 +86,10 @@ export default function Page() {
         viewport={{ once: true }}
         variants={textVariants}
       >
-        <span className="text-[1.5rem]">Jacob Millman </span>
-        {`was born in Buffalo, NY in the sweltering month of August.
-          Always interested in acting, it wasn’t until he received numerous
-          accolades from his middle school film festival that he decided to
-          pursue it as a career. From that point on, Jacob was a force to be
-          reckoned with. If there was an opportunity to learn, he took it. He
-          was at every workshop, class, and audition possible. He
-          graduated from SUNY Fredonia with a BFA in Acting and minors in Music
-          and Human Studies. Jacob currently resides in Manhattan with his
-          plants and Legos.`}
+        {/* <span className="text-[1.5rem]">Jacob Millman </span> */}
+        {`From a very young age, Jacob would constantly study the words and actions of others, seeing how it affected the world around them. The books he read would become reality, the films he watched would become lessons. He did not realize what he was doing until he was asked to be in some friends’ short films. He proceeded to win Best Lead Actor (Sci-Fi Fantasy) and Best Supporting Actor (Drama) at the ~Mill Middle School Young Playwrights Film Festival~. It all clicked – he was an Actor. He was working on his Craft.`}
         {<br></br>}
       </motion.p>
-      <motion.div
-        className="about-image md:relative md:float-left md:h-[18rem] md:w-[13rem] xl:h-[24rem] xl:w-[20rem] mt-8 mr-6"
-        initial="hide"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={textVariants}
-      ></motion.div>
       <motion.p
         className="hidden md:block text-[1.1rem] text-start font-[400]"
         initial="hide"
@@ -136,22 +98,10 @@ export default function Page() {
         variants={imageVariants}
       >
         {<br></br>}
-        {`Jacob’s main focus in his work is the character.
-          Their journey and relationships. Their hopes and dreams. From The
-          Pillowman to Singfeld!, he is able to be successful across many
-          genres. Jacob takes pride in his ability to understand and empathize
-          with people so different from him, and he is constantly pulling
-          inspiration from the outside world into his work.`}
+        {`Yes, Jacob Millman is an Actor. He uses “craft” as a noun. Never out of arrogance – he just finds the craft (👀) so fascinating. We’ve had to cut supporting sentences following that statement because we asked Jacob what made it so fascinating and he got too excited and got the zoomies and then he ran into a wall, so we are on our way to the ER, but we’ll circle back soon.`}
         {<br></br>}
       </motion.p>
       {<br></br>}
-      <motion.div
-        className="about-image-2 md:relative md:float-right md:h-[18rem] md:w-[15.43rem] ml-6 "
-        initial="hide"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={imageVariants}
-      ></motion.div>
       <motion.p
         className="hidden md:block text-[1.1rem] text-start font-[400]"
         initial="hide"
@@ -159,14 +109,18 @@ export default function Page() {
         viewport={{ once: true }}
         variants={textVariants}
       >
-        {`A wise teacher once
-          told Jacob, “The best way to grow as an actor is by living your life
-          to the fullest,” which he embraced. Jacob loves to cook, box, and pet
-          dogs, although not always at the same time. His favorite places to be
-          are in a park or a movie theater. Jacob loves to spread positivity and
-          make people laugh, though sometimes he can be a real rascal (in a
-          totally safe, healthy, and marketable way). Maybe just a little prank
-          every now and again. Unless…?`}
+        {`Colleagues and audiences alike consistently commend the intelligence, strength and authenticity that Jacob brings to his work. While he may not always take himself too seriously, he will always be focused on elevating the text and doing the story justice. As an artist, Jacob leads with generosity, prioritizing his collaborators and storytelling above glamour. From farce to family drama, from musical theater to mockumentary, Jacob’s work is elevated by his clear understanding of technique, allowing him to transcend genres and mediums.`}
+      </motion.p>
+      <motion.p
+        className="hidden md:block text-[1.1rem] text-start font-[400]"
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={imageVariants}
+      >
+        {<br></br>}
+        {`At the end of the day, it’s midnight. And in conclusion, as hard as we try, a brief bio will not do Jacob Millman justice. Experience his work for yourself. Or even better, ask him about it – watch as he lights up and brings you into his world, one full of curiosity and hope and torment and resilience andddd he ran into a wall again.`}
+        {<br></br>}
       </motion.p>
     </div>
   );
