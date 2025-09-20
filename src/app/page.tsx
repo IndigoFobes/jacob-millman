@@ -151,7 +151,7 @@ export default function Home() {
         {/* What's Next */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-end-3 col-end-4 text-left">
-            {`What's New?`}
+            {`Coming Up`}
           </h1>
           <hr className="col-start-1 md:col-end-3 col-end-4 md:mr-10 border-solid horizontal-line-dark mt-2"></hr>
         </div>
@@ -181,7 +181,9 @@ export default function Home() {
               variants={introTextVariants}
             >
               <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-full">
-                {`Jacob will return Off-Broadway this fall, understudying the roles of Lorne Michaels and John Belushi in Not Ready for Prime Time. As a lifelong fan of SNL, he is delighted to be a part of this production. As an actor, he is thrilled to be able to study these two legends and their lives.`}
+                {`Jacob will return Off-Broadway this fall, understudying the roles of Lorne Michaels and John Belushi in `}{" "}
+                <span className="italic">{`Not Ready for Prime Time.`}</span>
+                {` As a lifelong fan of SNL, he is delighted to be a part of this production. As an actor, he is thrilled to be able to study these two legends and their lives.`}
                 <br></br>
                 <br></br>
                 {/* {`Per ${(
@@ -272,7 +274,7 @@ export default function Home() {
               viewport={{ once: true }}
               variants={introTextVariants}
             >
-              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-full">
+              <p className="md:text-lg lg:text-xl 2xl:text-2xl font-[400] lg:w-full text-right md:pr-10">
                 {`Jacob also portrayed Jack in The Roles We Play, written and directed by Linsy Segarra. The film follows Jack and his partner, Honey, taking absurd measures to cope with the end of the world. Currently in post-production with a planned 2025 release. `}
               </p>
             </motion.div>
