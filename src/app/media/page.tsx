@@ -390,31 +390,37 @@ export default function Page() {
   let id;
 
   // TODO: Tighten up this code using a formula
-  if (rendered == 0) {
-  } else if (rendered == 1) {
-    source = videos[0].src;
-    title = videos[0].alt;
-    id = videos[0].id;
-    // title = video[0].title;
-  } else if (rendered == 2) {
-    source = videos[1].src;
-    title = videos[1].alt;
-    id = videos[1].id;
-  } else if (rendered == 3) {
-    source = videos[2].src;
-    title = videos[2].alt;
-    id = videos[2].id;
-  } else if (rendered == 4) {
-    source = videos[3].src;
-    title = videos[3].alt;
-    id = videos[3].id;
-  } else if (rendered == 5) {
-    source = videos[4].src;
-    title = videos[4].alt;
-    id = videos[4].id;
-  } else {
-    console.log("Something went wrong.");
-  }
+  // LOGIC IF SHOWING MULTIPLE VIDEOS
+  // if (rendered == 0) {
+  // } else if (rendered == 1) {
+  //   source = videos[0].src;
+  //   title = videos[0].alt;
+  //   id = videos[0].id;
+  //   // title = video[0].title;
+  // } else if (rendered == 2) {
+  //   source = videos[1].src;
+  //   title = videos[1].alt;
+  //   id = videos[1].id;
+  // } else if (rendered == 3) {
+  //   source = videos[2].src;
+  //   title = videos[2].alt;
+  //   id = videos[2].id;
+  // } else if (rendered == 4) {
+  //   source = videos[3].src;
+  //   title = videos[3].alt;
+  //   id = videos[3].id;
+  // } else if (rendered == 5) {
+  //   source = videos[4].src;
+  //   title = videos[4].alt;
+  //   id = videos[4].id;
+  // } else {
+  //   console.log("Something went wrong.");
+  // }
+
+  // JUST SHOWING ONE VIDEO
+  source = "https://www.youtube.com/embed/MDsVvNl71PA?si=qVDuJaTM-Nz7fQ8a";
+  title = "1 Minute Reel";
+  id = 0;
 
   // Video frame
   const video = (
@@ -450,7 +456,7 @@ export default function Page() {
           viewport={{ once: true }}
           variants={titleVariants}
         >
-          Videos
+          Reel
         </motion.h1>
         <hr className="w-3/4 border-solid mt-4 place-self-center horizontal-line-light mb-8"></hr>
         <div className="flex justify-center lg:row-span-4">
@@ -461,7 +467,9 @@ export default function Page() {
             viewport={{ once: true }}
             variants={imageVariants}
           >
-            {rendered == 0 ? (
+            {/* IF SHOWING MULTIPLE VIDEOS */}
+            <div>{video}</div>
+            {/* {rendered == 0 ? (
               <div className="video-image flex b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
                 <div className="flex image-overlay w-full justify-center">
                   <p className="place-self-center font-[500] text-[1rem] md:text-[2rem]">
@@ -471,11 +479,12 @@ export default function Page() {
               </div>
             ) : (
               <div>{video}</div>
-            )}
+            )} */}
             {/* {video} */}
           </motion.div>
         </div>
-        <div className="flex flex-col lg:flex-row lg:h-[5rem] place-self-center mt-10 lg:mx-10 w-full">
+        {/* BUTTONS FOR MULTIPLE VIDS */}
+        {/* <div className="flex flex-col lg:flex-row lg:h-[5rem] place-self-center mt-10 lg:mx-10 w-full">
           {buttons.map((button) => {
             return (
               <button
@@ -489,7 +498,7 @@ export default function Page() {
               </button>
             );
           })}
-        </div>
+        </div> */}
         {/* <button onClick={handleClick} className="bg-red-400 m-4 p-3">
             Click me
           </button> */}
