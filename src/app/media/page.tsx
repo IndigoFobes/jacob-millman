@@ -183,6 +183,37 @@ const shows: Shows[] = [
   },
   {
     id: 2,
+    title: "Don't Let The Pidgeon Drive The Bus!",
+    subtitle: "",
+    photos: {
+      a: {
+        id: 1,
+        title: "Don't Let The Pidgeon Drive The Bus!",
+        src: "/Pidgeon-1.jpg",
+        alt: "Jacob with Pidgeon puppet, talking to construction worker",
+      },
+      b: {
+        id: 2,
+        title: "Don't Let The Pidgeon Drive The Bus!",
+        src: "/Pidgeon-2.jpg",
+        alt: "Jacob with Pidgeon puppet, talking to bus driver",
+      },
+      c: {
+        id: 3,
+        title: "Don't Let The Pidgeon Drive The Bus!",
+        src: "/Pidgeon-3.jpg",
+        alt: "Jacob with Pidgeon puppet, singing while bus driver watches",
+      },
+      d: {
+        id: 4,
+        title: "Don't Let The Pidgeon sDrive The Bus!",
+        src: "/Pidgeon-4.jpg",
+        alt: "Jacob with Pidgeon puppet, talking with bus driver on a bench",
+      },
+    },
+  },
+  {
+    id: 3,
     title: "Stupid F**king Bird",
     subtitle: "",
     photos: {
@@ -213,7 +244,7 @@ const shows: Shows[] = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Anything Goes",
     subtitle: "",
     photos: {
@@ -274,7 +305,7 @@ const shows: Shows[] = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Our Town",
     subtitle: "",
     photos: {
