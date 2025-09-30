@@ -240,7 +240,25 @@ export default function Home() {
               </div> */}
             </motion.div>
           </li>
+          {/* Poster for MOBILE ONLY */}
+          <div className="flex md:hidden gap-y-4 gap-x-20 mt-12 mb-8 place-self-center w-[90%] md:w-[60%]">
+            <motion.div
+              className="relative place-self-center aspect-[2/3] w-full"
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={introPictureVariants}
+            >
+              <Image
+                src="/nfrpt-poster.jpg"
+                alt="Not Ready For Prime Time poster"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
         </ul>
+
         {/* Most Recent */}
         <div className="title pb-12 pt-6 px-8 md:px-12 lg:px-20 xl:px-36 w-full grid grid-cols-3">
           <h1 className="col-start-1 md:col-start-2 col-end-4 text-right md:pr-10">
@@ -281,7 +299,24 @@ export default function Home() {
           </li>
         </ul>
         {/* Posters */}
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-y-4 gap-x-20 mt-12 md:mt-16 md:mb-4 place-self-center w-[90%] md:w-[60%]">
+        {/* Poster for MOBILE ONLY */}
+        <div className="flex md:hidden gap-y-4 gap-x-20 mt-12 place-self-center w-[90%] md:w-[60%]">
+          <motion.div
+            className="relative place-self-center aspect-[2/3] w-full"
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={introPictureVariants}
+          >
+            <Image
+              src="/The-Roles-We-Play-poster.jpg"
+              alt="The Roles We Play poster"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
+        <div className="hidden md:grid md:grid-cols-2 gap-y-4 gap-x-20 mt-16 md:mb-4 place-self-center w-[90%] md:w-[60%]">
           <motion.div
             className="relative place-self-center aspect-[2/3] w-full"
             initial="hide"
