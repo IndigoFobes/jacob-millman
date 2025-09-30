@@ -2,6 +2,8 @@
 import Header from "../components/header";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { FaYoutube } from "react-icons/fa";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapCarousel from "../components/carousel";
 import "../../../src/app/globals.css";
@@ -467,8 +469,8 @@ export default function Page() {
             viewport={{ once: true }}
             variants={imageVariants}
           >
-            {/* IF SHOWING MULTIPLE VIDEOS */}
             <div>{video}</div>
+            {/* IF SHOWING MULTIPLE VIDEOS */}
             {/* {rendered == 0 ? (
               <div className="video-image flex b-gradient border-2 rounded-[var(--rounded-tiny)] w-[calc(800px*1/2)] h-[calc(400px*1/2)] md:w-[calc(800px*2/3)] md:h-[calc(400px*2/3)] lg:w-[800px] lg:h-[400px]">
                 <div className="flex image-overlay w-full justify-center">
@@ -483,6 +485,17 @@ export default function Page() {
             {/* {video} */}
           </motion.div>
         </div>
+        <Link
+          href="https://www.youtube.com/@jacob-millman"
+          target="_blank"
+          className="flex flex-row my-4 self-center gap-2 hover:text-[var(--accent-color)]"
+          style={{
+            transition: "all 300ms ease-in-out",
+          }}
+        >
+          <FaYoutube className="align-self-center text-2xl" />
+          <h2 className="text-lg">More content available here</h2>
+        </Link>
         {/* BUTTONS FOR MULTIPLE VIDS */}
         {/* <div className="flex flex-col lg:flex-row lg:h-[5rem] place-self-center mt-10 lg:mx-10 w-full">
           {buttons.map((button) => {
